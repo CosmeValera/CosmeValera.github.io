@@ -10,6 +10,6 @@ build_search_index = false
 
 [extra]
 links = [
-    { title = "GitHub", url = "https://github.com", icon = "github" },
-    { title = "Twitter", url = "https://twitter.com", icon = "twitter" }
+    { title = "GitHub", url = "https://github.com/CosmeValera", icon = "github" },
+    { title = "Twitter", url = "https://twitter.com/CosmeValera", icon = "twitter" }
 ]
