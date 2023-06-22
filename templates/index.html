@@ -9,28 +9,6 @@
         <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
         <link rel="stylesheet" href="{{ get_url(path='fontawesome/css/fontawesome.css') }}">
         <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
-
-        {% if config.extra.theme %}
-            <style>
-                body {
-                    color: {{ config.extra.theme.foreground }} !important;
-                    background-color: {{ config.extra.theme.background }} !important;
-                }
-
-                a {
-                    color: {{ config.extra.theme.foreground }} !important;
-                }
-
-                a:hover {
-                    color: {{ config.extra.theme.hover }} !important;
-                }
-
-
-                img.portrait {
-                    border: 10px solid {{ config.extra.theme.foreground }} !important;
-                }
-            </style>
-        {% endif %}
     </head>
     <body>
         <main>
@@ -38,8 +16,8 @@
                 <img src="{{ get_url(path='images/portrait.jpg') }}" class="portrait" alt="Portrait" />
             </div>
             <div class="column right">
-                <h1>{{ config.extra.greeting | default(value="Hello") }}</h1>
-                <h2>{{ config.extra.iam | default(value="I am") }} {{ config.extra.author.name | default(value="Hallo") }}.</h2>
+                <h1>Hello</h1>
+                <h2>I am Cosme</h2>
                 <p>{{ section.content | safe }}</p>
 
                 {% if config.extra.links %}
