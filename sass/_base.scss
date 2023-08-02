@@ -44,6 +44,7 @@ h2 {
 
 img.portrait {
     box-sizing: border-box;
+    object-fit: cover;
     border-radius: 50%;
     border: 10px solid $color-foreground;
     margin: 2em 3em;
