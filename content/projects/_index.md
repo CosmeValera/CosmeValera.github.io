@@ -1,3 +1,3 @@
 +++
+template = "projects/index.html"
 +++
-projects
