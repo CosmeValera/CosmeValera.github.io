@@ -13,12 +13,14 @@
     <body>
         <main>
             <div class="column left">
-                <img src="{{ get_url(path='images/portrait.jpg') }}" class="portrait" alt="Portrait" />
+                <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
             </div>
             <div class="column right">
                 <h1>Hello</h1>
                 <h2>I am Cosme</h2>
                 <p>{{ section.content | safe }}</p>
+                <!-- <p>{{ section }}</p>
+                <p>{{ section.content }}</p> -->
 
                 {% if config.extra.links %}
                     <div class="links">
