@@ -1,50 +1,31 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
 
-        <title>{{ config.title }}</title>
+{% block content %}
+<main>
+    <div class="column left">
+        <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+        </ul>
+    </nav>
+    <div class="column right">
+        <h1>Hello</h1>
+        <h2>I am Cosme</h2>
+        <p>I enjoy everything related to software and the people who create it. I strongly advocate for clean code and agile practices. I am ambitious, organized and able to learn quickly.</p>
+        <!-- <a href="/projects">Click here to go to projects</a> -->
 
-        <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
-        <link rel="stylesheet" href="{{ get_url(path='fontawesome/css/fontawesome.css') }}">
-        <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
-    </head>
-    <body>
-        <main>
-            <div class="column left">
-                <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
-            </div>
-            <div class="column right">
-                <h1>Hello</h1>
-                <h2>I am Cosme</h2>
-                <p>{{ section.content | safe }}</p>
+        <!-- <br> -->
+        <!-- <div>
+            <nav class="nav-menu desktop-homepage-nav-menu">
+                {% for link in config.extra.nav %}
+                <a href="{{ link.path }}">{{ link.name }}</a>
+                {% endfor %}
+            </nav>
+        </div> -->
 
-                {% if config.extra.links %}
-                    <div class="links">
-                        {% for link in config.extra.links %}
-                            <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
-                                {% if link.iconset %}
-                                    <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
-                                {% else %}
-                                    <span class="fab {{ 'fa-' ~ link.icon }}"></span>
-                                {% endif %}
-                            </a>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-
-
-                <br>
-                <div>
-                    <nav class="nav-menu desktop-homepage-nav-menu">
-                        {% for link in config.extra.nav %}
-                        <a href="{{ link.path }}">{{ link.name }}</a>
-                        {% endfor %}
-                    </nav>
-                </div>
-
-            </div>
-        </main>
-    </body>
-</html>
+    </div>
+</main>
+{% endblock content %}
