@@ -13,6 +13,22 @@
 <div class="column right">
     <h1>Hello</h1>
     <h2>I am Cosme</h2>
-    <p>I enjoy everything related to software and the people who create it. I strongly advocate for clean code and agile practices. I am ambitious, organized and able to learn quickly.</p>
+    <p>I enjoy everything related to software and the people who create it. I strongly advocate for <b>clean code</b> and <b>agile practices</b>. I am ambitious, organized and able to learn quickly.</p>
+    {% if config.extra.links %}
+        <div class="links">
+            <p><b>You can also find me here!</b></p>
+            {% for link in config.extra.links %}
+                <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
+                    {% if link.iconset %}
+                        <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
+                        {% else %}
+                        <span class="fab {{ 'fa-' ~ link.icon }}"></span>
+                    {% endif %}
+
+                    {{ link.title }}
+                </a>
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>
 {% endblock content %}

@@ -29,6 +29,9 @@ main {
                 margin-right: 0.5rem;
                 text-decoration: none;
             }
+            a:not(:last-child) {
+                margin-right: 10rem
+            }
         }
     }
 
