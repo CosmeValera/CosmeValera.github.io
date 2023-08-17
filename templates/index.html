@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main>
-    <div class="column left">
-        <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
-    </div>
+<div class="column left">
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/projects">Projects</a></li>
         </ul>
     </nav>
-    <div class="column right">
-        <h1>Hello</h1>
-        <h2>I am Cosme</h2>
-        <p>I enjoy everything related to software and the people who create it. I strongly advocate for clean code and agile practices. I am ambitious, organized and able to learn quickly.</p>
-    </div>
-</main>
+    <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
+</div>
+<div class="column right">
+    <h1>Hello</h1>
+    <h2>I am Cosme</h2>
+    <p>I enjoy everything related to software and the people who create it. I strongly advocate for clean code and agile practices. I am ambitious, organized and able to learn quickly.</p>
+</div>
 {% endblock content %}

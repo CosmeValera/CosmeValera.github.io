@@ -4,7 +4,7 @@
 
 main {
     display: flex;
-    margin-top: 20vh;
+    margin-top: 10vh;
 
     .column.left {
         text-align: end;
@@ -28,6 +28,23 @@ main {
             a {
                 margin-right: 0.5rem;
                 text-decoration: none;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            
+            li {
+                list-style-type: none;
+                padding-right: 2rem;
+                a {
+                    text-decoration: overline;
+                    text-decoration-thickness: 0.3rem;
+                    font-size: 2.5rem;
+                }
             }
         }
     }
