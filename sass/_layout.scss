@@ -26,11 +26,10 @@ main {
             font-size: 1.5rem;
 
             a {
-                margin-right: 0.5rem;
-                text-decoration: none;
-            }
-            a:not(:last-child) {
-                margin-right: 10rem
+                // text-decoration: none;
+
+                text-decoration: overline;
+                text-decoration-thickness: 0.15rem;
             }
         }
     }
