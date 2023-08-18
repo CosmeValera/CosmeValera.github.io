@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>This Page is not finished yet</h2>
-<nav>
+<div class="column right">
+
+  <nav class="nav-projects w-100">
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects">Projects</a></li>
+      <li><a href="/"><img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait-projects" alt="Portrait" /></a></li>
+      <!-- <li><a href="/projects">Projects</a></li> -->
     </ul>
-</nav>
-<p>Here are some of my projects:</p>
-<ul>
-  <li>- Project 1</li>
-  <li>- Project 2</li>
-  <li>- Project 3</li>
-</ul>
+  </nav>
+  <hr>
+  <h2 class="text-center">Here are some of my projects:</h2>
+  <ul>
+    <li>- Project 1</li>
+    <li>- Project 2</li>
+    <li>- Project 3</li>
+  </ul>
+</div>
 {% endblock content %}
