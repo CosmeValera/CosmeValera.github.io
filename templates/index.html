@@ -1,42 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="column left">
-    <nav class="index-nav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-        </ul>
-    </nav>
-    <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
-</div>
-<div class="column right">
-    <h1>Hello</h1>
-    <h2>I am Cosme</h2>
-    <p>I enjoy everything related to software and the people who create it. I strongly advocate for <b>clean code</b> and <b>agile practices</b>. I am ambitious, organized and able to learn quickly.</p>
-    {% if config.extra.links %}
-        <div class="links">
-            <p><b>You can also find me here!</b></p>
-            <div class="row">
-<<<<<<< HEAD
-                {% for link in config.extra.links %}
-=======
-                {% for link in config.extra.linkss %}
->>>>>>> 79a4f049b8d6146bfce70f32b1110920ddfd293a
-                    <div class="col-12 col-sm-6">
-                        <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
-                            {% if link.iconset %}
-                            <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
-                            {% else %}
-                            <span class="fab {{ 'fa-' ~ link.icon }}"></span>
-                            {% endif %}
-                            
-                            {{ link.title }}
-                        </a>
-                    </div>
-                {% endfor %}
+    <div class="column left">
+        <nav class="index-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+            </ul>
+        </nav>
+        <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
+    </div>
+    <div class="column right">
+        <h1 class="mt-5">Hello</h1>
+        <h2>I am Cosme</h2>
+        <p>I enjoy everything related to software and the people who create it. I strongly advocate for <b>clean code</b> and <b>agile practices</b>. I am ambitious, organized and able to learn quickly.</p>
+        {% if config.extra.links %}
+            <div class="links">
+                <p><b>You can also find me here!</b></p>
+                <div class="row">
+                    {% for link in config.extra.links %}
+                        <div class="col-12 col-sm-6">
+                            <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
+                                {% if link.iconset %}
+                                    <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
+                                {% else %}
+                                    <span class="fab {{ 'fa-' ~ link.icon }}"></span>
+                                {% endif %}
+                                
+                                {{ link.title }}
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    {% endif %}
-</div>
+        {% endif %}
+    </div>
 {% endblock content %}
