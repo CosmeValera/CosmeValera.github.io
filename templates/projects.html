@@ -11,10 +11,52 @@
   </nav>
   <hr>
   <h2 class="text-center">Here are some of my projects:</h2>
-  <ul>
-    <li>- Project 1</li>
-    <li>- Project 2</li>
-    <li>- Project 3</li>
-  </ul>
+
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="project-card">
+        <a href="https://github.com/CosmeValera/FitCal" target="_blank">
+          <div class="project-image">
+            <img src="{{ get_url(path='images/FitCal.png') }}" alt="FitCal" />
+          </div>
+          <div class="project-details">
+            <h3 class="card-title">FitCal</h3>
+            <p class="card-description">FitCal is a calorie tracking and fitness app.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="project-card">
+        <a href="https://github.com/CosmeValera/Sympho" target="_blank">
+          <div class="project-image">
+            <img src="{{ get_url(path='images/Sympho.png') }}" alt="Sympho" />
+          </div>
+          <div class="project-details">
+            <h3 class="card-title">Sympho</h3>
+            <p class="card-description">An app designed for creating, storing, modifying, and playing music scores.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="project-card">
+        <a href="https://github.com/CosmeValera/LeagueOfPokemon" target="_blank">
+          <div class="project-image">
+            <img src="{{ get_url(path='images/LeagueOfPokemon.jpg') }}" alt="League of Pokemon" />
+          </div>
+          <div class="project-details">
+            <h3 class="card-title">League of Pokemon</h3>
+            <p class="card-description">A turn-based RPG adventure inspired by League of Legends and Pokémo.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
 </div>
 {% endblock content %}
