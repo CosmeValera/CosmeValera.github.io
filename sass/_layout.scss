@@ -136,23 +136,23 @@ main {
 
                 .card-title {
                     font-weight: bold;
-                    color: $color-foreground;
+                    color: $color-secondary;
                 }
                 .card-technology {
                     margin-top: 0.2rem;
                     font-size: 12px;
                     font-weight: 600;
-                    color: #4ff5f5;
+                    color: $color-foreground;
                 }
                 .learn-more-button {
                     background-color: $color-background;
-                    color: white;
+                    color: $color-secondary;
                     font-weight: bold;
                     text-decoration: none;
-                    padding: 15px 30px;
+                    padding: 12px 30px;
                     border-radius: 0;
-                    margin: 25px auto 0px;
-                    border: 3px solid $color-foreground;
+                    margin: 30px auto 0px;
+                    border: 3px solid $color-secondary;
                 }
             }
         }
@@ -169,7 +169,7 @@ main {
             }
             .learn-more-button:hover {
                 color: $color-background;
-                background-color: $color-foreground;
+                background-color: $color-secondary;
             }
         }
     }
