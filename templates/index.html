@@ -5,10 +5,12 @@
         <nav class="nav-index">
             <ul>
                 <!-- <li><a href="/">Home</a></li> -->
-                <li><a href="/projects">Projects</a></li>
+                <li class="animate__animated animate__fadeInUp">
+                    <a href="/projects">Projects</a>
+                </li>
             </ul>
         </nav>
-        <img src="{{ get_url(path='images/portrait2.jpg') }}" class="portrait" alt="Portrait" />
+        <img class="portrait animate__animated animate__rotateInDownLeft" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
     </div>
     <div class="column right">
         <h1 class="mt-5">Hello</h1>
@@ -19,7 +21,7 @@
                 <p><b>You can also find me here!</b></p>
                 <div class="row">
                     {% for link in config.extra.links %}
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 animate__animated animate__fadeInUp">
                             <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
                                 {% if link.iconset %}
                                     <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
