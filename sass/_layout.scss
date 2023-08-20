@@ -20,7 +20,7 @@ main {
             margin-left: -4px; /* Correction for margin of leftmost character. */
             margin-top: 0;
         }
-        
+
         .links {
             margin-top: 2.5rem;
             font-size: 1.5rem;
@@ -38,7 +38,7 @@ main {
         ul {
             display: flex;
             justify-content: flex-end;
-            
+
             li {
                 list-style-type: none;
                 a {
@@ -56,7 +56,7 @@ main {
         ul {
             display: flex;
             justify-content: center;
-            
+
             li {
                 list-style-type: none;
                 padding-right: 3rem;
@@ -104,7 +104,7 @@ main {
     .project-card {
         position: relative;
         margin-bottom: 2rem;
-      
+
         .project-image {
             position: relative;
             overflow: hidden;
@@ -113,21 +113,20 @@ main {
             a {
                 text-decoration: none;
             }
-            
+
             img {
                 max-width: 100%;
                 height: auto;
                 border-radius: 5px;
-                transition: transform 0.2s;
             }
-            
+
             .project-details-overlay {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba($color: #006060, $alpha: 0.9);
+                background-color: rgba(0, 96, 96, 0.9); /* When activated 0.9 opacity */
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -143,7 +142,6 @@ main {
                     margin-top: 0.2rem;
                     font-size: 12px;
                     font-weight: 600;
-                    color: rgb(50, 220, 220);
                     color: #4ff5f5;
                 }
                 .card-description {
@@ -151,15 +149,19 @@ main {
                 }
             }
         }
-        
-        &:hover .project-details-overlay {
-            opacity: 1; /* Show on hover */
-            
-            border-radius: 3%;
+
+        &:hover {
+            .project-details-overlay {
+                opacity: 1; /* Show on hover */
+                border-radius: 3%;
+            }
+
+            .project-image {
+                transform: translateY(20px); /* Move image down */
+                transition: transform 0.5s; /* Adjust the transition duration */
+            }
         }
     }
-    
-      
 }
 
 footer {
