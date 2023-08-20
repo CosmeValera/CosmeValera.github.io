@@ -144,21 +144,32 @@ main {
                     font-weight: 600;
                     color: #4ff5f5;
                 }
-                .card-description {
-                    color: $color-foreground;
+                .learn-more-button {
+                    background-color: $color-background;
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                    padding: 15px 30px;
+                    border-radius: 0;
+                    margin: 25px auto 0px;
+                    border: 3px solid $color-foreground;
                 }
             }
         }
 
         &:hover {
             .project-details-overlay {
-                opacity: 1; /* Show on hover */
+                opacity: 1;
                 border-radius: 3%;
             }
 
             .project-image {
-                transform: translateY(20px); /* Move image down */
-                transition: transform 0.5s; /* Adjust the transition duration */
+                transform: translateY(20px);
+                transition: transform 0.5s;
+            }
+            .learn-more-button:hover {
+                color: $color-background;
+                background-color: $color-foreground;
             }
         }
     }
