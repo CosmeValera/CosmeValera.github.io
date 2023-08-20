@@ -103,6 +103,7 @@ main {
 
     .project-card {
         position: relative;
+        margin-bottom: 2rem;
       
         .project-image {
             position: relative;
@@ -126,13 +127,28 @@ main {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+                background-color: rgba($color: #006060, $alpha: 0.9);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                text-align: center;
                 opacity: 0; /* Hidden by default */
                 transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
+
+                .card-title {
+                    font-weight: bold;
+                    color: $color-foreground;
+                }
+                .card-technology {
+                    margin-top: 0.2rem;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: rgb(50, 220, 220);
+                    color: #4ff5f5;
+                }
+                .card-description {
+                    color: $color-foreground;
+                }
             }
         }
         
