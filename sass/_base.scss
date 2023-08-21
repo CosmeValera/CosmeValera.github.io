@@ -18,9 +18,10 @@ body {
 a {
     @include transition(color .2s ease-out);    
     color: $color-foreground;
+    text-decoration: none;
 
     &:hover {
-        color: $color-hover;
+        text-decoration: underline;
     }
 }
 

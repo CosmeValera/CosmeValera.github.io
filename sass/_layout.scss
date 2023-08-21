@@ -24,13 +24,6 @@ main {
         .links {
             margin-top: 2.5rem;
             font-size: 1.5rem;
-
-            a {
-                // text-decoration: none;
-
-                text-decoration: overline;
-                text-decoration-thickness: 0.15rem;
-            }
         }
     }
 
@@ -42,11 +35,9 @@ main {
             li {
                 list-style-type: none;
                 a {
-                    text-decoration: overline;
-                    text-decoration-thickness: 0.3rem;
-                    font-size: 2.5rem;
+                    font-size: 2.5rem; // text-decoration-thickness: 0.3rem;
 
-                    margin-right: 117px;
+                    margin-right: 117px; /* Centrado */
                 }
             }
         }
@@ -61,8 +52,6 @@ main {
                 list-style-type: none;
                 padding-right: 3rem;
                 a {
-                    text-decoration: overline;
-                    text-decoration-thickness: 0.3rem;
                     font-size: 2.5rem;
                 }
             }
