@@ -3,12 +3,12 @@ main {
     margin-top: 10vh;
     
     .column.left {
-        flex: 2;
+        flex: 3;
         text-align: end;
     }
 
     .column.right {
-        flex: 3;
+        flex: 4;
 
         h1 {
             margin-left: -10px; /* Correction for margin of leftmost character. */
@@ -27,20 +27,20 @@ main {
     }
 
     /* MIXIN */
-    @mixin styled-button() {
+    @mixin styled-button($color-font-and-border) {
         background-color: $color-background;
-        color: $color-secondary;
+        color: $color-font-and-border;
         font-weight: bold;
         text-decoration: none;
         padding: 12px 30px;
         border-radius: 0;
         margin: 30px auto 0px;
-        border: 3px solid $color-secondary;
+        border: 3px solid $color-font-and-border;
     }
 
-    @mixin styled-button-hover() {
+    @mixin styled-button-hover($background-color) {
         color: $color-background;
-        background-color: $color-secondary;
+        background-color: $background-color;
     }
     /* END: MIXIN */
 
@@ -54,12 +54,12 @@ main {
                 list-style-type: none;
 
                 a.projects-button  {
-                    @include styled-button();
+                    @include styled-button($color-foreground);
 
                     font-size: 2rem;
                     margin-right: 90px; /* Centrado */
                     &:hover {
-                        @include styled-button-hover();
+                        @include styled-button-hover($color-foreground);
                     }
                 }
             }
@@ -128,7 +128,7 @@ main {
                     color: $color-foreground;
                 }
                 .learn-more-button {
-                    @include styled-button();
+                    @include styled-button($color-secondary);
                 }
             }
         }
@@ -144,7 +144,7 @@ main {
                 transition: transform 0.5s;
             }
             .learn-more-button:hover {
-                @include styled-button-hover();
+                @include styled-button-hover($color-secondary);
             }
         }
     }
