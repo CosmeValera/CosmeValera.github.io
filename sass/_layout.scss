@@ -6,6 +6,23 @@ main {
     display: flex;
     margin-top: 10vh;
 
+    @mixin styled-button() {
+        background-color: $color-background;
+        color: $color-secondary;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 0;
+        margin: 30px auto 0px;
+        border: 3px solid $color-secondary;
+    }
+
+    @mixin styled-button-hover() {
+        color: $color-background;
+        background-color: $color-secondary;
+    }
+
+
     .column.left {
         text-align: end;
     }
@@ -34,10 +51,15 @@ main {
 
             li {
                 list-style-type: none;
-                a {
-                    font-size: 2.5rem; // text-decoration-thickness: 0.3rem;
 
-                    margin-right: 117px; /* Centrado */
+                a.projects-button  {
+                    @include styled-button();
+
+                    font-size: 2rem;
+                    margin-right: 90px; /* Centrado */
+                    &:hover {
+                        @include styled-button-hover();
+                    }
                 }
             }
         }
@@ -77,13 +99,13 @@ main {
         }
 
         nav.nav-index {
+            margin-bottom: 30px;
             ul {
                 padding: 0px;
                 margin: 0px 0px 16px 0px;
                 li {
-                    a {
-                        padding: 0px;
-                        margin: 0px;
+                    a.projects-button {
+                        margin: auto;
                     }
                 }
             }
@@ -135,14 +157,7 @@ main {
                     color: $color-foreground;
                 }
                 .learn-more-button {
-                    background-color: $color-background;
-                    color: $color-secondary;
-                    font-weight: bold;
-                    text-decoration: none;
-                    padding: 12px 30px;
-                    border-radius: 0;
-                    margin: 30px auto 0px;
-                    border: 3px solid $color-secondary;
+                    @include styled-button();
                 }
             }
         }
@@ -158,8 +173,7 @@ main {
                 transition: transform 0.5s;
             }
             .learn-more-button:hover {
-                color: $color-background;
-                background-color: $color-secondary;
+                @include styled-button-hover();
             }
         }
     }
