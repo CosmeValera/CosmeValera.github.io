@@ -1,6 +1,26 @@
+/* ANIMATIONS */
 .animate__bounceInRight, .animate__bounceInLeft {
     animation-delay: 0s;
 }
 .animate__bounceIn {
     animation-delay: 0.75s;
 }
+/* END: ANIMATIONS */
+
+/* SCROLLBAR */
+::-webkit-scrollbar { /* width */
+    width: 15px;
+}
+
+::-webkit-scrollbar-track { /* Track */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb { /* Handle */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover { /* Handle on hover */
+    background-color: $color-secondary;
+}
+/* END: SCROLLBAR */
