@@ -27,7 +27,39 @@
         <footer>
             <p class="text-center">Copyright © 2023 Cosme</p>
         </footer>
+
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> -->
+        <!-- <script src="{{ get_url(path="static/js/app.js") }}"></script> -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const filterButtons = document.querySelectorAll(".filter-button");
+                const projectCards = document.querySelectorAll(".project-card");
+
+                filterButtons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        const selectedFilter = button.getAttribute("data-filter");
+
+                        projectCards.forEach((card) => {
+                            const cardTechnology = card.querySelector(".card-technology").textContent;
+
+                            if (selectedFilter === "All"
+                                || (cardTechnology.includes(selectedFilter)
+                                    && !(selectedFilter === "Java"
+                                    && cardTechnology.includes("JavaScript"))
+                                )
+                            ) {
+                                card.style.display = "block";
+                            } else {
+                                card.style.display = "none";
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+
+
     </body>
 </html>
 
