@@ -83,6 +83,34 @@ main {
         }
     }
 
+    .presentation-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .filter-buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    
+        .filter-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px 20px;
+            margin: 0 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $color-foreground;
+            transition: color 0.3s ease-in-out;
+    
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+
     .project-card {
         position: relative;
         margin-bottom: 2rem;
