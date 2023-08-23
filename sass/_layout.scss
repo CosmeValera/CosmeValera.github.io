@@ -38,9 +38,9 @@ main {
         border: 3px solid $color-font-and-border;
     }
 
-    @mixin styled-button-hover($background-color) {
+    @mixin styled-button-hover($hover-background-color) {
         color: $color-background;
-        background-color: $background-color;
+        background-color: $hover-background-color;
     }
     /* END: MIXIN */
 
@@ -94,19 +94,12 @@ main {
         margin-bottom: 24px;
     
         .filter-button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 5px 20px;
+            @include styled-button($color-secondary);
             margin: 0 5px;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: $color-foreground;
-            transition: color 0.3s ease-in-out;
+            padding: 8px 20px;
         }
         .selected-filter {
-            color: $color-secondary;
+            @include styled-button-hover($color-secondary);
         }
     }
 
@@ -182,7 +175,7 @@ main {
         .filter-buttons {
             .filter-button {
                 &:hover {
-                    color: $color-secondary;
+                    @include styled-button-hover($color-secondary);
                 }
             }
         }
