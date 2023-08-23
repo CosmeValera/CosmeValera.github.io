@@ -35,11 +35,13 @@
                 const projectCards = document.querySelectorAll(".project-card");
                 const animationClasses = ["animate__bounceInLeft", "animate__bounceIn", "animate__bounceInRight"];
                 let currentSelectedFilter = "All"; // Start with "All" selected initially
+                let previousVisibleCards = []; // To track the previously visible cards and their positions
 
                 filterButtons.forEach((button) => {
                     button.addEventListener("click", () => {
                         const selectedFilter = button.getAttribute("data-filter");
 
+                        // When clicking a filter: 1st time-> blue, 2nd time-> All is triggered
                         if (currentSelectedFilter !== selectedFilter) {
                             const prevButton = document.querySelector(`[data-filter="${currentSelectedFilter}"]`);
                             prevButton.classList.remove("selected-filter");
@@ -54,28 +56,46 @@
                             }
                         }
 
-                        let visibleCards = Array.from(projectCards).filter((card) => {
+                        // Filter cards
+                        const visibleCards = Array.from(projectCards).filter((card) => {
                             const cardTechnology = card.querySelector(".card-technology").textContent;
                             return currentSelectedFilter === "All" ||
                                 (cardTechnology.includes(currentSelectedFilter) &&
                                 !(currentSelectedFilter === "Java" && cardTechnology.includes("JavaScript")));
                         });
 
+                        // Cards reappear with their new animation, except those that have same the position
                         visibleCards.forEach((card, index) => {
-                            card.style.display = "block";
-                            card.classList.add(animationClasses[index % 3]);
-                            card.classList.remove(animationClasses[(index + 1) % 3]);
-                            card.classList.remove(animationClasses[(index + 2) % 3]);
+                            const previousCardIndex = previousVisibleCards.findIndex(prevCard => prevCard.card === card);
+                            if (previousCardIndex !== -1 && previousVisibleCards[previousCardIndex].position === index) {
+                                return; // Skip cards with unchanged position
+                            }
+
+                            card.style.display = "none";
+                            setTimeout(() => {
+                                card.style.display = "block";
+                                card.classList.add(animationClasses[index % 3]);
+                                card.classList.remove(animationClasses[(index + 1) % 3]);
+                                card.classList.remove(animationClasses[(index + 2) % 3]);
+                            }, 1);
                         });
 
+                        // Display none to not filtered cards
                         projectCards.forEach((card) => {
                             if (!visibleCards.includes(card)) {
                                 card.style.display = "none";
                             }
                         });
+
+                        // Update previousVisibleCards with current positions
+                        previousVisibleCards = visibleCards.map((card, index) => ({
+                            card: card,
+                            position: index
+                        }));
                     });
                 });
             });
+
         </script>
         <!-- END: Projects.js -->
 
