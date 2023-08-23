@@ -212,9 +212,13 @@ main {
                 }
             }
         }
+        
+        .filter-buttons {
+            overflow: auto;
+            justify-content: flex-start;
+        }
     }
     /* END: RESPONSIVE */
-
 }
 
 footer {
