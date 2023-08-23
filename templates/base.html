@@ -35,8 +35,12 @@
                 const projectCards = document.querySelectorAll(".project-card");
                 const animationClasses = ["animate__bounceInLeft", "animate__bounceIn", "animate__bounceInRight"];
                 let currentSelectedFilter = "All"; // Start with "All" selected initially
-                let previousVisibleCards = []; // To track the previously visible cards and their positions
+                let previousVisibleCards = Array.from(projectCards).map((card, index) => ({
+                    card: card,
+                    position: index
+                })); // Initialize with the first set of visible cards and their positions
 
+                
                 filterButtons.forEach((button) => {
                     button.addEventListener("click", () => {
                         const selectedFilter = button.getAttribute("data-filter");
