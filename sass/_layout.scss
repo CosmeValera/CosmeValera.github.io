@@ -178,16 +178,23 @@ main {
     /* END: PROJECTS */
     
     /* RESPONSIVE */
-    @media screen and (min-width: $break-large) {
+    @media screen and (min-width: $break-small) {
         .filter-buttons {
             .filter-button {
                 &:hover {
-                    color: $color-secondary;
+                    color: $color-secondary; /* hover azul solo en ordenador */
                 }
             }
         }
     }
 
+    @media screen and (max-width: $break-small) {
+        .filter-buttons {
+            overflow: auto;
+            justify-content: flex-start;
+        }
+    }
+    
     @media screen and (max-width: $break-large) {
         flex-direction: column;
         margin-top: 0;
@@ -217,11 +224,6 @@ main {
                     }
                 }
             }
-        }
-        
-        .filter-buttons {
-            overflow: auto;
-            justify-content: flex-start;
         }
     }
     /* END: RESPONSIVE */
