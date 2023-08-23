@@ -35,28 +35,34 @@
             document.addEventListener("DOMContentLoaded", function () {
                 const filterButtons = document.querySelectorAll(".filter-button");
                 const projectCards = document.querySelectorAll(".project-card");
-
+                const animationClasses = ["animate__bounceInLeft", "animate__bounceIn", "animate__bounceInRight"];
+                
                 filterButtons.forEach((button) => {
                     button.addEventListener("click", () => {
                         const selectedFilter = button.getAttribute("data-filter");
+                        let visibleCards = Array.from(projectCards).filter((card) => {
+                            const cardTechnology = card.querySelector(".card-technology").textContent;
+                            return selectedFilter === "All" ||
+                                (cardTechnology.includes(selectedFilter) &&
+                                !(selectedFilter === "Java" && cardTechnology.includes("JavaScript")));
+                        });
+
+                        visibleCards.forEach((card, index) => {
+                            card.style.display = "block";
+                            card.classList.add(animationClasses[index % 3]);
+                            card.classList.remove(animationClasses[(index + 1) % 3]);
+                            card.classList.remove(animationClasses[(index + 2) % 3]);
+                        });
 
                         projectCards.forEach((card) => {
-                            const cardTechnology = card.querySelector(".card-technology").textContent;
-
-                            if (selectedFilter === "All"
-                                || (cardTechnology.includes(selectedFilter)
-                                    && !(selectedFilter === "Java"
-                                    && cardTechnology.includes("JavaScript"))
-                                )
-                            ) {
-                                card.style.display = "block";
-                            } else {
+                            if (!visibleCards.includes(card)) {
                                 card.style.display = "none";
                             }
                         });
                     });
                 });
             });
+
         </script>
 
 
