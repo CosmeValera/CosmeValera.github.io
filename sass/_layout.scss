@@ -104,10 +104,6 @@ main {
             text-transform: uppercase;
             color: $color-foreground;
             transition: color 0.3s ease-in-out;
-    
-            &:hover {
-                color: $color-secondary;
-            }
         }
         .selected-filter {
             color: $color-secondary;
@@ -182,6 +178,16 @@ main {
     /* END: PROJECTS */
     
     /* RESPONSIVE */
+    @media screen and (min-width: $break-large) {
+        .filter-buttons {
+            .filter-button {
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: $break-large) {
         flex-direction: column;
         margin-top: 0;
