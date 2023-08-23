@@ -38,9 +38,9 @@ main {
         border: 3px solid $color-font-and-border;
     }
 
-    @mixin styled-button-hover($background-color) {
+    @mixin styled-button-hover($hover-background-color) {
         color: $color-background;
-        background-color: $background-color;
+        background-color: $hover-background-color;
     }
     /* END: MIXIN */
 
