@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block extra_style %}
+    <link rel="stylesheet" href="{{ get_url(path='index.css') }}">
+{% endblock extra_style %}
+
 {% block content %}
     <div class="column left">
         <nav class="nav-index">

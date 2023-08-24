@@ -21,7 +21,24 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
         <link rel="stylesheet" href="{{ get_url(path='fontawesome/css/fontawesome.css') }}">
-        <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+
+        <!-- <link rel="stylesheet" href="{{ get_url(path='index.css') }}">
+        <link rel="stylesheet" href="{{ get_url(path='projects.css') }}"> -->
+
+        <!-- <link rel="stylesheet" href="{{ get_url(path='index.css') }}">
+        <link rel="stylesheet" href="{{ get_url(path='projects.css') }}"> -->
+        
+        <!-- {% block extra_style %}
+            {% if page.extra_style %}
+                <link rel="stylesheet" href="{{ get_url(path=page.extra_style) }}">
+            {% endif %}
+        {% endblock extra_style %} -->
+
+        {% block extra_style %}
+            {% if page.extra_style %}
+                <link rel="stylesheet" href="{{ get_url(path=page.extra_style) }}">
+            {% endif %}
+        {% endblock extra_style %}
     </head>
     <body>
         <main>
