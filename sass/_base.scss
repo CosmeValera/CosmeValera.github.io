@@ -40,10 +40,10 @@ h2 {
 }
 @media screen and (max-width: $break-large) {
     h1 {
-        font-size: min(7rem, 15vw);
+        font-size: calc(min(7rem, 15vw));
     }
 
     h2 {
-        font-size: min(3rem, 8vw)!important;
+        font-size: calc(min(3rem, 8vw))!important;
     }
 }
