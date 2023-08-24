@@ -13,12 +13,16 @@
         <img class="portrait-index animate__animated animate__rotateInDownLeft" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
     </div>
     <div class="column right">
-        <h1 class="mt-5">Hello</h1>
-        <h2>I am Cosme</h2>
-        <p>I enjoy everything related to software and the people who create it. I strongly advocate for <b>clean code</b> and <b>agile practices</b>. I am ambitious, organized and able to learn quickly.</p>
+        <h1 class="mt-5">Hello!</h1>
+        <div class="d-flex">
+            <h2 class="presentation first-half">I am&nbsp;</h2>
+            <h2 class="presentation second-half">Cosme</h2>
+        </div>
+        <!-- 👉 👉🏼 ✊🏻 -->
+        <p class="description">👉🏼 I enjoy everything related to software and the people who create it. I strongly advocate for <b>clean code</b> and <b>agile practices</b>. I am ambitious, organized and able to learn quickly.</p>
         {% if config.extra.links %}
             <div class="links">
-                <p><b>You can also find me here!</b></p>
+                <p class="call-to-action">You can also find me here!</p>
                 <div class="row">
                     {% for link in config.extra.links %}
                         <div class="col-12 col-sm-6 animate__animated animate__fadeInUp">
