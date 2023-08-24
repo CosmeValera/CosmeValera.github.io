@@ -92,15 +92,16 @@ h2.presentation-text-projects {
             opacity: 0; /* Hidden by default */
             transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
 
-            .card-title {
+            h3.card-title {
                 font-weight: bold;
                 color: $color-secondary;
             }
-            .card-technology {
+            p.card-technology {
                 margin-top: 0.2rem;
                 font-size: clamp(12px, 1.4vw, 14px);
                 font-weight: 600;
                 color: $color-foreground;
+                font-family: Andika;
             }
             .learn-more-button {
                 @include styled-button($color-secondary);
