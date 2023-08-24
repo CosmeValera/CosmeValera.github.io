@@ -4,5 +4,8 @@ $color-secondary: #4ff5f5;
 
 @import 'variables';
 @import 'base';
+@import 'helpers';
 @import 'layout';
-@import 'hovers';
+@import 'responsive';
+@import 'index';
+@import 'projects';

@@ -40,37 +40,10 @@ h2 {
 }
 @media screen and (max-width: $break-large) {
     h1 {
-        font-size: 15vw;
+        font-size: min(7rem, 15vw);
     }
 
     h2 {
-        font-size: 2.5rem;
-    }
-}
-
-img.portrait-index {
-    box-sizing: border-box;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 10px solid $color-foreground;
-    margin: 2em 3em;
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 300px;
-}
-
-img.portrait-projects {
-    box-sizing: border-box;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid $color-foreground;
-    width: 100%;
-    height: auto;
-    max-width: 80px;
-    max-height: 80px;
-    &:hover {
-        transform: rotate(1turn);
-        transition: transform 1s cubic-bezier(.67,.28,.54,.89);
+        font-size: min(3rem, 8vw)!important;
     }
 }
