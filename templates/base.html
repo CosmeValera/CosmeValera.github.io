@@ -30,11 +30,15 @@
 
         <!-- This is projects.js -->
         <script>
+            const ALL_FILTER_VALUE = "All";
+            const JAVA_FILTER_VALUE = "Java";
+            const JAVASCRIPT_FILTER_VALUE = "JavaScript";
+
             document.addEventListener("DOMContentLoaded", function () {
                 const filterButtons = document.querySelectorAll(".filter-button");
                 const projectCards = document.querySelectorAll(".project-card");
                 const animationClasses = ["animate__bounceInLeft", "animate__bounceIn", "animate__bounceInRight"];
-                let currentSelectedFilter = "All"; // Start with "All" selected initially
+                let currentSelectedFilter = ALL_FILTER_VALUE; // Start with "All" selected initially
                 let previousVisibleCards = Array.from(projectCards).map((card, index) => ({
                     card: card,
                     position: index
@@ -52,20 +56,20 @@
                             button.classList.add("selected-filter");
                             currentSelectedFilter = selectedFilter;
                         } else {
-                            if (currentSelectedFilter !== "All") {
-                                const allButton = document.querySelector(`[data-filter="All"]`);
+                            if (currentSelectedFilter !== ALL_FILTER_VALUE) {
+                                const allButton = document.querySelector(`[data-filter=${ALL_FILTER_VALUE}]`);
                                 allButton.classList.add("selected-filter");
                                 button.classList.remove("selected-filter");
-                                currentSelectedFilter = "All";
+                                currentSelectedFilter = ALL_FILTER_VALUE;
                             }
                         }
 
                         // Filter cards
                         const visibleCards = Array.from(projectCards).filter((card) => {
                             const cardTechnology = card.querySelector(".card-technology").textContent;
-                            return currentSelectedFilter === "All" ||
+                            return currentSelectedFilter === ALL_FILTER_VALUE ||
                                 (cardTechnology.includes(currentSelectedFilter) &&
-                                !(currentSelectedFilter === "Java" && cardTechnology.includes("JavaScript")));
+                                !(currentSelectedFilter === JAVA_FILTER_VALUE && cardTechnology.includes(JAVASCRIPT_FILTER_VALUE)));
                         });
 
                         // Cards reappear with their new animation, except those that have same the position
