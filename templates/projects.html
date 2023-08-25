@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block scripts %}
-  <script src="js/projects.js"></script>
+<script src="{{ get_url(path="js/projects.js") | safe }}"></script>
 {% endblock %}
 
 {% block content %}
