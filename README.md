@@ -28,6 +28,6 @@ zola serve
 Open [http://localhost:1111/](http://localhost:1111/) to view it in your browser.
 
 ### 👥 Contributing
-I welcome pull requests! If you're interested in collaborating or improving my projects, feel free to fork the repository and submit your changes.
+I welcome pull requests! If you're interested in collaborating or improving this project, feel free to fork the repository and submit your changes.
 
 Happy exploring and coding!
