@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block title %}
+  Home | Cosme
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+{% endblock %}
+
 {% block content %}
     <div class="column left">
         <nav class="nav-index">
