@@ -5,7 +5,11 @@
 {% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ get_url(path="projects.css") | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path="projects.css") | safe }}">
+{% endblock %}
+
+{% block scripts %}
+  <script src="js/projects.js"></script>
 {% endblock %}
 
 {% block content %}
