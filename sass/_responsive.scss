@@ -1,10 +1,9 @@
-
 main {
     @media screen and (min-width: $break-small) {
         .filter-buttons {
             .filter-button {
                 &:hover {
-                    color: $color-secondary; /* For computer filters have a hover blue */
+                    color: $color-secondary; /* Computer: filters have a hover blue */
                 }
             }
         }
@@ -12,12 +11,16 @@ main {
     
     @media screen and (max-width: $break-small) {
         .filter-buttons {
-            overflow: auto; /* For phone scrollbar for filters*/
+            overflow: auto; /* Phone: scrollbar for filter buttons*/
             justify-content: flex-start;
+            button.filter-button:hover::after {
+                width: 0%; /* ¨Phone: no underline in filter buttons  */
+            }
         }
+        
     }
     
-    /* For phone and tablet column left goes on top of column right */
+    /* Phone & tablets: column left goes on top of column right */
     @media screen and (max-width: $break-large) {
         flex-direction: column;
         margin-top: 0;
