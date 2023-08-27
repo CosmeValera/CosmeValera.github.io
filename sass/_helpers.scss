@@ -1,21 +1,3 @@
-/* MIXIN */
-@mixin styled-button($color-font-and-border) {
-    background-color: $color-background;
-    color: $color-font-and-border;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 0;
-    margin: 30px auto 0px;
-    border: 3px solid $color-font-and-border;
-}
-
-@mixin styled-button-hover($hover-background-color) {
-    color: $color-background;
-    background-color: $hover-background-color;
-}
-/* END: MIXIN */
-
 /* ANIMATIONS */
 .animate__bounceInRight, .animate__bounceInLeft {
     animation-delay: 0s;

@@ -52,21 +52,8 @@
         font-size: 1.5rem;
         a {
             font-family: Andika;
-            position: relative;
-        }
 
-        a::after {
-            content: '';
-            position: absolute;
-            width: 0px;
-            height: 1px;
-            display: block;
-            background: $color-foreground;
-            transition: 250ms;
-        }
-          
-        a:hover::after {
-            width: 100%;
+            @include underline-effect(absolute, 0px, $color-foreground);
         }
     }
 }

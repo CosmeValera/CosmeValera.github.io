@@ -54,28 +54,15 @@ h2.presentation-text-projects {
         color: $color-foreground;
         transition: color 0.3s ease-in-out;
 
-        position: relative;
-    }
-    button.filter-button::after {
-        content: '';
-        position: inline-block;
-        width: 0px;
-        height: 1px;
-        display: block;
-        background: $color-foreground;
-        transition: 250ms;
-        bottom: -3px;
-    }
-    button.filter-button:hover::after {
-        width: 100%;
-        background: $color-secondary;
+        @include underline-effect(inline-block, -3px, $color-secondary);
     }
 
     button.selected-filter {
         color: $color-secondary;
-    }
-    button.selected-filter:hover::after {
-        width: 0%;
+        
+        &:hover::after {
+            width: 0%;
+        }
     }
 }
 
