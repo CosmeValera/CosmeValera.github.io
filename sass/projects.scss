@@ -112,7 +112,7 @@ h2.presentation-text-projects {
                 font-family: Andika;
             }
             .learn-more-button {
-                @include styled-button($color-secondary);
+                @include styled-button($color-secondary, $color-secondary);
             }
         }
     }
@@ -126,9 +126,6 @@ h2.presentation-text-projects {
         .project-image {
             transform: translateY(20px);
             transition: transform 0.5s;
-        }
-        .learn-more-button:hover {
-            @include styled-button-hover($color-secondary);
         }
     }
 }

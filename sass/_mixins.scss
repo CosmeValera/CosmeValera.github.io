@@ -1,4 +1,4 @@
-@mixin styled-button($color-font-and-border) {
+@mixin styled-button($color-font-and-border, $hover-background-color) {
     background-color: $color-background;
     color: $color-font-and-border;
     font-weight: bold;
@@ -7,18 +7,19 @@
     border-radius: 0;
     margin: 30px auto 0px;
     border: 3px solid $color-font-and-border;
-}
-@mixin styled-button-hover($hover-background-color) {
-    color: $color-background;
-    background-color: $hover-background-color;
+
+    &:hover {
+        color: $color-background;
+        background-color: $hover-background-color;
+    }
 }
 
-@mixin underline-effect($position, $bottom, $hover-color) {
+@mixin underline-effect($after-position, $bottom, $hover-color) {
     position: relative;
 
     &::after {
         content: '';
-        position: $position;
+        position: $after-position;
         width: 0;
         height: 1px;
         display: block;
@@ -29,6 +30,6 @@
 
     &:hover::after {
         width: 100%;
-        background: $hover-color;
+        background-color: $hover-color;
     }
 }

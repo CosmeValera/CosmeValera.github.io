@@ -10,13 +10,10 @@
                 list-style-type: none;
 
                 a.projects-button  {
-                    @include styled-button($color-foreground);
+                    @include styled-button($color-foreground, $color-foreground);
 
                     font-size: 2rem;
                     margin-right: 90px; /* Centrado */
-                    &:hover {
-                        @include styled-button-hover($color-foreground);
-                    }
                 }
             }
         }
