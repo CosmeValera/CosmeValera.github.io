@@ -30,7 +30,7 @@
                 <div class="row">
                     {% for link in config.extra.links %}
                         <div class="col-12 col-sm-6 animate__animated animate__fadeInUp">
-                            <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
+                            <a rel="me" href="{{ link.url }}" title="{{ link.title }}" target="_blank">
                                 {% if link.iconset %}
                                     <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
                                 {% else %}
