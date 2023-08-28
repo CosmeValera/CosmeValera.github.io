@@ -35,18 +35,26 @@
     h2.presentation {
         font-weight: bold;
         font-size: 2.5rem;
-    }
-    h2.presentation.first-half {
-        opacity:0.7;
+        
+        span.less-opacity {
+            opacity: 0.7;
+        }
     }
 
-    p.call-to-action {
-        font-weight: bold;
-        font-family: Andika;
+    p.description {
+        span.bold {
+            font-weight: bold;
+        }
     }
+
     .links {
         margin-top: 2.5rem;
         font-size: 1.5rem;
+    
+        p.call-to-action {
+            font-weight: bold;
+            font-family: Andika;
+        }
         a {
             font-family: Andika;
 
