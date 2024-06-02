@@ -28,5 +28,13 @@
   <hr>
 
   <h2 class="presentation-text-projects">My blogs:</h2>
+  <div class="blog-cards">
+    {% for post in section.pages %}
+    <div class="blog-card">
+      <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+      <p>{{ post.summary }}</p>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock content %}
