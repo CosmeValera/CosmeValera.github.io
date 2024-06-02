@@ -12,10 +12,11 @@
     <div class="column left">
         <nav class="nav-index">
             <ul>
-                <!-- <li><a href="/">Home</a></li> -->
-                <li class="animate__animated animate__fadeInUp">
-                    <a class="projects-button" href="/projects">Projects</a>
-                </li>
+                {% for item in config.extra.nav %}
+                    <li class="animate__animated animate__fadeInUp">
+                        <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </nav>
         <img class="portrait-index animate__animated animate__rotateInDownLeft" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />

@@ -14,5 +14,6 @@ links = [
     { title = "LinkedIn", url = "https://www.linkedin.com/in/cosmevalera/", icon = "linkedin" }
 ]
 nav = [
-    { name = "Projects", path = "/projects/" },
+    { name = "Projects", path = "/projects/", class = "projects-button" },
+    { name = "Blog", path = "/blog/", class = "projects-button" },
 ]
