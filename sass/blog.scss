@@ -1,0 +1,38 @@
+@import 'main';
+
+nav.nav-projects {
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            list-style-type: none;
+            padding-right: 3rem;
+            a {
+                font-size: 2.5rem;
+
+                img.portrait-projects {
+                    box-sizing: border-box;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 4px solid $color-foreground;
+                    width: 100%;
+                    height: auto;
+                    max-width: 80px;
+                    max-height: 80px;
+                    &:hover {
+                        transform: rotate(1turn);
+                        transition: transform 1s cubic-bezier(.67,.28,.54,.89);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+h2.presentation-text-projects {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+}

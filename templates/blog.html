@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Blog | Cosme
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ get_url(path="blog.css") | safe }}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ get_url(path="js/projects.js") | safe }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="column right">
+
+  <nav class="nav-projects">
+    <ul>
+      <li>
+        <a href="/">
+          <img class="portrait-projects" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
+        </a>
+      </li>
+      <!-- <li><a href="/projects">Projects</a></li> -->
+    </ul>
+  </nav>
+  <hr>
+
+  <h2 class="presentation-text-projects">My blogs:</h2>
+</div>
+{% endblock content %}
