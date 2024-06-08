@@ -13,7 +13,10 @@ links = [
     { title = "GitHub", url = "https://github.com/CosmeValera", icon = "github" },
     { title = "LinkedIn", url = "https://www.linkedin.com/in/cosmevalera/", icon = "linkedin" }
 ]
+
 nav = [
     { name = "Projects", path = "/projects/", class = "projects-button" },
     { name = "Blog", path = "/blog/", class = "projects-button" },
 ]
+
+favicon = "favicon.jpg"

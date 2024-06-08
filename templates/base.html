@@ -22,6 +22,10 @@
         <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
         <link rel="stylesheet" href="{{ get_url(path='fontawesome/css/fontawesome.css') }}">
 
+        {% if config.extra.favicon %}
+          <link rel="icon" href="{{ get_url(path=config.extra.favicon) }}" />
+        {% endif %}
+  
         {% block styles%} {% endblock %}
     </head>
     <body>
