@@ -1,6 +1,24 @@
 @import 'main';
 
 nav.nav-projects {
+    nav.nav-index {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                list-style-type: none;
+
+                a.projects-button  {
+                    @include styled-button($color-foreground, $color-foreground);
+
+                    font-size: 2rem;
+                    margin-right: 90px; /* Centered */
+                }
+            }
+        }
+    }
+
     ul {
         display: flex;
         justify-content: center;
@@ -31,7 +49,7 @@ nav.nav-projects {
     }
 }
 
-h2.presentation-text-projects {
+h2.presentation-text {
     text-align: center;
     margin-bottom: 2rem;
     text-wrap: balance;

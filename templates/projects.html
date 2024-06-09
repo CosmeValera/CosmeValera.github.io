@@ -22,12 +22,20 @@
           <img class="portrait-projects" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
         </a>
       </li>
-      <!-- <li><a href="/projects">Projects</a></li> -->
+      <nav class="nav-index">
+        <ul>
+            {% for item in config.extra.nav %}
+                <li class="animate__animated animate__fadeInUp">
+                    <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
     </ul>
   </nav>
   <hr>
 
-  <h2 class="presentation-text-projects">Here are some of my projects:</h2>
+  <h2 class="presentation-text">Here are some of my projects:</h2>
 
   <div class="filter-buttons">
     <button class="filter-button selected-filter" data-filter="All">All</button>

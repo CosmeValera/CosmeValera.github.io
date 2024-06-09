@@ -8,10 +8,6 @@
   <link rel="stylesheet" href="{{ get_url(path="blog.css") | safe }}">
 {% endblock %}
 
-{% block scripts %}
-<script src="{{ get_url(path="js/projects.js") | safe }}"></script>
-{% endblock %}
-
 {% block content %}
 <div class="column right">
 
@@ -22,17 +18,27 @@
           <img class="portrait-projects" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
         </a>
       </li>
-      <!-- <li><a href="/projects">Projects</a></li> -->
+      <nav class="nav-index">
+        <ul>
+            {% for item in config.extra.nav %}
+                <li class="animate__animated animate__fadeInUp">
+                    <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
     </ul>
   </nav>
   <hr>
 
-  <h2 class="presentation-text-projects">My blogs:</h2>
   <div class="blog-cards">
     {% for post in section.pages %}
     <div class="blog-card">
-      <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
-      <p>{{ post.summary }}</p>
+      <h3><a class="blog-title" href="{{ post.permalink }}">{{ post.title }}</a></h3>
+      <div class="blog-card-details">
+        <p class="card-description"> {{ post.description }} </p>
+        <span class="card-date"> {{ post.date }}</span>
+      </div>
     </div>
     {% endfor %}
   </div>

@@ -1,6 +1,24 @@
 @import 'main';
 
 nav.nav-projects {
+    nav.nav-index {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                list-style-type: none;
+
+                a.projects-button  {
+                    @include styled-button($color-foreground, $color-foreground);
+
+                    font-size: 2rem;
+                    margin-right: 90px; /* Centered */
+                }
+            }
+        }
+    }
+
     ul {
         display: flex;
         justify-content: center;
@@ -31,8 +49,36 @@ nav.nav-projects {
     }
 }
 
-h2.presentation-text-projects {
-    text-align: center;
-    margin-bottom: 2rem;
-    text-wrap: balance;
+
+.blog-cards, .blog-post {
+    max-width: 700px;
+    padding-top: 1.5rem;
+    margin: 0 auto;
+
+    .presentation-text {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-wrap: balance;
+    }
+
+    .blog-card {
+        h3 {
+            a.blog-title {
+                @include underline-effect(absolute, 0px, $color-foreground);
+            }
+        }
+        .blog-card-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+
+            .card-description {
+                font-weight: light;
+            }
+            .card-date {
+                font-style: italic;
+                min-width: fit-content;
+            }
+        }
+    }
 }

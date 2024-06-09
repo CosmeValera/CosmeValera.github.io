@@ -11,22 +11,33 @@
 {% block content %}
 <div class="column right">
 
-    <nav class="nav-projects">
+
+  <nav class="nav-projects">
+    <ul>
+      <li>
+        <a href="/">
+          <img class="portrait-projects" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
+        </a>
+      </li>
+      <nav class="nav-index">
         <ul>
-        <li>
-            <a href="/">
-            <img class="portrait-projects" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
-            </a>
-        </li>
-        <!-- <li><a href="/projects">Projects</a></li> -->
+            {% for item in config.extra.nav %}
+                <li class="animate__animated animate__fadeInUp">
+                    <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
+                </li>
+            {% endfor %}
         </ul>
     </nav>
-    <hr>
-    <div class="blog-post">
-    <h1>{{ page.title }}</h1>
-    <div class="post-content">
-        {{ page.content | safe }}
-    </div>
-    </div>
+    </ul>
+  </nav>
+  <hr>
+
+  <div class="blog-post">
+      <h2 class="presentation-text">{{ page.title }}</h2>
+      <h3 class="presentation-text">{{ page.description }}</h3>
+      <div class="post-content">
+          {{ page.content | safe }}
+      </div>
+  </div>
 </div>
 {% endblock content %}
