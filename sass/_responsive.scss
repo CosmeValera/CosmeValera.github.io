@@ -9,17 +9,6 @@ main {
         }
     }
     
-    @media screen and (max-width: $break-small) {
-        .filter-buttons {
-            overflow: auto; /* Phone: scrollbar for filter buttons*/
-            justify-content: flex-start;
-            button.filter-button:hover::after {
-                width: 0%; /* ¨Phone: no underline in filter buttons  */
-            }
-        }
-        
-    }
-    
     /* Phone & tablets: column left goes on top of column right */
     @media screen and (max-width: $break-large) {
         flex-direction: column;
@@ -47,9 +36,36 @@ main {
                 margin: 0;
             }
         }
-    
-        .column.right h1 {
-            margin-top: 0;
+        
+        .column.right {
+            h1 {
+                margin-top: 0;
+            }
         }    
     }
+    @media screen and (max-width: $break-medium) {
+        .column.right {
+            img.portrait-projects {
+                max-width: 60px;
+                max-height: 60px;
+            }
+        }    
+    }
+
+    @media screen and (max-width: $break-small) {
+        .filter-buttons {
+            overflow: auto; /* Phone: scrollbar for filter buttons*/
+            justify-content: flex-start;
+            button.filter-button:hover::after {
+                width: 0%; /* Phone: no underline in filter buttons  */
+            }
+        }
+        .column.right {
+            img.portrait-projects {
+                max-width: clamp(40px, calc(11vw + 4px), 55px);
+                max-height: clamp(40px, calc(11vw + 4px), 55px);
+            }
+        }
+    }
+    
 }

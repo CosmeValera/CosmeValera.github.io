@@ -5,15 +5,13 @@ nav.nav-projects {
         ul {
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
+            gap: 1.5rem;
 
             li {
                 list-style-type: none;
 
                 a.projects-button  {
                     @include styled-button($color-foreground, $color-foreground);
-
-                    font-size: 2rem;
                 }
             }
         }

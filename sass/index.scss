@@ -5,7 +5,7 @@
         ul {
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-right: 2rem;
 
             li {
@@ -13,8 +13,6 @@
 
                 a.projects-button  {
                     @include styled-button($color-foreground, $color-foreground);
-
-                    font-size: 2rem;
                 }
             }
         }
