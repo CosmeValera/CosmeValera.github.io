@@ -5,15 +5,15 @@ nav.nav-projects {
         ul {
             display: flex;
             justify-content: flex-end;
+            gap: 2rem;
 
             li {
                 list-style-type: none;
-
+ 
                 a.projects-button  {
                     @include styled-button($color-foreground, $color-foreground);
 
                     font-size: 2rem;
-                    margin-right: 90px; /* Centered */
                 }
             }
         }
@@ -22,10 +22,10 @@ nav.nav-projects {
     ul {
         display: flex;
         justify-content: center;
+        align-items: center;
 
         li {
             list-style-type: none;
-            padding-right: 3rem;
             a {
                 font-size: 2.5rem;
 
