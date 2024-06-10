@@ -5,9 +5,11 @@ template = "blog-post.html"
 description = "Comparing Vite and Webpack for microfrontend development"
 +++
 
+![blog-cover](/images/blog/2024-06-01/vite-vs-webpack.webp)
+
 <h4><b>Overview</b></h4>
 
-<b>Vite</b> and <b>Webpack</b> are popular module bundlers with different approaches, especially relevant in microfrontends.
+<b>Vite</b> and <b>Webpack</b> are popular module bundlers with different approaches, especially regarding microfrontends.
 
 <h4><b>Key Points of Comparison</b></h4>
 
@@ -29,8 +31,10 @@ description = "Comparing Vite and Webpack for microfrontend development"
 - <b>Vite:</b> Generates remoteEntry.js only during the build.
 
 <b>4. Compatibility</b>
-- <b>Interoperability</b> between Vite and Webpack requires special handling for proper communication.
+- <b>Interoperability</b> between Webpack and Vite requires special handling for proper communication.
+
+![garnalds](/images/blog/general/garlands.png)
 
 <h4><b>Conclusion</b></h4>
 
-Choosing <b>Vite</b> or <b>Webpack</b> depends on project needs. Webpack is robust for complex microfrontends with mature ecosystem support. Vite offers faster build times but requires all microfrontends to be built and previewed.
+Choosing <b>Webpack</b> or <b>Vite</b> depends on your project needs. <b>Webpack</b> works well with microfrontends and has a mature ecosystem. <b>Vite</b> is faster for development and builds but needs all microfrontends built and previewed for Module Federation.
