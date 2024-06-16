@@ -5,10 +5,10 @@
         @include blog-cards-and-blog-post-styles();
 
         a.blog-card {
-            h3.blog-title {
+            .blog-title {
                 font-family: Andika;
             }
-            
+
             .blog-card-details {
                 display: flex;
                 justify-content: space-between;
