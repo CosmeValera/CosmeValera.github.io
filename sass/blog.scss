@@ -4,12 +4,11 @@
     .blog-cards {
         @include blog-cards-and-blog-post-styles();
 
-        .blog-card {
-            h3 {
-                a.blog-title {
-                    @include underline-effect(absolute, 0px, $color-foreground);
-                }
+        a.blog-card {
+            h3.blog-title {
+                font-family: Andika;
             }
+            
             .blog-card-details {
                 display: flex;
                 justify-content: space-between;
@@ -17,10 +16,12 @@
 
                 .card-description {
                     font-weight: light;
+                    opacity: .7;
                 }
                 .card-date {
                     font-style: italic;
                     min-width: fit-content;
+                    font-family: Andika;
                 }
             }
         }

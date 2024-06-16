@@ -28,13 +28,13 @@
 
   <div class="blog-cards">
     {% for post in section.pages %}
-    <div class="blog-card">
-      <h3><a class="blog-title" href="{{ post.permalink }}">{{ post.title }}</a></h3>
+    <a class="blog-card" href="{{ post.permalink }}">
+      <h3 class="blog-title">{{ post.title }}</h3>
       <div class="blog-card-details">
         <p class="card-description"> {{ post.description }} </p>
         <span class="card-date"> {{ post.date | date(format="%B %d, %Y") }}</span>
       </div>
-    </div>
+    </a>
     {% endfor %}
   </div>
 </div>
