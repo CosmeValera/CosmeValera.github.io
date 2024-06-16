@@ -1,6 +1,5 @@
 +++
 title = "Develop with Vite"
-date = 2024-06-15
 template = "blog-post.html"
 description = "Development guide for launching a Vite project using the Module Federation plugin"
 +++

@@ -1,6 +1,5 @@
 +++
 title = "Vite vs Webpack (MF)"
-date = 2024-06-01
 template = "blog-post.html"
 description = "Comparing Vite and Webpack for microfrontend development"
 +++
