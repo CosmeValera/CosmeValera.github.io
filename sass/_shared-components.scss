@@ -14,7 +14,7 @@ nav.nav-shared {
             list-style-type: none;
             a {
                 &.menu-item {
-                    @include styled-button($color-foreground, $color-foreground);
+                    @include styled-button($color-fg, $color-fg);
                     font-size: 2.5rem;
                 }
 
@@ -22,7 +22,7 @@ nav.nav-shared {
                     box-sizing: border-box;
                     object-fit: cover;
                     border-radius: 50%;
-                    border: 4px solid $color-foreground;
+                    border: 4px solid $color-fg;
                     width: 100%;
                     height: auto;
                     max-width: 80px;

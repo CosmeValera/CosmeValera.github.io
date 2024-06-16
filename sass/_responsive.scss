@@ -3,7 +3,7 @@ main {
         .filter-buttons {
             .filter-button {
                 &:hover {
-                    color: $color-secondary; /* Computer: filters have a hover blue */
+                    color: $color-fg-secondary; /* Computer: filters have a hover blue */
                 }
             }
         }

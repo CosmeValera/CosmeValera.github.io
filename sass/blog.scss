@@ -5,23 +5,43 @@
         @include blog-cards-and-blog-post-styles();
 
         a.blog-card {
-            .blog-title {
-                font-family: Andika;
+            display: block;
+            background-color: $color-bg-secondary;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 2rem;
+
+            &:hover {
+                transform: translateY(20px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             }
 
+            .blog-title {
+                color: $color-fg-secondary;
+                font-family: Andika;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
             .blog-card-details {
                 display: flex;
                 justify-content: space-between;
                 gap: 2rem;
-
+                
                 .card-description {
+                    color: $color-fg;
+                    opacity: 0.9;
                     font-weight: light;
-                    opacity: .7;
+                    font-size: 1rem;
                 }
+                
                 .card-date {
-                    font-style: italic;
+                    color: $color-fg-secondary;
                     min-width: fit-content;
                     font-family: Andika;
+                    font-size: 0.9rem;
                 }
             }
         }

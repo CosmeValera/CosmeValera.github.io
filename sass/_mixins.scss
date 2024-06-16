@@ -3,12 +3,12 @@
     padding: 12px 30px;
     border: 3px solid $color-font-and-border;
     color: $color-font-and-border;
-    background-color: $color-background;
+    background-color: $color-bg;
     font-weight: bold;
     text-decoration: none;
     
     &:hover {
-        color: $color-background;
+        color: $color-bg;
         background-color: $hover-background-color;
     }
     
@@ -40,7 +40,7 @@
         width: 0;
         height: 1px;
         display: block;
-        background: $color-foreground;
+        background: $color-fg;
         transition: 0.25s;
         bottom: $bottom;
     }

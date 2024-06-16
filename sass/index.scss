@@ -12,7 +12,7 @@
                 list-style-type: none;
 
                 a.menu-item  {
-                    @include styled-button($color-foreground, $color-foreground);
+                    @include styled-button($color-fg, $color-fg);
                 }
             }
         }
@@ -22,7 +22,7 @@
         box-sizing: border-box;
         object-fit: cover;
         border-radius: 50%;
-        border: 10px solid $color-foreground;
+        border: 10px solid $color-fg;
         margin: 2em 3em;
         width: 100%;
         height: auto;
@@ -59,7 +59,7 @@
         a {
             font-family: Andika;
 
-            @include underline-effect(absolute, 0px, $color-foreground);
+            @include underline-effect(absolute, 0px, $color-fg);
         }
     }
 }

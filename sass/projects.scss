@@ -20,14 +20,14 @@ h2.presentation-text {
         font-size: 16px;
         font-weight: bold;
         text-transform: uppercase;
-        color: $color-foreground;
+        color: $color-fg;
         transition: color 0.3s ease-in-out;
 
-        @include underline-effect(inline-block, -3px, $color-secondary);
+        @include underline-effect(inline-block, -3px, $color-fg-secondary);
     }
 
     button.selected-filter {
-        color: $color-secondary;
+        color: $color-fg-secondary;
         
         &:hover::after {
             width: 0%;
@@ -74,17 +74,17 @@ h2.presentation-text {
 
                 h3.card-title {
                     font-weight: bold;
-                    color: $color-secondary;
+                    color: $color-fg-secondary;
                 }
                 p.card-technology {
                     margin-top: 0.2rem;
                     font-size: clamp(12px, 1.4vw, 14px);
                     font-weight: 600;
-                    color: $color-foreground;
+                    color: $color-fg;
                     font-family: Andika;
                 }
                 .learn-more-button {
-                    @include styled-button($color-secondary, $color-secondary);
+                    @include styled-button($color-fg-secondary, $color-fg-secondary);
                     margin: 0 1rem;
                 }
             }

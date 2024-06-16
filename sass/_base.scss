@@ -1,6 +1,6 @@
 html,
 body {
-    color: $color-foreground;
+    color: $color-fg;
     margin: 1rem;
     padding: 0;
     max-width: 100vw;
@@ -14,12 +14,12 @@ html {
 }
 
 body {
-    background-color: $color-background;
+    background-color: $color-bg;
 }
 
 a {
     @include transition(color .2s ease-out);    
-    color: $color-foreground;
+    color: $color-fg;
     text-decoration: none;
 }
 
