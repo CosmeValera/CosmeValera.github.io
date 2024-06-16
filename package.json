@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "zola serve"
+  },
   "dependencies": {
     "animate.css": "^4.1.1"
   }
