@@ -1,0 +1,14 @@
+@import 'main';
+
+.blog-post {
+    @include blog-cards-and-blog-post-styles();
+
+    p:has(img[alt=blog-cover], img[alt=garnalds]) {
+        text-align: center;
+
+        img[alt=blog-cover], img[alt=garnalds] {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+    }
+}

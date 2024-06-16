@@ -11,7 +11,7 @@
             li {
                 list-style-type: none;
 
-                a.projects-button  {
+                a.menu-item  {
                     @include styled-button($color-foreground, $color-foreground);
                 }
             }
@@ -30,6 +30,7 @@
         max-height: 300px;
     }
 }
+
 .column.right {
     h2.presentation {
         font-weight: bold;
@@ -54,6 +55,7 @@
             font-weight: bold;
             font-family: Andika;
         }
+        
         a {
             font-family: Andika;
 

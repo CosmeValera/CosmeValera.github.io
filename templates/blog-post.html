@@ -5,29 +5,23 @@
 {% endblock %}
 
 {% block styles %}
-  <link rel="stylesheet" href="{{ get_url(path="blog.css") | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path="blog-post.css") | safe }}">
 {% endblock %}
 
 {% block content %}
 <div class="column right">
-
-
-  <nav class="nav-projects">
+  <nav class="nav-shared">
     <ul>
       <li>
         <a href="/">
-          <img class="portrait-projects" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
+          <img class="portrait-menu-item" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
         </a>
       </li>
-      <nav class="nav-index">
-        <ul>
-            {% for item in config.extra.nav %}
-                <li class="animate__animated animate__fadeInUp">
-                    <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+      {% for item in config.extra.nav %}
+        <li class="animate__animated animate__fadeInUp">
+          <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
   <hr>

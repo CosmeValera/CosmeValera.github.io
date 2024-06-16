@@ -15,8 +15,8 @@ links = [
 ]
 
 nav = [
-    { name = "Projects", path = "/projects/", class = "projects-button" },
-    { name = "Blog", path = "/blog/", class = "projects-button" },
+    { name = "Projects", path = "/projects/", class = "menu-item" },
+    { name = "Blog", path = "/blog/", class = "menu-item" },
 ]
 
 favicon = "favicon.jpg"
