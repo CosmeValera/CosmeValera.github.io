@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            
+  Blog | Cosme
+
+        </title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Inter:wght@400;600;700&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cosmevalera.github.io/fonts.css">
+        <link rel="stylesheet" href="https://cosmevalera.github.io/fontawesome/css/fontawesome.css">
+
+        
+          <link rel="icon" href="https://cosmevalera.github.io/favicon.jpg" />
+        
+  
+        
+  <link rel="stylesheet" href="https://cosmevalera.github.io/blog-post.css">
+
+    </head>
+    <body>
+        <main>
+            
+<div class="column right">
+  <nav class="nav-shared">
+    <ul>
+      <li>
+        <a href="/">
+          <img class="portrait-menu-item" src="https://cosmevalera.github.io/images/portrait2.jpg" alt="Portrait" />
+        </a>
+      </li>
+      
+        <li>
+          <a class="menu-item" href="&#x2F;projects&#x2F;">Projects</a>
+        </li>
+      
+        <li>
+          <a class="menu-item" href="&#x2F;blog&#x2F;">Blog</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <hr>
+
+  <div class="blog-post">
+      <h2 class="presentation-text">Develop with Vite</h2>
+      <h3 class="presentation-text">Development guide for launching a Vite project using the Module Federation plugin</h3>
+      <div class="post-content">
+          <p><img src="/images/blog/2024-06-15/vite.png" alt="blog-cover" /></p>
+<h4><b>🧪 Development</b></h4>
+<p>We need to execute <i>npm run build</i> and then <i>npm run preview</i> to have the <b>Vite</b> application running with Module Federations.</p>
+<p>We have 2 options for having it in one command:</p>
+<p><b>Option 1.</b> Use <i>concurrently</i>:</p>
+<ul>
+<li>1.1 <i>package.json</i>:</li>
+</ul>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">"preview:watch": "concurrently \"vite preview --port 4001 -l silent\" \"vite build --watch\""</div>
+<div style="margin-top: 1.5rem;"></div>
+<p><b>Option 2.</b> Create a custom script:</p>
+<ul>
+<li>2.1 <i>package.json</i>:</li>
+</ul>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+"start": "bash vite-execution-script.sh 4001",
+</div>
+<ul>
+<li>2.2 Custom script:</li>
+</ul>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<p>#!/bin/bash</p>
+<p>PORT=&quot;$1&quot;</p>
+<p># If the port is already in use, then kill the PID related to that port<br />
+PID=$(netstat -ano | grep &quot;:${PORT} &quot; | grep LISTENING | awk '{print $5}')</p>
+<p>if [ -n &quot;$PID&quot; ]; then
+taskkill //F //PID $PID
+fi</p>
+<p># Run 'npm run build --watch' in the background and store its process ID<br />
+npm run build &amp;
+BUILD_WATCH_PID=$!</p>
+<p># Wait for a brief moment to ensure the 'build --watch' process is up and running<br />
+sleep 2</p>
+<p># Run 'npm run preview' also in the background and store its process ID<br />
+npm run preview &amp;
+PREVIEW_PID=$!</p>
+<p>printf 'Welcome: %s\n' &quot;$BUILD_WATCH_PID $PREVIEW_PID&quot;</p>
+<p># Wait for any background job to finish (if one finishes, they both should be killed)<br />
+wait -n</p>
+<p># Kill both processes if they are still running<br />
+kill $BUILD_WATCH_PID $PREVIEW_PID 2&gt;/dev/null</p>
+</div>
+<p><img src="/images/blog/general/garlands.png" alt="garnalds" /></p>
+<h4><b>🔃 Challenges with HMR and Module Federations</b></h4>
+Vite excels in many areas, but achieving Hot Module Reload (HMR) with Module Federation is difficult. Developers must manually refresh the screen after changes. Despite forum discussions about a potential <i>npm run preview --watch</i> command, as of June 15, 2024, no direct solution exists for seamless HMR.
+<div style="margin-top: 1.5rem;"></div>
+<p><b>Theoretical Expectation</b></p>
+<ul>
+<li><i>npm run dev</i> should ideally create the Module Federation JavaScript file (<i>remoteEntry.js</i>) automatically.</li>
+<li>This behavior is not observed due to limitations in the <i>vite-plugin-federation.</i></li>
+</ul>
+
+      </div>
+  </div>
+</div>
+
+        </main>
+        <footer>
+            <p class="text-center">Copyright © 2024 Cosme</p>
+        </footer>
+
+         
+    </body>
+</html>
+
+
