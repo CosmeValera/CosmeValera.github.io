@@ -32,7 +32,7 @@
       <h3><a class="blog-title" href="{{ post.permalink }}">{{ post.title }}</a></h3>
       <div class="blog-card-details">
         <p class="card-description"> {{ post.description }} </p>
-        <span class="card-date"> {{ post.date }}</span>
+        <span class="card-date"> {{ post.date | date(format="%B %d, %Y") }}</span>
       </div>
     </div>
     {% endfor %}
