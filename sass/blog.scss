@@ -21,27 +21,27 @@
             .blog-title {
                 color: $color-fg-secondary;
                 font-family: Andika;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 3.8vw, 1.7rem);
                 margin-bottom: 1rem;
             }
             
             .blog-card-details {
                 display: flex;
                 justify-content: space-between;
-                gap: 2rem;
+                gap: clamp(1rem, 4.4vw, 2rem);
                 
                 .card-description {
                     color: $color-fg;
                     opacity: 0.9;
                     font-weight: light;
-                    font-size: 1rem;
+                    font-size: clamp(0.7rem, 2.2vw, 1rem);
                 }
                 
                 .card-date {
                     color: $color-fg-secondary;
                     min-width: fit-content;
                     font-family: Andika;
-                    font-size: 0.9rem;
+                    font-size: clamp(0.6rem, 2vw, 0.9rem);;
                 }
             }
         }
