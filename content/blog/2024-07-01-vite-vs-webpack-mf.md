@@ -34,6 +34,13 @@ description = "Comparing Vite and Webpack for microfrontend development"
 
 ![garnalds](/images/blog/general/garlands.png)
 
+
+<h4><b>Resources</b></h4>
+
+- Learn to create a <b>Webpack</b> project with MF: <a target="_blank" href="https://youtu.be/lKKsjpH09dU?si=lVE58HAuWyddfuRe" class="presentation-text">Click here</a>
+
+- Learn to create a <b>VITE</b> project with MF: <a target="_blank" href="https://www.youtube.com/watch?si=D_stg3jW_fGL2uKh&v=t-nchkL9yIg&feature=youtu.be" class="presentation-text">Click here</a>
+
 <h4><b>Conclusion</b></h4>
 
 Choosing <b>Webpack</b> or <b>Vite</b> depends on your project needs. <b>Webpack</b> works well with microfrontends and has a mature ecosystem. <b>Vite</b> is faster for development and builds but needs all microfrontends built and previewed for Module Federation.
