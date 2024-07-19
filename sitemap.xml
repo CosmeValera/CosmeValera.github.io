@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://cosmevalera.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://cosmevalera.github.io/blog/</loc>
+    </url>
+    <url>
+        <loc>https://cosmevalera.github.io/blog/develop-with-vite/</loc>
+        <lastmod>2024-08-02</lastmod>
+    </url>
+    <url>
+        <loc>https://cosmevalera.github.io/blog/vite-vs-webpack-mf/</loc>
+        <lastmod>2024-07-01</lastmod>
+    </url>
+    <url>
+        <loc>https://cosmevalera.github.io/projects/</loc>
+    </url>
+</urlset>
