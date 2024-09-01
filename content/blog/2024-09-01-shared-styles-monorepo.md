@@ -51,7 +51,7 @@ Requires publishing and versioning with each change.
 <b>Implementation:</b> Place your styles in a folder at the root level, parallel to your apps, and import them in your projects:
 
 <div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
-import '../style/themes/black-and-red-theme/theme.scss';
+import '../style/themes/my-theme/theme.scss';
 </div>
 
 <b>Pros:</b>
