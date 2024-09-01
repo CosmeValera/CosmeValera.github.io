@@ -10,14 +10,14 @@ description = "Approaches to maintain consistent styles across multiple projects
 
 In large-scale projects maintaining consistent styles across multiple applications is crucial. Here are two key approaches for managing shared styles:
 
-1. 📦 Creating a shared styles library as an <b>npm package</b>.
+1. 📦 Creating a shared styles library as a <b>npm package</b>.
 2. 🔗 Directly importing styles from <b>a centralized directory</b> within the monorepo.
 
 ---
 
 <h4><b>📦 1. Creating a Styles Library with npm</b></h4>
 
-<b>Overview:</b> This approach involves creating a dedicated styles library that is published as an npm package. The styles can then be imported into any project that needs them.
+<b>Overview:</b> This approach involves creating a dedicated styles library that is published as a npm package. The styles can then be imported into any project that needs them.
 
 <b>Implementation:</b> For example, if you're working with custom theme styles for PrimeReact, you can create your styles in a library and export them using an `index.js` file like this:
 
