@@ -4,7 +4,7 @@ template = "blog-post.html"
 description = "Development guide for launching a Vite project using the Module Federation plugin"
 +++
 
-![blog-cover](/images/blog/2024-06-15/vite.png)
+![blog-cover](/images/blog/2024-08-02/vite.png)
 
 <h4><b>🧪 Development</b></h4>
 

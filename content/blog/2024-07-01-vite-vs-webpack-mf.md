@@ -4,7 +4,7 @@ template = "blog-post.html"
 description = "Comparing Vite and Webpack for microfrontend development"
 +++
 
-![blog-cover](/images/blog/2024-06-01/vite-vs-webpack.webp)
+![blog-cover](/images/blog/2024-07-01/vite-vs-webpack.webp)
 
 <h4><b>Overview</b></h4>
 
