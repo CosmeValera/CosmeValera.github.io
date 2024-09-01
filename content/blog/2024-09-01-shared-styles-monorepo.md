@@ -60,9 +60,9 @@ Immediate access to the latest styles without additional steps.
 
 <b>Cons:</b>
 Potential for accidental breaking changes if styles are updated.
-Dependency on monorepo structure; harder to manage if the projects are split into different repositories.
+Need to have a monorepo structure; doesn't work if the projects are split into different repositories.
 
 <h4><b>❓ What to choose</b></h4>
 
 - Use a <b>npm package</b> if you want to have strict version control or you don't have all your projects in the same folder.
-- Use directly importing from <b>a centralized directory</b> if you prefer a simpler solution and your code structure allows it.
+- Use direct importing from <b>a centralized directory</b> if you prefer a simpler solution and your code structure allows it.
