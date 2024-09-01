@@ -8,7 +8,7 @@ description = "Approaches to maintain consistent styles across multiple projects
 
 <h4><b>🤔 Overview</b></h4>
 
-In large-scale projects, especially those using a monorepo structure, maintaining consistent styles across multiple applications is crucial. Here are two key approaches for managing shared styles:
+In large-scale projects maintaining consistent styles across multiple applications is crucial. Here are two key approaches for managing shared styles:
 
 1. 📦 Creating a shared styles library as an <b>npm package</b>.
 2. 🔗 Directly importing styles from <b>a centralized directory</b> within the monorepo.
