@@ -1,4 +1,3 @@
-
 const ALL_FILTER_VALUE = "All";
 const JAVA_FILTER_VALUE = "Java";
 const JAVASCRIPT_FILTER_VALUE = "JavaScript";
