@@ -6,6 +6,10 @@ h2.presentation-text {
     text-wrap: balance;
 }
 
+span.colorful {
+    color: $color-fg-secondary;
+}
+
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -47,6 +51,7 @@ h2.presentation-text {
             position: relative;
             overflow: hidden;
             border-radius: 3%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 
             a {
                 text-decoration: none;
@@ -64,7 +69,7 @@ h2.presentation-text {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 96, 96, 0.9); /* When activated 0.9 opacity */
+                background-color: rgba(0, 96, 96, 0.85); /* When activated 0.85 opacity */
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -85,7 +90,8 @@ h2.presentation-text {
                 }
                 .learn-more-button {
                     @include styled-button($color-fg-secondary, $color-fg-secondary);
-                    margin: 0 1rem;
+                    margin: 0 3rem;
+                    border-radius: 9999px;
                 }
             }
         }
@@ -94,11 +100,17 @@ h2.presentation-text {
             .project-details-overlay {
                 opacity: 1;
                 border-radius: 3%;
+                border: 6px inset transparent;
+                border-image: linear-gradient(60deg, #ffffffcc, #4ff5f5cc) 1;
             }
 
             .project-image {
                 transform: translateY(20px);
                 transition: transform 0.5s;
+                img {
+                    filter: blur(6px);
+                    -webkit-filter: blur(6px);
+                }
             }
         }
     }
