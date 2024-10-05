@@ -52,7 +52,7 @@ main {
         }    
     }
 
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: $break-medium) {
         .filter-buttons {
             overflow: auto; /* Phone: scrollbar for filter buttons*/
             justify-content: flex-start;

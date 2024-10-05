@@ -41,6 +41,7 @@ span.colorful {
 
 .project-cards-row {
     overflow: hidden;
+    margin: 0 clamp(0.5rem, 2vw, 10rem);
     
     .project-card {
         position: relative;
