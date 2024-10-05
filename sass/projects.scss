@@ -1,43 +1,35 @@
 @import 'main';
 
-h2.presentation-text {
-    text-align: center;
-    margin-bottom: 2rem;
-    text-wrap: balance;
-}
-
-span.colorful {
-    color: $color-fg-secondary;
-}
-
 .filter-buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
 
     button.filter-button {
-        background-color: transparent;
+        background-color: darken($color-fg-secondary, 33%); // Tag background color
         border: none;
         cursor: pointer;
-        padding: 5px 15px;
+        padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
         margin: 0 5px;
-        font-size: 14px;
+        font-size: clamp(0.45rem, 1.2vw, 0.9rem);
         font-weight: bold;
         text-transform: uppercase;
-        color: $color-fg;
-        transition: color 0.3s ease-in-out;
+        color: $color-bg; // Adjust text color as needed
+        border-radius: 9999px; // Make it a pill shape
+        transition: background-color 0.3s ease-in-out;
 
-        @include underline-effect(inline-block, -3px, $color-fg-secondary);
-    }
+        &.selected-filter {
+            background-color: darken($color-fg-secondary, 17%); // Color for the selected filter
+            color: $color-bg; // Text color for the selected filter
+        }
 
-    button.selected-filter {
-        color: $color-fg-secondary;
-        
-        &:hover::after {
-            width: 0%;
+        &:hover {
+            background-color: $color-fg-secondary; // Darken background on hover
+            color: $color-bg; // Change text color on hover if needed
         }
     }
 }
+
 
 .project-cards-row {
     overflow: hidden;

@@ -55,9 +55,11 @@ main {
     @media screen and (max-width: $break-medium) {
         .filter-buttons {
             overflow: auto; /* Phone: scrollbar for filter buttons*/
-            justify-content: flex-start;
-            button.filter-button:hover::after {
-                width: 0%; /* Phone: no underline in filter buttons  */
+            flex-direction: column;
+            gap: 0.4rem;
+            margin: 2vw 4vw;
+            button.filter-button {
+                border-radius: 5px;
             }
         }
         .column.right {
