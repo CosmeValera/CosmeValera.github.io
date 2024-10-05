@@ -19,9 +19,9 @@ span.colorful {
         background-color: transparent;
         border: none;
         cursor: pointer;
-        padding: 5px 20px;
+        padding: 5px 15px;
         margin: 0 5px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
         color: $color-fg;
@@ -52,7 +52,7 @@ span.colorful {
             position: relative;
             overflow: hidden;
             border-radius: 3%;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
             a {
                 text-decoration: none;
@@ -70,39 +70,61 @@ span.colorful {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(to bottom, #4ff5f5cc, rgba(0, 0, 0, 0.6)); // Gradient overlay
+                background: linear-gradient(to bottom, #4ff5f5cc, rgba(0, 0, 0, 0.7));
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                opacity: 0; // Hidden by default
-                transition: opacity 0.3s ease-in-out; // Smooth transition effect
+                justify-content: flex-end; // Align items to the bottom
+                text-align: left; // Align text to the left
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                padding-left: 2rem;
+                padding-bottom: clamp(0.5vw, 2rem, 2vw);
 
                 h3.card-title {
                     font-weight: bold;
                     color: $color-fg;
+                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 4vw, 1.5rem);
+                    margin: 0; // Remove default margin
                 }
+
                 p.card-technology {
-                    margin-top: 0.2rem;
-                    font-size: clamp(12px, 1.4vw, 14px);
+                    font-size: clamp(10px, 1.2vw, 12px);
                     font-weight: 600;
                     color: $color-fg;
                     font-family: Andika;
+                    display: flex;
+                    gap: 0.5rem;
+                    margin: 8px 0 8px;
+
+                    // Create tag styles
+                    span.tag {
+                        background-color: #4ff5f550; 
+                        padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
+                        border-radius: 9999px; // Tag border radius
+                        font-size: clamp(0.45rem, 2vw, 0.9rem);
+                        color: $color-fg;
+                    }
                 }
+
                 .learn-more-button {
-                    font-size: 2rem;
-                    padding: 12px 30px;
-                    border: 3px solid $color-fg-secondary;
-                    color: $color-fg-secondary;
-                    background-color: $color-bg;
+                    font-size: clamp(0.45rem, 2vw, 0.9rem);
+                    padding: 6px 10px;
+                    
+                    color: $color-bg-secondary;
+                    background-color: $color-fg-secondary;
                     font-weight: bold;
                     text-decoration: none;
-                    margin: 0 3rem;
-                    border-radius: 9999px;
+                    margin: 0;
+                    border-radius: 5px;
+                    width: fit-content;
+                    svg {
+                        width: clamp(8px, 2vw, 16px);
+                        height: clamp(8px, 2vw, 16px);
+                    }
                     
                     &:hover {
-                        color: $color-bg;
-                        background-color: $color-fg-secondary;
+                        background-color: #4ff5f5c0;
                     }
                 }
             }
