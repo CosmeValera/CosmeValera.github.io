@@ -70,17 +70,17 @@ span.colorful {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 96, 96, 0.85); /* When activated 0.85 opacity */
+                background: linear-gradient(to bottom, #4ff5f5cc, rgba(0, 0, 0, 0.6)); // Gradient overlay
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
-                opacity: 0; /* Hidden by default */
-                transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
+                opacity: 0; // Hidden by default
+                transition: opacity 0.3s ease-in-out; // Smooth transition effect
 
                 h3.card-title {
                     font-weight: bold;
-                    color: $color-fg-secondary;
+                    color: $color-fg;
                 }
                 p.card-technology {
                     margin-top: 0.2rem;
@@ -90,28 +90,32 @@ span.colorful {
                     font-family: Andika;
                 }
                 .learn-more-button {
-                    @include styled-button($color-fg-secondary, $color-fg-secondary);
+                    font-size: 2rem;
+                    padding: 12px 30px;
+                    border: 3px solid $color-fg-secondary;
+                    color: $color-fg-secondary;
+                    background-color: $color-bg;
+                    font-weight: bold;
+                    text-decoration: none;
                     margin: 0 3rem;
                     border-radius: 9999px;
+                    
+                    &:hover {
+                        color: $color-bg;
+                        background-color: $color-fg-secondary;
+                    }
                 }
             }
         }
 
         &:hover {
             .project-details-overlay {
-                opacity: 1;
-                border-radius: 3%;
-                border: 6px inset transparent;
-                border-image: linear-gradient(60deg, #ffffffcc, #4ff5f5cc) 1;
+                opacity: 1; // Show overlay on hover
             }
 
             .project-image {
                 transform: translateY(20px);
                 transition: transform 0.5s;
-                img {
-                    filter: blur(6px);
-                    -webkit-filter: blur(6px);
-                }
             }
         }
     }
