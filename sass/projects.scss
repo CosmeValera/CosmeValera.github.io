@@ -99,24 +99,29 @@
                     }
                 }
 
-                .learn-more-button {
-                    font-size: clamp(0.45rem, 2vw, 0.9rem);
-                    padding: 6px 10px;
-                    
-                    color: $color-bg-secondary;
-                    background-color: $color-fg-secondary;
-                    font-weight: bold;
-                    text-decoration: none;
-                    margin: 0;
-                    border-radius: 5px;
-                    width: fit-content;
-                    svg {
-                        width: clamp(8px, 2vw, 16px);
-                        height: clamp(8px, 2vw, 16px);
-                    }
-                    
-                    &:hover {
-                        background-color: #4ff5f5c0;
+                .card-buttons {
+                    display: flex;
+                    gap: 0.5rem;
+
+                    .card-button {
+                        font-size: clamp(0.45rem, 2vw, 0.9rem);
+                        padding: 6px 10px;
+                        
+                        color: $color-bg-secondary;
+                        background-color: $color-fg-secondary;
+                        font-weight: bold;
+                        text-decoration: none;
+                        margin: 0;
+                        border-radius: 5px;
+                        width: fit-content;
+                        svg {
+                            width: clamp(8px, 2vw, 16px);
+                            height: clamp(8px, 2vw, 16px);
+                        }
+                        
+                        &:hover {
+                            background-color: #4ff5f5c0;
+                        }
                     }
                 }
             }
