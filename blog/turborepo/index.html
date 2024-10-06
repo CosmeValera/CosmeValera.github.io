@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            
+  Blog | Cosme
+
+        </title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Inter:wght@400;600;700&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cosmevalera.github.io/fonts.css">
+        <link rel="stylesheet" href="https://cosmevalera.github.io/fontawesome/css/fontawesome.css">
+
+        
+          <link rel="icon" href="https://cosmevalera.github.io/favicon.jpg" />
+        
+  
+        
+  <link rel="stylesheet" href="https://cosmevalera.github.io/blog-post.css">
+
+    </head>
+    <body>
+        <main>
+            
+<div class="column right">
+  <nav class="nav-shared">
+    <ul>
+      <li>
+        <a href="/">
+          <img class="portrait-menu-item" src="https://cosmevalera.github.io/images/portrait2.jpg" alt="Portrait" />
+        </a>
+      </li>
+      
+        <li>
+          <a class="menu-item" href="&#x2F;projects&#x2F;">Projects</a>
+        </li>
+      
+        <li>
+          <a class="menu-item" href="&#x2F;blog&#x2F;">Blog</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <hr>
+
+  <div class="blog-post">
+      <h2 class="presentation-text">Optimizing Microfrontends with Turborepo</h2>
+      <h3 class="presentation-text">Use Turborepo to improve microfrontend workflows with parallel tasks and caching</h3>
+      <div class="post-content">
+          <!-- ![blog-cover](/images/blog/2024-10-05/turborepo-microfrontends.webp) -->
+<p><img src="/images/blog/2024-10-04/turborepo.png" alt="blog-cover" /></p>
+<h4><b>🧐 Why Turborepo?</b></h4>
+<p>Managing multiple microfrontends within a monorepo can be challenging. Turborepo offers a powerful solution to optimize workflows, run tasks in parallel, and cache results for faster builds.</p>
+<p><b>Parallel Tasks:</b> Run builds and tests across multiple microfrontends simultaneously.</p>
+<p><b>Intelligent Caching:</b> Save time by reusing outputs from previous runs.</p>
+<p><b>Scalable:</b> Manage as many microfrontends as needed, all within a single monorepo.
+If you're working with multiple apps, Turborepo is a game-changer for streamlining your workflows.</p>
+<p>Here's how you can set up and use Turborepo in your project:</p>
+<hr />
+<h4><b>🔧 1. Creating a Turborepo Project</b></h4>
+<p><b>1.1 Create a New Turborepo Project:</b> </p>
+<p>Instead of manually setting up Turborepo, you can use the following command to quickly scaffold a new Turborepo:</p>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+npx create-turbo@latest
+</div>
+<p><b>1.2 Place your microfrontends inside the <code>apps</code> directory::</b> </p>
+<pre data-lang="sh" class="language-sh "><code class="language-sh" data-lang="sh">  apps&#x2F;
+   ├── mfe1&#x2F;
+   ├── mfe2&#x2F;
+   └── mfe3&#x2F;
+  package.json
+  turbo.json
+</code></pre>
+<h4><b>📄 2. Important Configuration Files</b></h4>
+<p><code>package.json</code> defines your scripts, dependencies, and workspace structure</p>
+<p><code>turbo.json</code> configures how tasks are run across your monorepo. It also includes caching settings to speed up subsequent runs.</p>
+<h4><b>⚡ 3. Running Turborepo Commands</b></h4>
+After setting up Turborepo, you can easily manage all apps and packages with a few simple commands:
+<p><b>Install dependencies:</b></p>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0"> npm i </div>
+<b>Build all apps and packages:</b>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0"> npm run build </div>
+<b>Start the development environment:</b>
+<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0"> npm run dev </div>
+Run any of these commands twice, and Turborepo will use its smart caching to speed up subsequent builds.
+<hr />
+<p>Give it a try in your next project and experience the efficiency firsthand! 😍😍</p>
+
+      </div>
+  </div>
+</div>
+
+        </main>
+
+        <footer>
+          <a href="/sponsor"><i class="fa fa-magic dark-hover" aria-hidden="true"></i> Sponsor</a> | © 2024 Cosme Valera Reales
+        </footer>
+         
+    </body>
+</html>
+
+
