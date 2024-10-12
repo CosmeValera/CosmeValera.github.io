@@ -123,30 +123,7 @@
         }
       }
     }
-    @media (min-width: 1280px) {
-      .tier-cards {
-        flex-direction: row;
-        .tier-card {
-          .tier-card-header {
-            h1 {
-              font-size: 1.0rem;
-              margin-bottom: 0.65rem;
-            }
-            small {
-              font-size: 0.75rem;
-            }
-          }
-          .tier-card-content {
-            p {
-              font-size: 1.35rem;
-            }
-            li {
-              font-size: 0.85rem;
-            }
-          }
-        }
-      }
-    }
+
   }
 
   .common-hr {
@@ -246,16 +223,28 @@
         opacity: 1;
         margin-bottom: 20px;
       }
-    }
-    
-    @media (min-width: 1280px) {
-      .contribution {
-        .donation-options {
-          flex-direction: row;
-          gap: 10px;
+
+      .sponsor-note {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $color-bg; /* Light background to stand out */
+        border-left: 4px solid #ffcc00; /* Accent border to draw attention */
+        font-size: 0.9rem; /* Slightly smaller than body text */
+        color: #ccc; /* Darker text for readability */
+        line-height: 1.6;
+      
+        strong {
+          color: #f7931a; /* Highlight the word "Note" in a bolder color */
+        }
+        
+        a {
+          color: $color-fg-secondary;
+        
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
-
 }

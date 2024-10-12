@@ -69,5 +69,35 @@ main {
             }
         }
     }
-    
+
+    @media (min-width: $break-extra-large) {
+        #sponsor #section-tiers .tier-cards {
+            flex-direction: row;
+            .tier-card {
+                .tier-card-header {
+                    h1 {
+                        font-size: 1.0rem;
+                        margin-bottom: 0.65rem;
+                    }
+                    small {
+                        font-size: 0.75rem;
+                    }
+                    .tier-card-content {
+                        p {
+                            font-size: 1.35rem;
+                        }
+                        li {
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+            }
+        }
+        #sponsor #section-contribution .contribution {
+            .donation-options {
+                flex-direction: row;
+                gap: 10px;
+            }
+        }
+    }
 }

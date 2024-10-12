@@ -29,6 +29,10 @@ footer {
     text-align: center;
     a {
         color: $color-fg-secondary;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     @media screen and (max-width: $break-large) {
