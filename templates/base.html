@@ -21,11 +21,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
         <link rel="stylesheet" href="{{ get_url(path='fontawesome/css/fontawesome.css') }}">
-
+        <script src="https://kit.fontawesome.com/cfd779d106.js" crossorigin="anonymous"></script>
+        
         {% if config.extra.favicon %}
-          <link rel="icon" href="{{ get_url(path=config.extra.favicon) }}" />
+        <link rel="icon" href="{{ get_url(path=config.extra.favicon) }}" />
         {% endif %}
-  
+        
         {% block styles%} {% endblock %}
     </head>
     <body>
