@@ -70,6 +70,7 @@ h2 {
     padding: 10px;
     border-radius: 50%;
     transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
 }
 
 .menu-item a:hover {
@@ -79,22 +80,22 @@ h2 {
 
 .menu-item a i {
     font-size: 24px;
+    display: block;
 }
 
-.menu-label {
+.menu-item a .menu-label {
     display: block;
-    text-align: center;
     font-size: 14px;
     margin-top: 5px;
-    color: #f58220;
+    color: white; /* Update to match the overall hover color */
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
 }
 
-/* Animation for hover */
-.menu-item:hover .menu-label {
-    color: #f4511e;
+.menu-item a:hover .menu-label {
+    color: white;
 }
+
 ///////////////////////
 // END: LATERAL-MENU //
 ///////////////////////
