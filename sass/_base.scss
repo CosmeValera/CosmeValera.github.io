@@ -49,13 +49,14 @@ h2 {
 //   LATERAL-MENU    //
 ///////////////////////
 .lateral-menu {
+    display: flex;
+    align-items: flex-end;
     position: fixed;
     top: 50%;
-    right: 20px;
+    right: 20px; /* Keep the menu on the right */
     transform: translateY(-50%);
-    display: flex;
     flex-direction: column;
-    z-index: 1000;
+    z-index: 1000;    
 }
 
 .menu-item {
@@ -64,37 +65,55 @@ h2 {
 }
 
 .menu-item a {
-    display: block;
-    background-color: #f58220;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the icon to the right */
+    background-color: black;
     color: white;
     padding: 10px;
     border-radius: 50%;
-    transition: transform 0.3s, background-color 0.3s;
-    text-align: center;
-}
-
-.menu-item a:hover {
-    transform: scale(1.1);
-    background-color: #f4511e;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 50px; /* Initially only show the icon */
+    height: 50px;
+    position: relative;
 }
 
 .menu-item a i {
     font-size: 24px;
     display: block;
+    transition: transform 0.3s ease;
+    margin-left: 10px; /* Add margin to create space when expanded */
 }
 
 .menu-item a .menu-label {
-    display: block;
+    display: inline-block;
     font-size: 14px;
-    margin-top: 5px;
-    color: white; /* Update to match the overall hover color */
+    margin-right: 10px; /* Place the text on the left */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50px); /* Move the text off-screen */
+    color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
 }
 
-.menu-item a:hover .menu-label {
-    color: white;
+.menu-item a:hover {
+    width: 150px; /* Expand width to the left */
+    background-color: #f4511e;
+    border-radius: 30px; /* Rounded rectangle when expanded */
 }
+
+.menu-item a:hover .menu-label {
+    opacity: 1; /* Show the label on hover */
+    transform: translateX(0); /* Slide the text into view */
+}
+
+.menu-item a:hover i {
+    transform: scale(1.1);
+}
+
 
 ///////////////////////
 // END: LATERAL-MENU //
