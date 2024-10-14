@@ -84,7 +84,8 @@ h2 {
     font-size: 24px;
     display: block;
     transition: transform 0.3s ease;
-    margin-left: 10px; /* Add margin to create space when expanded */
+    // margin-right: 10px;
+    margin: 0 10px 0 10px;
 }
 
 .menu-item a .menu-label {
