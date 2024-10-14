@@ -84,7 +84,6 @@ h2 {
     font-size: 24px;
     display: block;
     transition: transform 0.3s ease;
-    // margin-right: 10px;
     margin: 0 10px 0 10px;
 }
 
@@ -95,14 +94,15 @@ h2 {
     opacity: 0; /* Initially hide the text */
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(-50px); /* Move the text off-screen */
-    color: white;
+    color: $color-fg-secondary;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
 }
 
 .menu-item a:hover {
     width: 150px; /* Expand width to the left */
-    background-color: #f4511e;
+    background-color: $color-bg-secondary;
+    color: $color-fg-secondary;
     border-radius: 30px; /* Rounded rectangle when expanded */
 }
 
