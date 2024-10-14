@@ -44,3 +44,57 @@ h2 {
         font-size: calc(min(3rem, 8vw))!important;
     }
 }
+
+///////////////////////
+//   LATERAL-MENU    //
+///////////////////////
+.lateral-menu {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.menu-item {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu-item a {
+    display: block;
+    background-color: #f58220;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-item a:hover {
+    transform: scale(1.1);
+    background-color: #f4511e;
+}
+
+.menu-item a i {
+    font-size: 24px;
+}
+
+.menu-label {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #f58220;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+/* Animation for hover */
+.menu-item:hover .menu-label {
+    color: #f4511e;
+}
+///////////////////////
+// END: LATERAL-MENU //
+///////////////////////
