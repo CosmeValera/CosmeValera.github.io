@@ -5,6 +5,7 @@ main {
     .column.left {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         flex: 3;
         text-align: end;
     }
