@@ -1,102 +1,165 @@
-main {
-    @media screen and (min-width: $break-small) {
-        .filter-buttons {
-            .filter-button {
-                &:hover {
-                    color: $color-fg-secondary; /* Computer: filters have a hover blue */
-                }
-            }
-        }
-    }
-    
-    /* Phone & tablets: column left goes on top of column right */
-    @media screen and (max-width: $break-large) {
-        flex-direction: column;
-        margin-top: 0;
-    
-        .column.left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+body {
+    .lateral-menu {
+        @media screen and (min-width: $break-medium) {
+                display: flex;
+                align-items: flex-end;
+                position: fixed;
+                top: 50%;
+                right: 20px; /* Keep the menu on the right */
+                transform: translateY(-50%);
+                flex-direction: column;
+                z-index: 1000;    
+                width: unset;
+                background-color: transparent;
             
-            nav.nav-index {
-                margin-bottom: 30px;
-                ul {
-                    padding: 0px;
-                    margin: 0px 0px 16px 0px;
-                    li {
-                        a.menu-item {
-                            margin: auto;
+                .menu-item-container {
+                    margin: 10px 0;
+                    text-align: center;
+                    
+                    .menu-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end; /* Align the icon to the right */
+                        background-color: black;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 50%;
+                        transition: all 0.3s ease;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 50px;
+                        height: 50px;
+                        position: relative;
+                        
+                        &:hover {
+                            width: 150px; /* Expand width to the left */
+                            border-radius: 30px;
+            
+                            .menu-label {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+                            
+                            .menu-icon {
+                                opacity: 1;
+                                transform: scale(1.15);
+                            }
+                        }
+                        
+                        .menu-icon {
+                            opacity: 0.9;
+                            font-size: 24px;
+                            display: block;
+                            transition: transform 0.3s ease;
+                            margin: 0 2px 0 10px;
+                        }
+            
+                        .menu-label {
+                            display: inline-block;
+                            font-size: 14px;
+                            margin-right: 10px; /* Place the text on the left */
+                            opacity: 0; /* Initially hide the text */
+                            transition: opacity 0.3s ease, transform 0.3s ease;
+                            transform: translateX(+50px); /* Move the text off-screen */
+                            font-family: Andika;
+                            font-weight: 700;
                         }
                     }
                 }
-            }
-            
-            img.portrait-index {
-                margin: 0;
+        }
+    }
+
+    main {
+        @media screen and (min-width: $break-small) {
+            .filter-buttons {
+                .filter-button {
+                    &:hover {
+                        color: black; /* Computer: filters have a hover blue */
+                    }
+                }
             }
         }
         
-        .column.right {
-            h1 {
-                margin-top: 0;
-            }
-        }    
-    }
-    @media screen and (max-width: $break-medium) {
-        .column.right {
-            img.portrait-menu-item {
-                max-width: 60px;
-                max-height: 60px;
-            }
-        }    
-    }
-
-    @media screen and (max-width: $break-medium) {
-        .filter-buttons {
-            overflow: auto; /* Phone: scrollbar for filter buttons*/
+        /* Phone & tablets: column left goes on top of column right */
+        @media screen and (max-width: $break-large) {
             flex-direction: column;
-            gap: 0.4rem;
-            margin: 2vw 4vw;
-            button.filter-button {
-                border-radius: 5px;
-            }
-        }
-        .column.right {
-            img.portrait-menu-item {
-                max-width: clamp(40px, calc(11vw + 4px), 55px);
-                max-height: clamp(40px, calc(11vw + 4px), 55px);
-            }
-        }
-    }
-
-    @media (min-width: $break-extra-large) {
-        #sponsor #section-tiers .tier-cards {
-            flex-direction: row;
-            .tier-card {
-                .tier-card-header {
-                    h1 {
-                        font-size: 1.0rem;
-                        margin-bottom: 0.65rem;
-                    }
-                    small {
-                        font-size: 0.75rem;
-                    }
-                    .tier-card-content {
-                        p {
-                            font-size: 1.35rem;
-                        }
+            margin-top: 0;
+        
+            .column.left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                nav.nav-index {
+                    margin-bottom: 30px;
+                    ul {
+                        padding: 0px;
+                        margin: 0px 0px 16px 0px;
                         li {
-                            font-size: 0.85rem;
+                            a.menu-item {
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+                
+                img.portrait-index {
+                    margin: 0;
+                }
+            }
+            
+            .column.right {
+                h1 {
+                    margin-top: 0;
+                }
+            }    
+        }
+        @media screen and (max-width: $break-medium) {
+            .filter-buttons {
+                overflow: auto; /* Phone: scrollbar for filter buttons*/
+                flex-direction: column;
+                gap: 0.4rem;
+                margin: 2vw 4vw;
+                button.filter-button {
+                    border-radius: 5px;
+                }
+            }
+            .column.right {
+                img.portrait-menu-item {
+                    max-width: clamp(40px, calc(11vw + 4px), 55px);
+                    max-height: clamp(40px, calc(11vw + 4px), 55px);
+                }
+            }
+        }
+
+        @media (min-width: $break-extra-large) {
+            #sponsor #section-tiers .tier-cards {
+                flex-direction: row;
+                .tier-card {
+                    .tier-card-header {
+                        h1 {
+                            font-size: 1.0rem;
+                            margin-bottom: 0.65rem;
+                        }
+                        small {
+                            font-size: 0.75rem;
+                        }
+                        .tier-card-content {
+                            p {
+                                font-size: 1.35rem;
+                            }
+                            li {
+                                font-size: 0.85rem;
+                            }
                         }
                     }
                 }
             }
-        }
-        #sponsor #section-contribution .contribution {
-            .donation-options {
-                flex-direction: row;
-                gap: 10px;
+            #sponsor #section-contribution .contribution {
+                .donation-options {
+                    flex-direction: row;
+                    gap: 10px;
+                }
             }
         }
     }

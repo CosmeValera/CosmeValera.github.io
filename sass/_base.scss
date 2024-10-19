@@ -57,69 +57,45 @@ h1.page-title {
 ///////////////////////
 .lateral-menu {
     display: flex;
-    align-items: flex-end;
-    position: fixed;
-    top: 50%;
-    right: 20px; /* Keep the menu on the right */
-    transform: translateY(-50%);
-    flex-direction: column;
-    z-index: 1000;    
+    flex-direction: column; // Stack items vertically for phones if needed
+    justify-content: flex-start;
+    width: 100%; /* Stretch the menu across the screen */
+    padding: 5px 0;
+    top: 0; /* Pin it to the top */
+    background-color: $color-bg;
+    z-index: 999; /* Ensure it stays above other content */
 
     .menu-item-container {
-        margin: 10px 0;
+        margin: 0;
+        flex-grow: 1; /* Make each menu item take up equal space */
         text-align: center;
-        
+        margin-bottom: 10px; // Add some space between items when stacked
+
         .menu-item {
             display: flex;
             align-items: center;
-            justify-content: flex-end; /* Align the icon to the right */
+            justify-content: center;
             background-color: black;
             color: white;
-            padding: 10px;
-            border-radius: 50%;
+            padding: 8px 10px;
+            border-radius: 20px;
             transition: all 0.3s ease;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 50px;
-            height: 50px;
-            position: relative;
-            
-            &:hover {
-                width: 150px; /* Expand width to the left */
-                border-radius: 30px;
+            width: 100%;
+            height: 40px;
 
-                .menu-label {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-                
-                .menu-icon {
-                    opacity: 1;
-                    transform: scale(1.15);
-                }
-            }
-            
             .menu-icon {
-                opacity: 0.9;
-                font-size: 24px;
-                display: block;
-                transition: transform 0.3s ease;
-                margin: 0 2px 0 10px;
+                font-size: 18px; // Slightly smaller for mobile
+                margin-right: 5px;
             }
 
             .menu-label {
-                display: inline-block;
-                font-size: 14px;
-                margin-right: 10px; /* Place the text on the left */
-                opacity: 0; /* Initially hide the text */
-                transition: opacity 0.3s ease, transform 0.3s ease;
-                transform: translateX(+50px); /* Move the text off-screen */
-                font-family: Andika;
-                font-weight: 700;
+                font-size: 12px; // Slightly smaller text for mobile
+                font-weight: 600;
             }
         }
     }
 }
+
 ///////////////////////
 // END: LATERAL-MENU //
 ///////////////////////
