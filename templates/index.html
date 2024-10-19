@@ -10,15 +10,6 @@
 
 {% block content %}
     <div class="column left">
-        <nav class="nav-index">
-            <ul>
-                {% for item in config.extra.nav %}
-                    <li class="animate__animated animate__fadeInUp">
-                        <a class="{{ item.class }} index-nav" href="{{ item.path }}">{{ item.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
         <img class="portrait-index animate__animated animate__rotateInDownLeft" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
     </div>
     <div class="column right">

@@ -3,6 +3,8 @@ main {
     margin-top: 5vh;
     
     .column.left {
+        display: flex;
+        align-items: center;
         flex: 3;
         text-align: end;
     }
