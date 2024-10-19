@@ -1,23 +1,6 @@
 @import 'main';
 
 .column.left {
-    nav.nav-index {
-        ul {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1.5rem;
-            margin-right: 2rem;
-
-            li {
-                list-style-type: none;
-
-                a.menu-item  {
-                    @include styled-button($color-fg, $color-fg);
-                }
-            }
-        }
-    }
-
     img.portrait-index {
         box-sizing: border-box;
         object-fit: cover;

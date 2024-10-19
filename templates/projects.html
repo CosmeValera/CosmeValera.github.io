@@ -14,21 +14,7 @@
 
 {% block content %}
 <div class="column right">
-  <nav class="nav-shared">
-    <ul>
-      <li>
-        <a href="/">
-          <img class="portrait-menu-item" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
-        </a>
-      </li>
-      {% for item in config.extra.nav %}
-        <li>
-          <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <hr>
+  <h1 class="page-title">Projects</h1>
 
   <div class="filter-buttons">
     <button class="filter-button selected-filter" data-filter="All">All</button>
@@ -38,7 +24,6 @@
     <button class="filter-button" data-filter="Java">Java</button>
     <button class="filter-button" data-filter="Android">Android</button>
   </div>
-
 
   <div class="row project-cards-row">
 

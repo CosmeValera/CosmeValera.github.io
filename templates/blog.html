@@ -10,22 +10,8 @@
 
 {% block content %}
 <div class="column right">
-  <nav class="nav-shared">
-    <ul>
-      <li>
-        <a href="/">
-          <img class="portrait-menu-item" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
-        </a>
-      </li>
-      {% for item in config.extra.nav %}
-        <li>
-          <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <hr>
-
+  <h1 class="page-title">Blog</h1>
+  
   <div class="blog-cards">
     {% for post in section.pages %}
     <a class="blog-card" href="{{ post.permalink }}">

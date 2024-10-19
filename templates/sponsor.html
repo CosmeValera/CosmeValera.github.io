@@ -11,24 +11,8 @@
 {% block content %}
 
 <div class="column right">
-    <nav class="nav-shared">
-      <ul>
-        <li>
-          <a href="/">
-            <img class="portrait-menu-item" src="{{ get_url(path='images/portrait2.jpg') }}" alt="Portrait" />
-          </a>
-        </li>
-        {% for item in config.extra.nav %}
-          <li>
-            <a class="{{ item.class }}" href="{{ item.path }}">{{ item.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <hr>
-  
     <div id="sponsor">
-        <h1>Become a Sponsor</h1>
+        <h1 class="page-title">Become a Sponsor</h1>
             <section id="section-reasons-sponsor">
                 <h2 class="sponsor-title">Why Become a Sponsor?</h2>
                 <div class="sponsor-features">
