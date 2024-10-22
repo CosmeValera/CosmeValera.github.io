@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+  Blog | Cosme
+</title>
+
+        <link rel="stylesheet" href="https://cosmevalera.github.io/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Inter:wght@400;600;700&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cosmevalera.github.io/fonts.css">
+        <link rel="stylesheet" href="https://cosmevalera.github.io/fontawesome/css/fontawesome.css">
+        <script src="https://kit.fontawesome.com/cfd779d106.js" crossorigin="anonymous"></script>
+        
+        
+        <link rel="icon" href="https://cosmevalera.github.io/favicon.jpg" />
+        
+        
+        
+  <link rel="stylesheet" href="https://cosmevalera.github.io/blog-post.css">
+
+    </head>
+    <body>
+        <!-- Lateral Floating Menu -->
+        <div class="lateral-menu">
+          <div class="menu-item-container">
+            <a class="menu-item" href="/">
+              <span class="menu-label">Home</span>
+              <i class="menu-icon fas fa-home"></i>
+            </a>
+          </div>
+          <div class="menu-item-container">
+            <a class="menu-item" href="/projects">
+              <span class="menu-label">Projects</span>
+              <i class="menu-icon fas fa-briefcase"></i>
+            </a>
+          </div>
+          <div class="menu-item-container">
+            <a class="menu-item" href="/blog">
+              <span class="menu-label">Blog</span>
+              <i class="menu-icon fas fa-pencil-alt"></i>
+            </a>
+          </div>
+        </div>
+        <!-- END: Lateral Floating Menu -->
+        
+        <main>
+            
+<div class="column right">
+  <div class="blog-post">
+      <h2 class="presentation-text">Vite vs Webpack (MF)</h2>
+      <h3 class="presentation-text">Comparing Vite and Webpack for microfrontend development</h3>
+      <div class="post-content">
+          <p><img src="/images/blog/2024-07-01/vite-vs-webpack.webp" alt="blog-cover" /></p>
+<h4><b>Overview</b></h4>
+<p><b>Vite</b> and <b>Webpack</b> are popular module bundlers with different approaches, especially regarding microfrontends.</p>
+<h4><b>Key Points of Comparison</b></h4>
+<p><b>1. Module Federation</b></p>
+<ul>
+<li><b>Webpack:</b> Uses <i>ModuleFederationPlugin</i> for sharing code.</li>
+<li><b>Vite:</b> Uses <i>vite-plugin-federation</i>.</li>
+</ul>
+<p><b>2. Development Experience</b></p>
+<ul>
+<li><b>Hot Reloading:</b>
+<ul>
+<li><b>Webpack:</b> Supports live hot reloading.</li>
+<li><b>Vite:</b> Requires build and preview commands, not as fast as Webpack.</li>
+</ul>
+</li>
+<li><b>Running All Microfrontends:</b> Vite needs all microfrontends running for the host to work.</li>
+</ul>
+<p><b>3. Remote Entry Generation</b></p>
+<ul>
+<li><b>Webpack:</b> Generates remoteEntry.js during development.</li>
+<li><b>Vite:</b> Generates remoteEntry.js only during the build.</li>
+</ul>
+<p><b>4. Compatibility</b></p>
+<ul>
+<li><b>Interoperability</b> between Webpack and Vite requires special handling for proper communication.</li>
+</ul>
+<p><img src="/images/blog/general/garlands.png" alt="garnalds" /></p>
+<h4><b>Resources</b></h4>
+<ul>
+<li>
+<p>Learn to create a <b>Webpack</b> project with MF: <a target="_blank" href="https://youtu.be/lKKsjpH09dU?si=lVE58HAuWyddfuRe" class="presentation-text">Click here</a></p>
+</li>
+<li>
+<p>Learn to create a <b>VITE</b> project with MF: <a target="_blank" href="https://www.youtube.com/watch?si=D_stg3jW_fGL2uKh&v=t-nchkL9yIg&feature=youtu.be" class="presentation-text">Click here</a></p>
+</li>
+</ul>
+<h4><b>Conclusion</b></h4>
+<p>Choosing <b>Webpack</b> or <b>Vite</b> depends on your project needs. <b>Webpack</b> works well with microfrontends and has a mature ecosystem. <b>Vite</b> is faster for development and builds but needs all microfrontends built and previewed for Module Federation.</p>
+
+      </div>
+  </div>
+</div>
+
+        </main>
+
+        <footer>
+          <a href="/sponsor"><i class="fa fa-magic dark-hover" aria-hidden="true"></i> Sponsor</a> | © 2024 Cosme Valera Reales
+        </footer>
+         
+    </body>
+</html>
