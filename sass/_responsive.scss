@@ -90,6 +90,12 @@ body {
                 }
             }
         }
+
+        @media screen and (min-width: $break-medium) {
+            .column.right .description{
+                padding-right: 5rem;
+            }
+        }
         
         /* Phone & tablets: column left goes on top of column right */
         @media screen and (max-width: $break-large) {
