@@ -51,12 +51,6 @@
     }
 }
 
-@mixin blog-cards-and-blog-post-styles() {
-    max-width: 700px;
-    padding-top: 1.5rem;
-    margin: 0 auto;
-}
-
 @mixin card-a-colors-dark {
     background-color: $color-bg-secondary;
     border: 4px solid $color-fg-secondary;

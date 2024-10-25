@@ -1,9 +1,10 @@
 @import 'main';
 
 .blog-post {
-    @include blog-cards-and-blog-post-styles();
+    max-width: 700px;
+    margin: 0 auto;
 
-    .title-text {
+    .blog-post-title {
         text-align: center;
         margin-bottom: 2rem;
         margin-top: 0;
