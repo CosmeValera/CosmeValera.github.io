@@ -23,13 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 prevButton.classList.remove("selected-filter");
                 button.classList.add("selected-filter");
                 currentSelectedFilter = selectedFilter;
-            } else {
-                if (currentSelectedFilter !== ALL_FILTER_VALUE) {
-                    const allButton = document.querySelector(`[data-filter=${ALL_FILTER_VALUE}]`);
-                    allButton.classList.add("selected-filter");
-                    button.classList.remove("selected-filter");
-                    currentSelectedFilter = ALL_FILTER_VALUE;
-                }
+            } else if (currentSelectedFilter !== ALL_FILTER_VALUE) {
+                const allButton = document.querySelector(`[data-filter=${ALL_FILTER_VALUE}]`);
+                allButton.classList.add("selected-filter");
+                button.classList.remove("selected-filter");
+                currentSelectedFilter = ALL_FILTER_VALUE;
             }
 
             // Filter cards

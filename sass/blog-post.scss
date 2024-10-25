@@ -3,6 +3,23 @@
 .blog-post {
     @include blog-cards-and-blog-post-styles();
 
+    .title-text {
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: 0;
+        text-wrap: balance;
+        color: white;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    }
+    
+    .presentation-text {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-wrap: balance;
+        color: $color-fg-secondary;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
     p:has(img[alt=blog-cover], img[alt=garnalds]) {
         text-align: center;
 
