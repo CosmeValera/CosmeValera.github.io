@@ -22,7 +22,7 @@ npm i
 ```
 3. Start the project
 ```
-zola serve
+npm start
 ```
 
 Open [http://localhost:1111/](http://localhost:1111/) to view it in your browser.
