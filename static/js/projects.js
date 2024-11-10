@@ -1,8 +1,17 @@
-const ALL_FILTER_VALUE = "All";
-const JAVA_FILTER_VALUE = "Java";
-const JAVASCRIPT_FILTER_VALUE = "JavaScript";
+function clickFilterToggleButton() {
+    const filterToggleButton = document.querySelector('.filter-toggle-button');
+    const filterDropdown = document.querySelector('.filter-dropdown');
 
-document.addEventListener("DOMContentLoaded", function () {
+    filterToggleButton.addEventListener('click', () => {
+        filterDropdown.classList.toggle('show'); // Toggle the "show" class to display/hide filters
+    });
+}
+
+function clickFilterRendersCards() {
+    const ALL_FILTER_VALUE = "All";
+    const JAVA_FILTER_VALUE = "Java";
+    const JAVASCRIPT_FILTER_VALUE = "JavaScript";
+
     const filterButtons = document.querySelectorAll(".filter-button");
     const projectCards = document.querySelectorAll(".project-card");
     const animationClasses = ["animate__bounceInLeft", "animate__bounceIn", "animate__bounceInRight"];
@@ -68,4 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }));
         });
     });
+}
+
+//////////
+// MAIN //
+//////////
+document.addEventListener("DOMContentLoaded", function () {
+
+    clickFilterToggleButton() // PHONE: Makes filter buttons appear
+
+    clickFilterRendersCards() // REACT, ANGULAR, NODE ...
+
 });

@@ -5,8 +5,19 @@
     justify-content: center;
     margin-bottom: 24px;
 
-    button.filter-button {
-        background-color: darken($color-fg-secondary, 33%); // Tag background color
+    .filter-toggle-button {
+        display: none; // Hide on desktop
+        background: $color-fg-secondary;
+        color: $color-bg;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .filter-button {
+        background-color: darken($color-fg-secondary, 33%);
         border: none;
         cursor: pointer;
         padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
@@ -14,18 +25,18 @@
         font-size: clamp(0.45rem, 1.2vw, 0.9rem);
         font-weight: bold;
         text-transform: uppercase;
-        color: $color-bg; // Adjust text color as needed
-        border-radius: 9999px; // Make it a pill shape
+        color: $color-bg;
+        border-radius: 9999px;
         transition: background-color 0.3s ease-in-out;
 
         &.selected-filter {
-            background-color: darken($color-fg-secondary, 17%); // Color for the selected filter
-            color: $color-bg; // Text color for the selected filter
+            background-color: darken($color-fg-secondary, 17%);
+            color: $color-bg;
         }
 
         &:hover {
-            background-color: $color-fg-secondary; // Darken background on hover
-            color: black;
+            background-color: $color-fg-secondary;
+            color: $color-bg;
         }
     }
 }

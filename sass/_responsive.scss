@@ -133,19 +133,34 @@ body {
                 flex-direction: column;
                 gap: 0.4rem;
                 margin: 2vw 4vw;
-                button.filter-button {
-                    border-radius: 5px;
-                    
-                    &:not(.selected-filter)  { // THIS IS TO REMOVE THE EFFECT OF HOVERING IN PHONE
-                        background-color: darken($color-fg-secondary, 33%)!important;
-                        color: $color-bg!important;
-                    }
+
+                .filter-toggle-button {
+                    display: block; // Show the toggle button only on mobile
                 }
-            }
-            .column.right {
-                img.portrait-menu-item {
-                    max-width: clamp(40px, calc(11vw + 4px), 55px);
-                    max-height: clamp(40px, calc(11vw + 4px), 55px);
+    
+                .filter-dropdown {
+                    display: none; // Initially hide filter options on mobile
+                    flex-direction: column;
+                    background: $color-bg;
+                    padding: 10px;
+                    gap: 0.4rem;
+                    margin-top: 0.4rem;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                    &.show {
+                        display: flex;
+                    }
+
+                    .filter-button {
+                        margin: 5px 0;
+                        border-radius: 5px;
+
+                        &:not(.selected-filter) { // Disable hover effect on mobile
+                            background-color: darken($color-fg-secondary, 33%)!important;
+                            color: $color-bg!important;
+                        }
+                    }
                 }
             }
         }

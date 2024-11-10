@@ -16,15 +16,25 @@
 <div class="column right">
   <h1 class="page-title">Projects</h1>
 
+  <!-- FILTER -->
   <div class="filter-buttons">
-    <button class="filter-button selected-filter" data-filter="All">All</button>
-    <button class="filter-button" data-filter="React">React</button>
-    <button class="filter-button" data-filter="Angular">Angular</button>
-    <button class="filter-button" data-filter="Node">Node</button>
-    <button class="filter-button" data-filter="Java">Java</button>
-    <button class="filter-button" data-filter="Android">Android</button>
-  </div>
+    <button class="filter-toggle-button"> 
+      <i class="fas fa-filter"></i>
+      <span>Filter</span>
+    </button>
 
+    <div class="filter-dropdown">
+      <button class="filter-button selected-filter" data-filter="All">All</button>
+      <button class="filter-button" data-filter="React">React</button>
+      <button class="filter-button" data-filter="Angular">Angular</button>
+      <button class="filter-button" data-filter="Node">Node</button>
+      <button class="filter-button" data-filter="Java">Java</button>
+      <button class="filter-button" data-filter="Android">Android</button>
+    </div>
+  </div>
+  <!-- END: FILTER -->
+
+  <!-- CARDS -->
   <div class="row project-cards-row">
 
     <div class="project-card col-12 col-md-6 col-xl-4 animate__animated animate__bounceInLeft">
@@ -148,6 +158,7 @@
     </div>
 
   </div>
+  <!-- END: CARDS -->
 
 </div>
 {% endblock content %}
