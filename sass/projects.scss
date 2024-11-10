@@ -5,31 +5,30 @@
     justify-content: center;
     margin-bottom: 24px;
 
-    .filter-toggle-button {
-        display: none; // Hide on desktop
-        background: $color-fg-secondary;
-        color: $color-bg;
-        padding: 8px 16px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 5px;
-    }
+    .toggle-buttons-wrapper {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+        justify-content: center;
 
-    .toggle-hover-button {
-        display: none; // Hide on desktop
-        background: $color-fg-secondary;
-        color: $color-bg;
-        padding: 8px 16px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 5px;
-
-        i {
-            margin-right: 5px;
+        .filter-toggle-button, .toggle-hover-button {
+            display: none; // Hide on desktop
+            background: $color-fg-secondary;
+            color: $color-bg;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+    
+            i {
+                margin-right: 5px;
+            }
         }
+        .filter-toggle-button { flex: 3; }
+        .toggle-hover-button{ flex: 5; }
     }
+    
 
     .filter-button {
         background-color: darken($color-fg-secondary, 33%);
