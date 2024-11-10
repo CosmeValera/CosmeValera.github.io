@@ -7,6 +7,17 @@ function clickFilterToggleButton() {
     });
 }
 
+function clickToggleHoverButton() {
+    const toggleHoverButton = document.querySelector('.toggle-hover-button');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    toggleHoverButton.addEventListener('click', () => {
+        projectCards.forEach((card) => {
+            card.classList.toggle('hovered'); // Toggle hover effect on each card
+        });
+    });
+}
+
 function clickFilterRendersCards() {
     const ALL_FILTER_VALUE = "All";
     const JAVA_FILTER_VALUE = "Java";
@@ -85,6 +96,8 @@ function clickFilterRendersCards() {
 document.addEventListener("DOMContentLoaded", function () {
 
     clickFilterToggleButton() // PHONE: Makes filter buttons appear
+    
+    clickToggleHoverButton()
 
     clickFilterRendersCards() // REACT, ANGULAR, NODE ...
 

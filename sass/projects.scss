@@ -16,6 +16,21 @@
         border-radius: 5px;
     }
 
+    .toggle-hover-button {
+        display: none; // Hide on desktop
+        background: $color-fg-secondary;
+        color: $color-bg;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
     .filter-button {
         background-color: darken($color-fg-secondary, 33%);
         border: none;
@@ -138,7 +153,7 @@
             }
         }
 
-        &:hover {
+        &:hover, &.hovered {
             .project-details-overlay {
                 opacity: 1; // Show overlay on hover
             }
