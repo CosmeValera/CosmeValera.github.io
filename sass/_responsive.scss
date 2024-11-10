@@ -88,16 +88,6 @@ body {
     }
 
     main {
-        @media screen and (min-width: $break-small) {
-            .filter-buttons {
-                .filter-button {
-                    &:hover {
-                        color: black;
-                    }
-                }
-            }
-        }
-
         @media screen and (min-width: $break-medium) {
             .column.right .description{
                 padding-right: 5rem;
@@ -140,12 +130,16 @@ body {
         }
         @media screen and (max-width: $break-medium) {
             .filter-buttons {
-                overflow: auto; /* Phone: scrollbar for filter buttons*/
                 flex-direction: column;
                 gap: 0.4rem;
                 margin: 2vw 4vw;
                 button.filter-button {
                     border-radius: 5px;
+                    
+                    &:not(.selected-filter)  { // THIS IS TO REMOVE THE EFFECT OF HOVERING IN PHONE
+                        background-color: darken($color-fg-secondary, 33%)!important;
+                        color: $color-bg!important;
+                    }
                 }
             }
             .column.right {
