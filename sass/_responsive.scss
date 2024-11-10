@@ -139,7 +139,7 @@ body {
                 }
     
                 .filter-dropdown {
-                    display: flex; // Initially hide filter options on mobile
+                    display: none; // Initially hide filter options on mobile
                     flex-direction: column;
                     background: darken($color-fg-secondary, 47%);
                     padding: 10px;
