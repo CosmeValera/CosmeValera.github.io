@@ -137,15 +137,13 @@ body {
                 .toggle-buttons-wrapper {
                     .filter-toggle-button, .toggle-hover-button {
                         display: block; // Show the toggle button only on mobile
-                    }
 
-                    .filter-toggle-button {
-                        .filter-icon, .close-icon {
+                        i.show {
+                            display: inline;
+                        }
+    
+                        i.no-show {
                             display: none;
-
-                            &.show {
-                                display: inline;
-                            }
                         }
                     }
                 }

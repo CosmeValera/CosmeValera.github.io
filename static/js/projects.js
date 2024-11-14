@@ -9,18 +9,28 @@ function clickFilterToggleButton() {
 
         // Toggle the "show" class on the icons to switch between filter and close icons
         filterIcon.classList.toggle('show');
+        filterIcon.classList.toggle('no-show');
         closeIcon.classList.toggle('show');
+        closeIcon.classList.toggle('no-show');
     });
 }
 
 function clickToggleHoverButton() {
     const toggleHoverButton = document.querySelector('.toggle-hover-button');
     const projectCards = document.querySelectorAll('.project-card');
+    const eyeOpenIcon = toggleHoverButton.querySelector('.fa-eye');
+    const eyeClosedIcon = toggleHoverButton.querySelector('.fa-eye-slash');
     
     toggleHoverButton.addEventListener('click', () => {
         projectCards.forEach((card) => {
             card.classList.toggle('hovered'); // Toggle hover effect on each card
         });
+
+        // Toggle the "show" class on the icons to switch between eyeOpen and eyeClosed icons
+        eyeOpenIcon.classList.toggle('show');
+        eyeOpenIcon.classList.toggle('no-show');
+        eyeClosedIcon.classList.toggle('show');
+        eyeClosedIcon.classList.toggle('no-show');
     });
 }
 
