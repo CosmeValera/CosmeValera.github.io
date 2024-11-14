@@ -20,10 +20,6 @@
             cursor: pointer;
             font-weight: bold;
             border-radius: 5px;
-    
-            i {
-                margin-right: 5px;
-            }
         }
         .filter-toggle-button { flex: 3; }
         .toggle-hover-button{ flex: 5; }
@@ -163,4 +159,9 @@
             }
         }
     }
+}
+
+
+i {
+    margin-right: 4px;
 }
