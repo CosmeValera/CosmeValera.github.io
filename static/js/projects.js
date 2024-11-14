@@ -1,9 +1,15 @@
 function clickFilterToggleButton() {
     const filterToggleButton = document.querySelector('.filter-toggle-button');
     const filterDropdown = document.querySelector('.filter-dropdown');
+    const filterIcon = document.querySelector('.filter-icon');
+    const closeIcon = document.querySelector('.close-icon');
 
     filterToggleButton.addEventListener('click', () => {
         filterDropdown.classList.toggle('show'); // Toggle the "show" class to display/hide filters
+
+        // Toggle the "show" class on the icons to switch between filter and close icons
+        filterIcon.classList.toggle('show');
+        closeIcon.classList.toggle('show');
     });
 }
 

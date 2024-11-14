@@ -138,6 +138,16 @@ body {
                     .filter-toggle-button, .toggle-hover-button {
                         display: block; // Show the toggle button only on mobile
                     }
+
+                    .filter-toggle-button {
+                        .filter-icon, .close-icon {
+                            display: none;
+
+                            &.show {
+                                display: inline;
+                            }
+                        }
+                    }
                 }
     
                 .filter-dropdown {
