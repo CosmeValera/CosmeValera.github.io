@@ -78,6 +78,7 @@ h1.page-title {
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
+            opacity: 0.9;
             background-color: black;
             color: white;
             padding: 10px 20px;
@@ -104,6 +105,7 @@ h1.page-title {
     right: 20px;
     width: 60px;
     height: 60px;
+    opacity: 0.85;
     background-color: black;
     border-radius: 50%;
     display: flex;
@@ -115,7 +117,7 @@ h1.page-title {
     cursor: pointer;
     
     &:has(.fab-button-i.fa-times) {
-        opacity: 0.6;
+        opacity: 0.7;
     }
 }
 
