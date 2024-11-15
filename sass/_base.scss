@@ -58,7 +58,7 @@ h1.page-title {
 .lateral-menu {
     display: none;
     position: fixed;
-    bottom: 90px;
+    top: 90px;
     right: 24.5px;
     z-index: 999;
     flex-direction: column;
@@ -100,7 +100,7 @@ h1.page-title {
 /* Floating Action Button (FAB) for mobile */
 .fab-button {
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     width: 60px;
     height: 60px;
