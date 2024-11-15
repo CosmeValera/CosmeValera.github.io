@@ -7,10 +7,8 @@ function clickFilterToggleButton() {
     filterToggleButton.addEventListener('click', () => {
         filterDropdown.classList.toggle('show'); // Toggle the "show" class to display/hide filters
 
-        // Toggle the "show" class on the icons to switch between filter and close icons
-        filterIcon.classList.toggle('show');
+        // Toggle the "no-show" class on the icons to switch between filter and close icons
         filterIcon.classList.toggle('no-show');
-        closeIcon.classList.toggle('show');
         closeIcon.classList.toggle('no-show');
     });
 }
@@ -26,10 +24,8 @@ function clickToggleHoverButton() {
             card.classList.toggle('hovered'); // Toggle hover effect on each card
         });
 
-        // Toggle the "show" class on the icons to switch between eyeOpen and eyeClosed icons
-        eyeOpenIcon.classList.toggle('show');
+        // Toggle the "no-show" class on the icons to switch between eyeOpen and eyeClosed icons
         eyeOpenIcon.classList.toggle('no-show');
-        eyeClosedIcon.classList.toggle('show');
         eyeClosedIcon.classList.toggle('no-show');
     });
 }

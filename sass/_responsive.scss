@@ -138,10 +138,6 @@ body {
                     .filter-toggle-button, .toggle-hover-button {
                         display: block; // Show the toggle button only on mobile
 
-                        i.show {
-                            display: inline;
-                        }
-    
                         i.no-show {
                             display: none;
                         }
