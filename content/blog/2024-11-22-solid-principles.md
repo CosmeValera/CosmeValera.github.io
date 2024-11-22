@@ -197,6 +197,13 @@ class Notification {
 
 ![garnalds](/images/blog/general/garlands.png)
 
+<h4>Resources</h4>
+
+- **"Nothing is Something":** A `highly` recommended video that introduces the Null Object Pattern in a clear and practical way. It also features an excellent example of how inheritance can go wrong and the transitioning from inheritance to composition, making it a must-watch for anyone looking to deepen their understanding of clean design principles. <a target="_blank" href="https://www.youtube.com/watch?v=OMPfEXIlTVE" class="presentation-text">Watch it here</a>
+- **"Uncle Bob on SOLID Principles":** A video that covers object-oriented design concepts and touches on the SOLID principles near the end. A good watch for understanding the foundations of clean code. <a target="_blank" href="https://www.youtube.com/watch?v=zHiWqnTWsn4" class="presentation-text">Watch it here</a>.
+
+<h4>Conclusion</h4>
+
 🥰 By following these principles, you can create software that is easier to maintain, scale, and extend. Whether you're building a small app or a complex system, SOLID principles serve as a guide to avoid technical debt and enhance code quality.
 
 Start applying them today and watch your codebase transform! 🎉
