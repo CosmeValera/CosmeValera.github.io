@@ -36,7 +36,7 @@
         margin-bottom: 1rem;
     }
 
-    // Styling for inline code, is what will be shown when using `x`
+    // Styling for inline code, is what will be shown when using: ``
     code {
         color: $color-fg-secondary;
         background-color: rgba(255, 255, 255, 0.1);
@@ -44,15 +44,15 @@
         border-radius: 0.25rem;
         font-family: 'Courier New', Courier, monospace;
     }
-
+    
     // Reusable class for code blocks
     .code-block {
-        border: 1px solid white;
+        border: 1px solid $color-bg-secondary-2;
         font-style: italic;
         border-radius: 1rem;
         padding: 0.5rem;
         margin: 10px 0;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba($color-bg-secondary-2, 0.8);
         color: white;
         overflow-x: auto;
 
