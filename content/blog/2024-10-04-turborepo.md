@@ -28,7 +28,7 @@ Here's how you can set up and use Turborepo in your project:
 
 Instead of manually setting up Turborepo, you can use the following command to quickly scaffold a new Turborepo:
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 npx create-turbo@latest
 </div>
 
@@ -53,13 +53,13 @@ After setting up Turborepo, you can easily manage all apps and packages with a f
 
 <b>Install dependencies:</b>
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0"> npm i </div>
+<div class="code-block"> npm i </div>
 <b>Build all apps and packages:</b>
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0"> npm run build </div>
+<div class="code-block"> npm run build </div>
 <b>Start the development environment:</b>
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0"> npm run dev </div>
+<div class="code-block"> npm run dev </div>
 Run any of these commands twice, and Turborepo will use its smart caching to speed up subsequent builds.
 
 ---

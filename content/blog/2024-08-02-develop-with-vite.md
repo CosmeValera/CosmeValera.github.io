@@ -14,18 +14,18 @@ We have 2 options for having it in one command:
 
 <b>Option 1.</b> Use <i>concurrently</i>:
 - 1.1 <i>package.json</i>:
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">"preview:watch": "concurrently \"vite preview --port 4001 -l silent\" \"vite build --watch\""</div>
+<div class="code-block">"preview:watch": "concurrently \"vite preview --port 4001 -l silent\" \"vite build --watch\""</div>
 
 <div style="margin-top: 1.5rem;"></div>
 
 <b>Option 2.</b> Create a custom script:
 - 2.1 <i>package.json</i>:
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 "start": "bash vite-execution-script.sh 4001",
 </div>
 
 - 2.2 Custom script:
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 
 #!/bin/bash
   

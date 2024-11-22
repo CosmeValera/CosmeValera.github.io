@@ -21,19 +21,19 @@ In large-scale projects maintaining consistent styles across multiple applicatio
 
 <b>Implementation:</b> For example, if you're working with custom theme styles for PrimeReact, you can create your styles in a library and export them using an `index.js` file like this:
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 module.exports = {
     theme: require('./style/themes/my-theme/theme.scss'),
 };
 </div>
 
 After publishing the package, you can install it in your projects using:
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 npm i my-theme
 </div>
 
 Then, simply import the styles in your main JavaScript entry point:
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 import 'my-theme';
 </div>
 
@@ -50,7 +50,7 @@ Requires publishing and versioning with each change.
 
 <b>Implementation:</b> Place your styles in a folder at the root level, parallel to your apps, and import them in your projects:
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 import '../style/themes/my-theme/theme.scss';
 </div>
 

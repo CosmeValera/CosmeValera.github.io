@@ -20,7 +20,7 @@ Here's a breakdown of each principle with examples and insights into their appli
 🚫 **Violates SRP:** A `User` class that saves data to a database and logs user activity.   
 ✅ **Follows SRP:** Separate concerns into distinct classes like `UserRepository` and `Logger`.
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 <pre>
 // Violates SRP
 class User {
@@ -44,7 +44,7 @@ class Logger {
 **🚫 Violates OCP:** A Shape class that modifies existing code to add new shapes.    
 **✅ Follows OCP:** Use inheritance to extend functionality without altering existing code.
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 <pre>
 // Violates OCP
 class Shape {
@@ -78,7 +78,7 @@ class Square extends Shape {
 **🚫 Violates LSP**: A Square class inheriting from Rectangle but behaving differently when setting its width or height. The base class assumes independent width and height, but the Square class enforces equal sides, leading to unexpected behavior.    
 **✅ Follows LSP**: Use separate classes to avoid mismatched behavior.
 
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 <pre>
 // Violates LSP
 class Rectangle {
@@ -122,7 +122,7 @@ class Square extends Shape {
 
 **🚫 Violates ISP:** A MultifunctionDevice interface requiring unused methods like scan() and fax().    
 **✅ Follows ISP:** Create separate interfaces for specific functionalities.
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 <pre>
 // Violates ISP
 interface MultifunctionDevice {
@@ -148,7 +148,7 @@ interface Scanner {
 
 **🚫 Violates DIP:** High-level classes directly depend on low-level implementations.    
 **✅ Follows DIP:** Use abstractions to decouple dependencies.
-<div style="border: 1px solid white; font-style: italic; border-radius: 1rem; padding: 0.5rem; margin: 10px 0">
+<div class="code-block">
 <pre>
 // Violates DIP
 class EmailService {
