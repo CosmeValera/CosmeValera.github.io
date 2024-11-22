@@ -37,9 +37,9 @@ description = "Comparing Vite and Webpack for microfrontend development"
 
 <h4><b>Resources</b></h4>
 
-- Learn to create a <b>Webpack</b> project with MF: <a target="_blank" href="https://youtu.be/lKKsjpH09dU?si=lVE58HAuWyddfuRe" class="presentation-text">Click here</a>
+- Learn to create a <b>Webpack</b> project with MF: <a target="_blank" href="https://youtu.be/lKKsjpH09dU?si=lVE58HAuWyddfuRe" class="link-text">Click here</a>
 
-- Learn to create a <b>VITE</b> project with MF: <a target="_blank" href="https://www.youtube.com/watch?si=D_stg3jW_fGL2uKh&v=t-nchkL9yIg&feature=youtu.be" class="presentation-text">Click here</a>
+- Learn to create a <b>VITE</b> project with MF: <a target="_blank" href="https://www.youtube.com/watch?si=D_stg3jW_fGL2uKh&v=t-nchkL9yIg&feature=youtu.be" class="link-text">Click here</a>
 
 <h4><b>Conclusion</b></h4>
 

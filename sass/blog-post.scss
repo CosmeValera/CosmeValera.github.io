@@ -20,6 +20,18 @@
         color: $color-fg-secondary;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     }
+    .link-text {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-wrap: balance;
+        color: $color-fg-secondary;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.2s ease;
+        
+        &:hover {
+            border-bottom: 1px solid $color-fg-secondary;
+        }
+    }
 
     p:has(img[alt=blog-cover], img[alt=garnalds]) {
         text-align: center;
