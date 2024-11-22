@@ -29,4 +29,42 @@
             margin: 1rem 0;
         }
     }
+
+    // Common headings styling
+    h1, h2, h3, h4 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    // Styling for inline code, is what will be shown when using `x`
+    code {
+        color: $color-fg-secondary;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    // Reusable class for code blocks
+    .code-block {
+        border: 1px solid white;
+        font-style: italic;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        margin: 10px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        overflow-x: auto;
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    }
+
+    // Add spacing for horizontal rules
+    hr {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 2rem 0;
+    }
 }

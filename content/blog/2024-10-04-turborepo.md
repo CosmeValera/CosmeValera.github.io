@@ -32,7 +32,7 @@ Instead of manually setting up Turborepo, you can use the following command to q
 npx create-turbo@latest
 </div>
 
-<b>1.2 Place your microfrontends inside the `apps` directory::</b> 
+<b>1.2 Place your microfrontends inside the `apps` directory:</b> 
 
 ```sh
   apps/
