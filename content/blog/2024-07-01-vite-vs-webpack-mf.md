@@ -14,8 +14,8 @@ description = "Comparing Vite and Webpack for microfrontend development"
 
 <b>1. Module Federation</b>
 
-- <b>Webpack:</b> Uses <i>ModuleFederationPlugin</i> for sharing code.
-- <b>Vite:</b> Uses <i>vite-plugin-federation</i>.
+- <b>Webpack:</b> Uses `ModuleFederationPlugin` for sharing code.
+- <b>Vite:</b> Uses `vite-plugin-federation`.
 
 <b>2. Development Experience</b>
 
@@ -26,8 +26,8 @@ description = "Comparing Vite and Webpack for microfrontend development"
 
 <b>3. Remote Entry Generation</b>
 
-- <b>Webpack:</b> Generates remoteEntry.js during development.
-- <b>Vite:</b> Generates remoteEntry.js only during the build.
+- <b>Webpack:</b> Generates `remoteEntry.js` during development.
+- <b>Vite:</b> Generates `remoteEntry.js` only during the build.
 
 <b>4. Compatibility</b>
 - <b>Interoperability</b> between Webpack and Vite requires special handling for proper communication.
