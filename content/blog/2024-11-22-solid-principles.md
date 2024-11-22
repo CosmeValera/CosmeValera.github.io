@@ -9,11 +9,11 @@ description = "Learn how SOLID principles can enhance your codebase by promoting
 
 As software developers, we strive to create systems that are robust, maintainable, and easy to scale. The SOLID principles offer a foundation for writing clean, well-structured code by encouraging single-purpose classes, extensible designs, and minimal dependencies.
 
-Here's a breakdown of each principle with examples and insights into their application:
+Each principle includes a difficulty rating (<code>Easy</code>, <code>Medium</code>, or <code>Hard</code>) to reflect its understanding complexity. Here's a breakdown of each principle with examples and insights into their application:
 
 ---
 
-<h4>📜 1. Single Responsibility Principle (SRP)</h4>
+<h4>📜 1. Single Responsibility Principle (SRP) <code class="solid-principles-tag">Medium</code></h4>
 
 **Definition:** A class should have only one reason to change, meaning it should have a single responsibility or purpose.
 
@@ -40,7 +40,7 @@ class Logger {
 
 ---
 
-<h4>📦 2. Open/Closed Principle (OCP)</h4>
+<h4>📦 2. Open/Closed Principle (OCP) <code class="solid-principles-tag">Hard</code></h4>
 
 **Definition:** Software entities (classes, modules, functions) should be open for extension but closed for modification.
 
@@ -75,7 +75,7 @@ class Square extends Shape {
 
 ---
 
-<h4>🔄 3. Liskov Substitution Principle (LSP)</h4>
+<h4>🔄 3. Liskov Substitution Principle (LSP) <code class="solid-principles-tag">Hard</code></h4>
 
 **Definition:** Subtypes must be substitutable for their base types without altering the correctness of the program. In other words, a derived class must be able to replace its parent class without causing unexpected behavior.
 
@@ -122,7 +122,7 @@ class Square extends Shape {
 
 ---
 
-<h4>🎛️ 4. Interface Segregation Principle (ISP)</h4>
+<h4>🎛️ 4. Interface Segregation Principle (ISP) <code class="solid-principles-tag">Easy</code></h4>
 
 **Definition:** A class should not be forced to implement interfaces it doesn’t use. Instead, create specific, smaller interfaces.
 
@@ -150,7 +150,7 @@ interface Scanner {
 
 ---
 
-<h4>🔗 5. Dependency Inversion Principle (DIP)</h4>
+<h4>🔗 5. Dependency Inversion Principle (DIP) <code class="solid-principles-tag">Medium</code></h4>
 
 **Definition:** High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).
 
