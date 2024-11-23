@@ -78,6 +78,13 @@
         }
     }
 
+    blockquote {
+        border-left: 6px solid $color-fg-secondary;
+        padding-left: 1rem;
+        font-style: italic;
+        opacity: 0.9;
+      }
+
     .related-container {
         margin: 1rem auto;
         display: flex;
