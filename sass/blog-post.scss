@@ -69,7 +69,7 @@
         padding: 0.5rem;
         margin: 10px 0;
         background-color: rgba($color-bg-secondary-2, 0.8);
-        color: white;
+        color: $color-fg;
         overflow-x: auto;
 
         pre {
@@ -78,9 +78,49 @@
         }
     }
 
+    .related-container {
+        margin: 1rem auto;
+        display: flex;
+        text-align: center;
+    
+        > .link {
+            flex: 1;
+            padding: 1rem;
+            box-sizing: border-box;
+            width: 50%;
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+        
+            span {
+                font-style: italic;
+                font-size: 1rem;
+            }
+            a {
+                max-width: 20vw;
+                color: $color-fg-secondary;  
+                text-wrap-style: balance;
+            }
+        }
+    }
+
     // Add spacing for horizontal rules
     hr {
         border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 2rem 0;
+
+        &.footer-rule {
+            margin-top: 4rem;
+            background-color: $color-bg-secondary-2;
+            border: 2px $color-fg-secondary dashed;
+            opacity: 0.35;
+        }
+        &.footer-rule-2 {
+            background-color: $color-bg-secondary-2;
+            border: 2px $color-fg-secondary dashed;
+            opacity: 0.35;
+        }
     }
 }

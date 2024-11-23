@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% import "related-container.html" as related %}
+
 {% block title %}
   Blog | Cosme
 {% endblock %}
@@ -9,13 +11,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="column right">
-  <div class="blog-post">
-      <h2 class="blog-post-title">{{ page.title }}</h2>
-      <h3 class="presentation-text">{{ page.description }}</h3>
-      <div class="post-content">
-          {{ page.content | safe }}
-      </div>
+  <div class="column right">
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{ page.title }}</h2>
+        <h3 class="presentation-text">{{ page.description }}</h3>
+        <div class="post-content">
+            {{ page.content | safe }}
+        </div>
+
+        <hr class="footer-rule" />
+        {{ related::container(page=page,orderDesc=true) }}
+        <hr class="footer-rule-2" />
+    </div>
   </div>
-</div>
 {% endblock content %}

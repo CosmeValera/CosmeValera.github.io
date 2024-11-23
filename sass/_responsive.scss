@@ -167,6 +167,9 @@ body {
                     }
                 }
             }
+            .blog-post .related-container > .link a {
+                max-width: unset;
+            }
         }
 
         @media (min-width: $break-extra-large) {
