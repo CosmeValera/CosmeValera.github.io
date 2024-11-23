@@ -20,7 +20,7 @@ Here's a breakdown of each principle with examples and insights into their appli
 **Definition:** A class should have only one reason to change, meaning it should have a single responsibility or purpose.
 
 ```ts
-/**** Violates SRP ****/
+/** Violates SRP **/
 class User {
   saveToDatabase() {}
   logUserActivity() {}
@@ -28,7 +28,7 @@ class User {
 ```
 
 ```ts
-/**** Follows SRP ****/
+/** Follows SRP **/
 class UserRepository {
   saveToDatabase(user: User) {}
 }
@@ -47,7 +47,7 @@ class Logger {
 **Definition:** Software entities (classes, modules, functions) should be open for extension but closed for modification.
 
 ```ts
-/**** Violates OCP ****/
+/** Violates OCP **/
 class Shape {
   draw(shapeType: string) {
     if (shapeType === 'circle') {
@@ -60,7 +60,7 @@ class Shape {
 ```
 
 ```ts
-/**** Follows OCP ****/
+/** Follows OCP **/
 abstract class Shape {
   abstract draw(): void;
 }
@@ -84,7 +84,7 @@ class Square extends Shape {
 **How to identify a violation:** If overriding a method in the subclass breaks assumptions about the parent class, this violates LSP. Subtypes must maintain the behavior expected by the base type.
 
 ```ts
-/**** Violates LSP ****/
+/** Violates LSP **/
 class Rectangle {
   setWidth(width: number) { this.width = width; }
   setHeight(height: number) { this.height = height; }
@@ -99,7 +99,7 @@ class Square extends Rectangle {
 ```
 
 ```ts
-/**** Follows LSP ****/
+/** Follows LSP **/
 abstract class Shape {
   abstract getArea(): number;
 }
@@ -129,7 +129,7 @@ class Square extends Shape {
 **Definition:** A class should not be forced to implement interfaces it doesn’t use. Instead, create specific, smaller interfaces.
 
 ```ts
-/**** Violates ISP ****/
+/** Violates ISP **/
 interface MultifunctionDevice {
   print(): void;
   scan(): void;
@@ -138,7 +138,7 @@ interface MultifunctionDevice {
 ```
 
 ```ts
-/**** Follows ISP ****/
+/** Follows ISP **/
 interface Printer {
   print(): void;
 }
@@ -157,7 +157,7 @@ interface Scanner {
 **Definition:** High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).
 
 ```ts
-/**** Violates DIP ****/
+/** Violates DIP **/
 class EmailService {
   sendEmail() {
     /* email logic */
@@ -172,7 +172,7 @@ class Notification {
 ```
 
 ```ts
-/**** Follows DIP ****/
+/** Follows DIP **/
 interface MessageService {
   sendMessage(): void;
 }
