@@ -5,7 +5,7 @@ compile_sass = true
 
 [markdown]
 highlight_code = true
-highlight_theme = "dracula"
+highlight_theme = "monokai"
 
 build_search_index = false
 
