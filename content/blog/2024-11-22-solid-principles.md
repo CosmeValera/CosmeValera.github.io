@@ -19,23 +19,21 @@ Here's a breakdown of each principle with examples and insights into their appli
 
 **Definition:** A class should have only one reason to change, meaning it should have a single responsibility or purpose.
 
-<div class="code-block">
-<pre>
-// Violates SRP
+```ts
+/**** Violates SRP ****/
 class User {
   saveToDatabase() {}
   logUserActivity() {}
 }
----
-// Follows SRP
+
+/**** Follows SRP ****/
 class UserRepository {
   saveToDatabase(user: User) {}
 }
 class Logger {
   logUserActivity(user: User) {}
 }
-</pre>
-</div>
+```
 
 🚫 **Violates SRP:** Handles multiple responsabilities.   
 ✅ **Follows SRP:** Separate concerns into different classes like `UserRepository` and `Logger`.
@@ -46,9 +44,8 @@ class Logger {
 
 **Definition:** Software entities (classes, modules, functions) should be open for extension but closed for modification.
 
-<div class="code-block">
-<pre>
-// Violates OCP
+```ts
+/**** Violates OCP ****/
 class Shape {
   draw(shapeType: string) {
     if (shapeType === 'circle') {
@@ -58,8 +55,8 @@ class Shape {
     }
   }
 }
----
-// Follows OCP
+
+/**** Follows OCP ****/
 abstract class Shape {
   abstract draw(): void;
 }
@@ -69,8 +66,7 @@ class Circle extends Shape {
 class Square extends Shape {
   draw() { /* draw square */ }
 }
-</pre>
-</div>
+```
 
 **🚫 Violates OCP:** Modifying existing code for new behaviours.    
 **✅ Follows OCP:** Add new behaviours without modifying existing code.
@@ -83,9 +79,8 @@ class Square extends Shape {
 
 **How to identify a violation:** If overriding a method in the subclass breaks assumptions about the parent class, this violates LSP. Subtypes must maintain the behavior expected by the base type.
 
-<div class="code-block">
-<pre>
-// Violates LSP
+```ts
+/**** Violates LSP ****/
 class Rectangle {
   setWidth(width: number) { this.width = width; }
   setHeight(height: number) { this.height = height; }
@@ -97,8 +92,8 @@ class Square extends Rectangle {
     this.height = width; // Breaks LSP: unexpected behavior
   }
 }
----
-// Follows LSP
+
+/**** Follows LSP ****/
 abstract class Shape {
   abstract getArea(): number;
 }
@@ -114,8 +109,7 @@ class Square extends Shape {
   }
   getArea() { return this.side * this.side; }
 }
-</pre>
-</div>
+```
 
 **Regarding this example:** A `Square` class inheriting from `Rectangle` but behaving differently when setting its width or height. The base class assumes independent width and height, but the `Square` class enforces equal sides, leading to unexpected behavior.    
 
@@ -128,24 +122,22 @@ class Square extends Shape {
 
 **Definition:** A class should not be forced to implement interfaces it doesn’t use. Instead, create specific, smaller interfaces.
 
-<div class="code-block">
-<pre>
-// Violates ISP
+```ts
+/**** Violates ISP ****/
 interface MultifunctionDevice {
   print(): void;
   scan(): void;
   fax(): void;
 }
----
-// Follows ISP
+
+/**** Follows ISP ****/
 interface Printer {
   print(): void;
 }
 interface Scanner {
   scan(): void;
 }
-</pre>
-</div>
+```
 
 **🚫 Violates ISP:** A single interface forcing implementations to include unused or irrelevant methods.    
 **✅ Follows ISP:** Divide interfaces into smaller, specific ones to ensure implementations only include relevant methods.
@@ -156,9 +148,8 @@ interface Scanner {
 
 **Definition:** High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).
 
-<div class="code-block">
-<pre>
-// Violates DIP
+```ts
+/**** Violates DIP ****/
 class EmailService {
   sendEmail() {
     /* email logic */
@@ -170,8 +161,8 @@ class Notification {
     this.emailService.sendEmail();
   }
 }
----
-// Follows DIP
+
+/**** Follows DIP ****/
 interface MessageService {
   sendMessage(): void;
 }
@@ -189,8 +180,7 @@ class Notification {
     this.messageService.sendMessage();
   }
 }
-</pre>
-</div>
+```
 
 **🚫 Violates DIP:** High-level classes directly depend on low-level implementations.    
 **✅ Follows DIP:** Use abstractions to decouple dependencies.

@@ -48,8 +48,26 @@
         margin-bottom: 1rem;
     }
 
-    // Styling for inline code, is what will be shown when using: ``
-    code {
+    
+    // MULTIPLE LINE CODE (CSS Selector: pre -> code)
+    pre {
+        border: 1px solid $tertiary-bg;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 10px 0;
+        background-color: rgba($tertiary-bg, 0.8);
+        color: $text-color;
+        overflow-x: auto;
+    
+        // Ensures code inside inherits proper styling
+        code {
+            font-style: italic;
+            white-space: pre-wrap; // Allows long lines to wrap
+        }
+    }
+
+    // INLINE CODE (CSS Selector: code)
+    :not(pre) > code {
         color: $accent-color;
         background-color: rgba(255, 255, 255, 0.1);
         padding: 0.2rem 0.4rem;
@@ -61,29 +79,29 @@
         }
     }
     
-    // Reusable class for code blocks
-    .code-block {
-        border: 1px solid $tertiary-bg;
-        font-style: italic;
-        border-radius: 1rem;
-        padding: 0.5rem;
-        margin: 10px 0;
-        background-color: rgba($tertiary-bg, 0.8);
-        color: $text-color;
-        overflow-x: auto;
+    // // Reusable class for code blocks
+    // .code-block {
+    //     border: 1px solid $tertiary-bg;
+    //     font-style: italic;
+    //     border-radius: 1rem;
+    //     padding: 0.5rem;
+    //     margin: 10px 0;
+    //     background-color: rgba($tertiary-bg, 0.8);
+    //     color: $text-color;
+    //     overflow-x: auto;
 
-        pre {
-            margin: 0;
-            white-space: pre-wrap;
-        }
-    }
+    //     pre {
+    //         margin: 0;
+    //         white-space: pre-wrap;
+    //     }
+    // }
 
     blockquote {
         border-left: 6px solid $accent-color;
         padding-left: 1rem;
         font-style: italic;
         opacity: 0.9;
-      }
+    }
 
     .related-container {
         margin: 1rem auto;
