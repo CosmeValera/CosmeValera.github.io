@@ -7,7 +7,7 @@
 
     a.blog-card {
         display: block;
-        background-color: $color-bg-secondary;
+        background-color: $secondary-bg;
         padding: 1rem;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
         }
 
         .blog-title {
-            color: $color-fg-secondary;
+            color: $accent-color;
             font-family: Andika;
             font-size: clamp(1.2rem, 3.8vw, 1.7rem);
             margin-bottom: 1rem;
@@ -32,14 +32,14 @@
             gap: clamp(1rem, 4.4vw, 2rem);
             
             .card-description {
-                color: $color-fg;
+                color: $text-color;
                 opacity: 0.9;
                 font-weight: light;
                 font-size: clamp(0.7rem, 2.2vw, 1rem);
             }
             
             .card-date {
-                color: $color-fg-secondary;
+                color: $accent-color;
                 min-width: fit-content;
                 font-family: Andika;
                 font-size: clamp(0.6rem, 2vw, 0.9rem);;

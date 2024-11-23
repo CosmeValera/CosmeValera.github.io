@@ -13,8 +13,8 @@
 
         .filter-toggle-button, .toggle-hover-button {
             display: none; // Hide on desktop
-            background: $color-fg-secondary;
-            color: $color-bg;
+            background: $accent-color;
+            color: $primary-bg;
             padding: 8px 16px;
             border: none;
             cursor: pointer;
@@ -27,7 +27,7 @@
     
 
     .filter-button {
-        background-color: darken($color-fg-secondary, 33%);
+        background-color: darken($accent-color, 33%);
         border: none;
         cursor: pointer;
         padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
@@ -35,18 +35,18 @@
         font-size: 0.9rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: $color-bg;
+        color: $primary-bg;
         border-radius: 9999px;
         transition: background-color 0.3s ease-in-out;
 
         &.selected-filter {
-            background-color: darken($color-fg-secondary, 17%);
-            color: $color-bg;
+            background-color: darken($accent-color, 17%);
+            color: $primary-bg;
         }
 
         &:hover {
-            background-color: $color-fg-secondary;
-            color: $color-bg;
+            background-color: $accent-color;
+            color: $primary-bg;
         }
     }
 }
@@ -95,7 +95,7 @@
 
                 h3.card-title {
                     font-weight: bold;
-                    color: $color-fg;
+                    color: $text-color;
                     font-size: 1.5rem;
                     font-size: clamp(1rem, 4vw, 1.5rem);
                     margin: 0; // Remove default margin
@@ -104,7 +104,7 @@
                 p.card-technology {
                     font-size: clamp(10px, 1.2vw, 12px);
                     font-weight: 600;
-                    color: $color-fg;
+                    color: $text-color;
                     font-family: Andika;
                     display: flex;
                     gap: 0.5rem;
@@ -116,7 +116,7 @@
                         padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
                         border-radius: 9999px; // Tag border radius
                         font-size: clamp(0.45rem, 2vw, 0.9rem);
-                        color: $color-fg;
+                        color: $text-color;
                     }
                 }
 
@@ -128,8 +128,8 @@
                         font-size: clamp(0.45rem, 2vw, 0.9rem);
                         padding: 6px 10px;
                         
-                        color: $color-bg-secondary;
-                        background-color: $color-fg-secondary;
+                        color: $secondary-bg;
+                        background-color: $accent-color;
                         font-weight: bold;
                         text-decoration: none;
                         margin: 0;

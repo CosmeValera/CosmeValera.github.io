@@ -3,12 +3,12 @@
     padding: 12px 30px;
     border: 3px solid $color-font-and-border;
     color: $color-font-and-border;
-    background-color: $color-bg;
+    background-color: $primary-bg;
     font-weight: bold;
     text-decoration: none;
     
     &:hover {
-        color: $color-bg;
+        color: $primary-bg;
         background-color: $hover-background-color;
     }
     
@@ -40,7 +40,7 @@
         width: 0;
         height: 1px;
         display: block;
-        background: $color-fg;
+        background: $text-color;
         transition: 0.25s;
         bottom: $bottom;
     }
@@ -52,10 +52,10 @@
 }
 
 @mixin card-a-colors-dark {
-    background-color: $color-bg-secondary;
-    border: 4px solid $color-fg-secondary;
+    background-color: $secondary-bg;
+    border: 4px solid $accent-color;
 }
 @mixin card-b-colors-dark {
-    background-color: $color-bg-secondary-2;
-    border: 1px solid $color-fg-secondary;
+    background-color: $tertiary-bg;
+    border: 1px solid $accent-color;
 } 

@@ -171,7 +171,7 @@
 
           &.paypal {
             background-color: #0070ba;
-            color: #fff;
+            color: $text-color;
 
             &:hover {
               background-color: #005ea6;
@@ -180,7 +180,7 @@
 
           &.github {
             background-color: #000;
-            color: #fff;
+            color: $text-color;
 
             &:hover {
               background-color: #24292e;
@@ -189,7 +189,7 @@
 
           &.lightning {
             background-color: #f7931a;
-            color: #fff;
+            color: $text-color;
 
             &:hover {
               background-color: #e5841a;
@@ -221,7 +221,7 @@
       .sponsor-note {
         margin-top: 20px;
         padding: 10px;
-        background-color: $color-bg; /* Light background to stand out */
+        background-color: $primary-bg; /* Light background to stand out */
         border-left: 4px solid #ffcc00; /* Accent border to draw attention */
         font-size: 0.9rem; /* Slightly smaller than body text */
         color: #ccc; /* Darker text for readability */
@@ -232,7 +232,7 @@
         }
         
         a {
-          color: $color-fg-secondary;
+          color: $accent-color;
         
           &:hover {
             text-decoration: underline;

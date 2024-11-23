@@ -9,7 +9,7 @@
         margin-bottom: 2rem;
         margin-top: 0;
         text-wrap: balance;
-        color: white;
+        color: $text-color;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     }
     
@@ -17,19 +17,19 @@
         text-align: center;
         margin-bottom: 2rem;
         text-wrap: balance;
-        color: $color-fg-secondary;
+        color: $accent-color;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     }
     .link-text {
         text-align: center;
         margin-bottom: 2rem;
         text-wrap: balance;
-        color: $color-fg-secondary;
+        color: $accent-color;
         border-bottom: 2px solid transparent;
         transition: border-bottom 0.2s ease;
         
         &:hover {
-            border-bottom: 1px solid $color-fg-secondary;
+            border-bottom: 1px solid $accent-color;
         }
     }
 
@@ -50,7 +50,7 @@
 
     // Styling for inline code, is what will be shown when using: ``
     code {
-        color: $color-fg-secondary;
+        color: $accent-color;
         background-color: rgba(255, 255, 255, 0.1);
         padding: 0.2rem 0.4rem;
         border-radius: 0.25rem;
@@ -63,13 +63,13 @@
     
     // Reusable class for code blocks
     .code-block {
-        border: 1px solid $color-bg-secondary-2;
+        border: 1px solid $tertiary-bg;
         font-style: italic;
         border-radius: 1rem;
         padding: 0.5rem;
         margin: 10px 0;
-        background-color: rgba($color-bg-secondary-2, 0.8);
-        color: $color-fg;
+        background-color: rgba($tertiary-bg, 0.8);
+        color: $text-color;
         overflow-x: auto;
 
         pre {
@@ -79,7 +79,7 @@
     }
 
     blockquote {
-        border-left: 6px solid $color-fg-secondary;
+        border-left: 6px solid $accent-color;
         padding-left: 1rem;
         font-style: italic;
         opacity: 0.9;
@@ -107,7 +107,7 @@
             }
             a {
                 max-width: 20vw;
-                color: $color-fg-secondary;  
+                color: $accent-color;  
                 text-wrap: balance;
             }
         }
@@ -120,13 +120,13 @@
 
         &.footer-rule {
             margin-top: 4rem;
-            background-color: $color-bg-secondary-2;
-            border: 2px $color-fg-secondary dashed;
+            background-color: $tertiary-bg;
+            border: 2px $accent-color dashed;
             opacity: 0.35;
         }
         &.footer-rule-2 {
-            background-color: $color-bg-secondary-2;
-            border: 2px $color-fg-secondary dashed;
+            background-color: $tertiary-bg;
+            border: 2px $accent-color dashed;
             opacity: 0.35;
         }
     }

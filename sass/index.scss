@@ -5,7 +5,7 @@
         box-sizing: border-box;
         object-fit: cover;
         border-radius: 50%;
-        border: 10px solid $color-fg;
+        border: 10px solid $text-color;
         margin: 2em 3em;
         width: 100%;
         height: auto;
@@ -42,7 +42,7 @@
         a {
             font-family: Andika;
 
-            @include underline-effect(absolute, 0px, $color-fg);
+            @include underline-effect(absolute, 0px, $text-color);
         }
     }
 }

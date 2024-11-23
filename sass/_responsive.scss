@@ -26,8 +26,8 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    background-color: black;
-                    color: white;
+                    background-color: $menu-item-bg;
+                    color: $text-color;
                     padding: 10px;
                     border-radius: 50%;
                     overflow: hidden;
@@ -147,7 +147,7 @@ body {
                 .filter-dropdown {
                     display: none; // Initially hide filter options on mobile
                     flex-direction: column;
-                    background: darken($color-fg-secondary, 47%);
+                    background: darken($accent-color, 47%);
                     padding: 10px;
                     margin: 0.4rem 0;
                     border-radius: 8px;
@@ -161,8 +161,8 @@ body {
                         border-radius: 5px;
 
                         &:not(.selected-filter) { // Disable hover effect on mobile
-                            background-color: darken($color-fg-secondary, 33%)!important;
-                            color: $color-bg!important;
+                            background-color: darken($accent-color, 33%)!important;
+                            color: $primary-bg!important;
                         }
                     }
                 }
