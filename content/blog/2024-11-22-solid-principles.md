@@ -25,7 +25,9 @@ class User {
   saveToDatabase() {}
   logUserActivity() {}
 }
+```
 
+```ts
 /**** Follows SRP ****/
 class UserRepository {
   saveToDatabase(user: User) {}
@@ -55,7 +57,9 @@ class Shape {
     }
   }
 }
+```
 
+```ts
 /**** Follows OCP ****/
 abstract class Shape {
   abstract draw(): void;
@@ -92,7 +96,9 @@ class Square extends Rectangle {
     this.height = width; // Breaks LSP: unexpected behavior
   }
 }
+```
 
+```ts
 /**** Follows LSP ****/
 abstract class Shape {
   abstract getArea(): number;
@@ -129,7 +135,9 @@ interface MultifunctionDevice {
   scan(): void;
   fax(): void;
 }
+```
 
+```ts
 /**** Follows ISP ****/
 interface Printer {
   print(): void;
@@ -161,7 +169,9 @@ class Notification {
     this.emailService.sendEmail();
   }
 }
+```
 
+```ts
 /**** Follows DIP ****/
 interface MessageService {
   sendMessage(): void;
