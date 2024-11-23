@@ -28,19 +28,19 @@ Here's how you can set up and use Turborepo in your project:
 
 Instead of manually setting up Turborepo, you can use the following command to quickly scaffold a new Turborepo:
 
-<div class="code-block">
+```sh
 npx create-turbo@latest
-</div>
+```
 
 <b>1.2 Place your microfrontends inside the `apps` directory:</b> 
 
 ```sh
-  apps/
-   ├── mfe1/
-   ├── mfe2/
-   └── mfe3/
-  package.json
-  turbo.json
+apps/
+ ├── mfe1/
+ ├── mfe2/
+ └── mfe3/
+package.json
+turbo.json
 ```
 <h4><b>📄 2. Important Configuration Files</b></h4>
 
@@ -52,15 +52,21 @@ npx create-turbo@latest
 After setting up Turborepo, you can easily manage all apps and packages with a few simple commands:
 
 <b>Install dependencies:</b>
+```sh
+npm i 
+```
 
-<div class="code-block"> npm i </div>
 <b>Build all apps and packages:</b>
+```sh
+npm run build 
+```
 
-<div class="code-block"> npm run build </div>
 <b>Start the development environment:</b>
+```sh
+npm run dev 
+```
 
-<div class="code-block"> npm run dev </div>
-Run any of these commands twice, and Turborepo will use its smart caching to speed up subsequent builds.
+> Run any of these commands twice, and Turborepo will use its smart caching to speed up subsequent builds.
 
 ---
 

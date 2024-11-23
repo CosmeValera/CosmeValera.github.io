@@ -21,21 +21,24 @@ In large-scale projects maintaining consistent styles across multiple applicatio
 
 <b>Implementation:</b> For example, if you're working with custom theme styles for PrimeReact, you can create your styles in a library and export them using an `index.js` file like this:
 
-<div class="code-block">
+
+```sh
 module.exports = {
-    theme: require('./style/themes/my-theme/theme.scss'),
+  theme: require('./style/themes/my-theme/theme.scss'),
 };
-</div>
+```
 
 After publishing the package, you can install it in your projects using:
-<div class="code-block">
+
+```sh
 npm i my-theme
-</div>
+```
 
 Then, simply import the styles in your main JavaScript entry point:
-<div class="code-block">
+
+```sh
 import 'my-theme';
-</div>
+```
 
 <b>Pros:</b>
 Centralized version control of styles.
@@ -50,9 +53,9 @@ Requires publishing and versioning with each change.
 
 <b>Implementation:</b> Place your styles in a folder at the root level, parallel to your apps, and import them in your projects:
 
-<div class="code-block">
+```sh
 import '../style/themes/my-theme/theme.scss';
-</div>
+```
 
 <b>Pros:</b>
 No need to publish or manage versions.

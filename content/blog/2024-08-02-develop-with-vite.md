@@ -1,5 +1,5 @@
 +++
-title = "Develop with Vite"
+title = "Develop with Vite in MF"
 template = "blog-post.html"
 description = "Development and challenges when launching a Vite project using the Module Federation plugin"
 +++
@@ -14,19 +14,20 @@ We have 2 options for having it in one command:
 
 <b>Option 1.</b> Use `concurrently`:
 - 1.1 `package.json`:
-<div class="code-block">"preview:watch": "concurrently \"vite preview --port 4001 -l silent\" \"vite build --watch\""</div>
+```sh
+"preview:watch": "concurrently \"vite preview --port 4001 -l silent\" \"vite build --watch\""
+```
 
 <div style="margin-top: 1.5rem;"></div>
 
 <b>Option 2.</b> Create a custom script:
 - 2.1 `package.json`:
-<div class="code-block">
+```sh
 "start": "bash vite-execution-script.sh 4001",
-</div>
+```
 
 - 2.2 Custom script:
-<div class="code-block">
-
+```sh
 #!/bin/bash
   
 PORT="$1"
@@ -56,7 +57,7 @@ wait -n
  
 \# Kill both processes if they are still running  
 kill $BUILD_WATCH_PID $PREVIEW_PID 2>/dev/null
-</div>
+```
 
 ![garnalds](/images/blog/general/garlands.png)
 
