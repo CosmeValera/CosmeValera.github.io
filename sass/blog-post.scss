@@ -48,7 +48,9 @@
         margin-bottom: 1rem;
     }
 
-    
+    ///////////////
+    //   CODE    //
+    ///////////////
     // MULTIPLE LINE CODE (CSS Selector: pre -> code)
     pre {
         border: 1px solid $tertiary-bg;
@@ -79,30 +81,20 @@
         }
     }
     
-    // // Reusable class for code blocks
-    // .code-block {
-    //     border: 1px solid $tertiary-bg;
-    //     font-style: italic;
-    //     border-radius: 1rem;
-    //     padding: 0.5rem;
-    //     margin: 10px 0;
-    //     background-color: rgba($tertiary-bg, 0.8);
-    //     color: $text-color;
-    //     overflow-x: auto;
-
-    //     pre {
-    //         margin: 0;
-    //         white-space: pre-wrap;
-    //     }
-    // }
-
+    // Code executed when using this: '>'
     blockquote {
         border-left: 6px solid $accent-color;
         padding-left: 1rem;
         font-style: italic;
         opacity: 0.9;
     }
+    ///////////////
+    // END: CODE //
+    ///////////////
 
+    ////////////////////////////
+    //   RELATED-CONTAINER    //
+    ////////////////////////////
     .related-container {
         margin: 1rem auto;
         display: flex;
@@ -148,4 +140,7 @@
             opacity: 0.35;
         }
     }
+    ////////////////////////////
+    // END: RELATED-CONTAINER //
+    ////////////////////////////
 }
