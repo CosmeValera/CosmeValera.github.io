@@ -9,7 +9,9 @@ description = "Learn how SOLID principles can enhance your codebase by promoting
 
 As software developers, we strive to create systems that are robust, maintainable, and easy to scale. The SOLID principles offer a foundation for writing clean, well-structured code by encouraging single-purpose classes, extensible designs, and minimal dependencies.
 
-Each principle includes a difficulty rating (<code>Easy</code>, <code>Medium</code>, or <code>Hard</code>) to reflect its understanding complexity. Here's a breakdown of each principle with examples and insights into their application:
+Here's a breakdown of each principle with examples and insights into their application:
+
+> Each principle includes a difficulty rating (<code>Easy</code>, <code>Medium</code>, or <code>Hard</code>) to reflect its understanding complexity.
 
 ---
 
