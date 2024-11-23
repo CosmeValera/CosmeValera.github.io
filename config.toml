@@ -4,7 +4,8 @@ title = "Home | Cosme"
 compile_sass = true
 
 [markdown]
-highlight_code = false
+highlight_code = true
+highlight_theme = "dracula"
 
 build_search_index = false
 
