@@ -10,14 +10,10 @@
   {% endif %}
 
   {% if page.lower %}
-    {% set post_date_numeric = page.lower.date | date(format="%Y%m%d") | int %}
-    {% set now_numeric = now() | date(format="%Y%m%d") | int %}
-    {% if post_date_numeric <= now_numeric %}
-      <div class="link">
-        <span>{% if orderDesc %}Newer{% else %}Older{% endif %}</span>
-        <a href="{{ page.lower.permalink }}">{{ page.lower.title }}</a>
-      </div>
-    {% endif %}
+  <div class="link">
+    <span>{% if orderDesc %}Newer{% else %}Older{% endif %}</span>
+    <a href="{{ page.lower.permalink }}">{{ page.lower.title }}</a>
+  </div>
   {% endif %}
 
 </div>
