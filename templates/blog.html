@@ -14,13 +14,18 @@
   
   <div class="blog-cards">
     {% for post in section.pages %}
-    <a class="blog-card" href="{{ post.permalink }}">
-      <h3 class="blog-title">{{ post.title }}</h3>
-      <div class="blog-card-details">
-        <p class="card-description"> {{ post.description }} </p>
-        <span class="card-date"> {{ post.date | date(format="%B %d, %Y") }}</span>
-      </div>
-    </a>
+      {% set post_date_numeric = post.date| date(format="%Y%m%d") | int %}
+      {% set now_numeric = now() | date(format="%Y%m%d") | int %}
+      
+      {% if post_date_numeric <= now_numeric %}
+        <a class="blog-card" href="{{ post.permalink }}">
+          <h3 class="blog-title">{{ post.title }}</h3>
+          <div class="blog-card-details">
+            <p class="card-description"> {{ post.description }} </p>
+            <span class="card-date"> {{ post.date | date(format="%B %d, %Y") }}</span>
+          </div>
+        </a>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
