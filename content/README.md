@@ -27,7 +27,7 @@ This system allows you to schedule blog posts in Zola, automatically displaying 
     +++
     ```
 
-## 💻 Code for Date Handling in `blog-post.html`
+## 💻 Code for Date Handling in `blog.html`
 ```jinja
 {% set post_date_numeric = post.date | date(format="%Y%m%d") | int %}
 {% set now_numeric = now() | date(format="%Y%m%d") | int %}
