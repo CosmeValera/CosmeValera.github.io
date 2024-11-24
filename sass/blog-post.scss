@@ -117,11 +117,15 @@
             }
             a {
                 max-width: 20vw;
-                color: $accent-color;  
+                color: $accent-color;
                 text-wrap: balance;
-                
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                text-underline-offset: 3px;
+                transition: text-decoration-color 0.15s ease;
+            
                 &:hover {
-                    text-decoration: underline;
+                    text-decoration-color: $accent-color;
                 }
             }
         }
