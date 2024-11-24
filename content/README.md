@@ -9,14 +9,14 @@ This system allows you to schedule blog posts in Zola, automatically displaying 
 
 ## 📝 Practical Examples
 1. **Past or Today's Date:** 
-    - **File Name:** `2024-11-24-past-post.md`
-    - **Current Date:** `2024-11-24`
+    - **Current Date:** `2025-01-01`
+    - **File Name:** `2025-01-01-past-or-current-post.md`
     - **Result:** It will be published with that date
 2. **Future Date:** 
-    - **File Name:** `2030-12-30-scheduled-post.md`
-    - **Current Date:** `2024-11-24`
-    - **Result:** The post will initially show today's date (`2024-11-24`) until it reaches the scheduled release date of `2030-12-30`.
-3. **Testing Posts:** Use `draft=true` to hide posts under development from the live site while you test or refine them.
+    - **Current Date:** `2025-01-01`
+    - **File Name:** `2030-01-01-scheduled-post.md`
+    - **Result:** The post will initially show today's date (`2025-01-01`) until it reaches the scheduled release date of `2030-01-01`
+3. **Testing Posts:** Use `draft=true` to hide posts under development from the live site while you test or refine them:
 
     ```sh
     +++
