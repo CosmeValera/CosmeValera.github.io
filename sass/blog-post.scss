@@ -119,6 +119,10 @@
                 max-width: 20vw;
                 color: $accent-color;  
                 text-wrap: balance;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
