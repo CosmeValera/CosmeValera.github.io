@@ -1,71 +1,112 @@
 +++
-title = "Develop with Vite in MF"
+title = "Mastering Development with Vite"
 template = "blog-post.html"
-description = "Development and challenges when launching a Vite project using the Module Federation plugin"
+description = "A comprehensive guide to starting and optimizing your development workflow with Vite."
 +++
 
 ![blog-cover](/images/blog/2024-08-02/vite.png)
+<h4><b>Setting Up a Vite Project</b></h4>
+To start a project with Vite, you can either create a basic project or directly specify a template:
 
-<h4><b>🧪 Development</b></h4>
+Option 1. Install Vite
+Run the following command to set up a new Vite project:
 
-We need to execute `npm run build` and then `npm run preview` to have the <b>Vite</b> application running with Module Federations.
-
-We have 2 options for having it in one command:
-
-<b>Option 1.</b> Use `concurrently`:
-- 1.1 `package.json`:
 ```sh
-"preview:watch": "concurrently \"vite preview --port 4001 -l silent\" \"vite build --watch\""
+npm create vite@latest my-vite-app
+```
+Replace `my-vite-app` with your project name.
+
+Option 2. Choose a Template
+During setup, you'll be prompted to select a framework. Vite supports vanilla JavaScript, React, Vue,
+Svelte, and more. For example, to create a React app, you can specify it directly:
+
+```sh
+npm create vite@latest my-react-app --template react
+```
+3. Install Dependencies
+After creating the project, navigate into the directory and install the dependencies:
+
+```sh
+cd my-vite-app
+npm install
+```
+4. Run the Development Server
+Start the development server with:
+
+```sh
+npm run dev
+```
+Vite's blazing-fast Hot Module Replacement (HMR) ensures near-instantaneous updates as you
+code.
+<h4><b>Key Configuration Options</b></h4>
+Configuring your `vite.config.js` is crucial for tailoring the development experience.
+
+1. Alias Imports
+Simplify your imports by defining aliases:
+
+```javascript
+import { defineConfig } from 'vite';
+import path from 'path';
+
+export default defineConfig({
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src')
+        }
+    }
+});
 ```
 
-<div style="margin-top: 1.5rem;"></div>
+2. Environment Variables
+Vite supports `.env` files for managing configurations. Create a `.env` file and define variables:
 
-<b>Option 2.</b> Create a custom script:
-- 2.1 `package.json`:
-```sh
-"start": "bash vite-execution-script.sh 4001",
+```env
+VITE_API_URL=https://api.example.com
+```
+Access these variables in your app with `import.meta.env`:
+
+```javascript
+console.log(import.meta.env.VITE_API_URL);
 ```
 
-- 2.2 Custom script:
-```sh
-#!/bin/bash
-  
-PORT="$1"
+3. Plugins
+Extend Vite's functionality using plugins, such as `@vitejs/plugin-react` for React projects. Install it
+and add it to your configuration:
 
-\# If the port is already in use, then kill the PID related to that port  
-PID=$(netstat -ano | grep ":${PORT} " | grep LISTENING | awk '{print $5}')
- 
-if [ -n "$PID" ]; then
-    taskkill //F //PID $PID
-fi
- 
-\# Run 'npm run build --watch' in the background and store its process ID  
-npm run build &
-BUILD_WATCH_PID=$!
- 
-\# Wait for a brief moment to ensure the 'build --watch' process is up and running  
-sleep 2
- 
-\# Run 'npm run preview' also in the background and store its process ID  
-npm run preview &
-PREVIEW_PID=$!
- 
-printf 'Welcome: %s\n' "$BUILD_WATCH_PID $PREVIEW_PID"
- 
-\# Wait for any background job to finish (if one finishes, they both should be killed)  
-wait -n
- 
-\# Kill both processes if they are still running  
-kill $BUILD_WATCH_PID $PREVIEW_PID 2>/dev/null
+```sh
+npm install @vitejs/plugin-react
 ```
 
-![garnalds](/images/blog/general/garlands.png)
+```javascript
+import react from '@vitejs/plugin-react';
+    export default defineConfig({
+    plugins: [react()]
+});
+```
+<h4><b>Challenges and Considerations</b></h4>
+While Vite offers a powerful development experience, there are some challenges to keep in mind:
 
-<h4><b>🔃 Challenges with HMR and Module Federations</b></h4>
-Vite excels in many areas, but achieving Hot Module Reload (HMR) with Module Federation is difficult. Developers must manually refresh the screen after changes. Despite forum discussions about a potential <code>npm run preview --watch</code> command, as of June 15, 2024, no direct solution exists for seamless HMR.
+1. Hot Module Replacement (HMR)
+Vite's HMR is fast, but integrating it with certain frameworks or configurations (like Module
+Federation) may require additional effort.
 
-<div style="margin-top: 1.5rem;"></div>
+2. Build Performance
+Vite leverages Rollup for production builds, which may require fine-tuning for large applications.
 
-<b>Theoretical Expectation</b>
-- `npm run dev` should ideally create the Module Federation JavaScript file (`remoteEntry.js`) automatically.
-- This behavior is not observed due to limitations in the `vite-plugin-federation`.
+3. Cross-Browser Compatibility
+Ensure your app is transpiled for older browsers using the `@vitejs/plugin-legacy` plugin.
+
+```sh
+npm install @vitejs/plugin-legacy
+```
+
+```javascript
+import legacy from '@vitejs/plugin-legacy';
+export default defineConfig({
+plugins: [legacy()]
+});
+```
+<h4><b>Final Thoughts</b></h4>
+Vite's simplicity, speed, and robust ecosystem make it an excellent choice for modern web
+development. By understanding the setup, configuration, and potential pitfalls, you can harness its
+full potential to create efficient and scalable applications.
