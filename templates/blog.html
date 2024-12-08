@@ -22,6 +22,12 @@
       {% else %}
         {% set post_date_display = post.date | date(format="%B %d, %Y") %}
       {% endif %}
+
+      {% if post.reading_time == 1 %}
+        {% set time_label = "min" %}
+      {% else %}
+        {% set time_label = "mins" %}
+      {% endif %}
       
       <a class="blog-card" href="{{ post.permalink }}">
         <h3 class="blog-title">{{ post.title }}</h3>
@@ -30,7 +36,7 @@
           <div class="card-date-and-stats">
             <span class="card-date"> {{ post_date_display }}</span>
             <span class="card-stats">
-              {{ post.reading_time }} mins <i class="fas fa-clock"></i> - <small><i>{{ post.word_count }} words</i></small>
+              {{ post.reading_time }} {{ time_label }} <i class="fas fa-clock"></i> - <small><i>{{ post.word_count }} words</i></small>
             </span>
           </div>
         </div>
