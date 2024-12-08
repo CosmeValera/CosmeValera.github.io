@@ -39,8 +39,8 @@ h2 {
 }
 
 @media screen and (max-width: $break-large) {
-    h1 {
-        font-size: calc(min(5rem, 10vw));
+    h1, h1.presentation-title {
+        font-size: calc(min(5rem, 10vw))!important;
     }
 
     h2 {
