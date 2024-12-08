@@ -28,8 +28,8 @@ h1, h2, h3, h4, h5, h6, p, b, a {
 }
 
 h1 {
-    font-size: 7rem;
-    font-weight: bold;
+    text-align: center;
+    font-size: 5rem;
 }
 
 h2 {
@@ -44,11 +44,11 @@ h1.page-title {
 
 @media screen and (max-width: $break-large) {
     h1 {
-        font-size: calc(min(7rem, 15vw));
+        font-size: calc(min(5rem, 10vw));
     }
 
     h2 {
-        font-size: calc(min(3rem, 8vw))!important;
+        font-size: calc(min(2.5rem, 5vw))!important;
     }
 }
 

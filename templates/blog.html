@@ -27,7 +27,12 @@
         <h3 class="blog-title">{{ post.title }}</h3>
         <div class="blog-card-details">
           <p class="card-description"> {{ post.description }} </p>
-          <span class="card-date"> {{ post_date_display }}</span>
+          <div class="card-date-and-time">
+            <span class="card-date"> {{ post_date_display }}</span>
+            <span class="card-time">
+              {{ post.word_count }} words - {{ post.reading_time }} mins
+            </span>
+          </div>
         </div>
       </a>
     {% endfor %}
