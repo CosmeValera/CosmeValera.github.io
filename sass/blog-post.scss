@@ -44,8 +44,11 @@
 
     // Common headings styling
     h1, h2, h3, h4 {
-        font-weight: bold;
         margin-bottom: 1rem;
+    }
+    
+    h1 {
+        font-weight: bold;
     }
     
     a {
