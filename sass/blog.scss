@@ -38,7 +38,7 @@
                 font-size: clamp(0.7rem, 2.2vw, 1rem);
             }
             
-            .card-date-and-time {
+            .card-date-and-stats {
                 text-align: right;
 
                 .card-date {
@@ -48,7 +48,7 @@
                     display: inline-block;
                 }
 
-                .card-time {
+                .card-stats {
                     color: $text-color;
                     font-family: Andika;
                     font-size: clamp(0.5rem, 1.67vw, 0.75rem);

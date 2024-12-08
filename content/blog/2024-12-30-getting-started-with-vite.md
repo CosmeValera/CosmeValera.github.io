@@ -126,5 +126,5 @@ export default defineConfig({
 
 <h4>Resources</h4>
 
-- <a target="_blank" href="https://vite.dev/"><b>VITE DOC</b></a>
+- <a target="_blank" href="https://vite.dev/">VITE DOC</a>
 - **Learn VITE + Module Federation** with this video tutorial by Jack Herrington. <a target="_blank" href="https://vite.dev/">Watch it here</a>.

@@ -27,11 +27,10 @@
         <h3 class="blog-title">{{ post.title }}</h3>
         <div class="blog-card-details">
           <p class="card-description"> {{ post.description }} </p>
-          <div class="card-date-and-time">
+          <div class="card-date-and-stats">
             <span class="card-date"> {{ post_date_display }}</span>
-            <span class="card-time">
-              {{ post.reading_time }} mins <i class="fas fa-clock"></i> 
-              - <i>{{ post.word_count }} words</i> &nbsp;<i class="fas fa-file-alt"></i>
+            <span class="card-stats">
+              {{ post.reading_time }} mins <i class="fas fa-clock"></i> - <small><i>{{ post.word_count }} words</i></small>
             </span>
           </div>
         </div>
