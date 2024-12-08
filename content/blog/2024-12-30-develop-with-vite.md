@@ -4,7 +4,7 @@ template = "blog-post.html"
 description = "A beginner-friendly guide to starting your development workflow with Vite."
 +++
 
-![blog-cover](/images/blog/2024-08-02/vite.png)
+![blog-cover](/images/blog/2024-12-30/vite.png)
 <h4><b>Setting Up a Vite Project</b></h4>
 
 **1. Start a project with Vite**
@@ -41,9 +41,12 @@ npm run dev
 ```
 Vite's blazing-fast Hot Module Replacement (HMR) ensures near-instantaneous updates as you
 code.
+
+---
+
 <h4><b>Key Configuration Options</b></h4>
 
-Configuring your `vite.config.js` is crucial for tailoring the development experience.
+Configuring your `vite.config.js` is crucial for improving the development experience.
 
 **1. Alias Imports**
 
@@ -62,7 +65,7 @@ export default defineConfig({
 });
 ```
 
-**1. Environment Variables**
+**2. Environment Variables**
 
 Vite supports `.env` files for managing configurations. Create a `.env` file and define variables:
 
@@ -75,7 +78,7 @@ Access these variables in your app with `import.meta.env`:
 console.log(import.meta.env.VITE_API_URL);
 ```
 
-**2. Plugins**
+**3. Plugins**
 
 Extend Vite's functionality using <a href="https://vite.dev/plugins/#plugins" target="_blank">plugins</a>, such as `@vitejs/plugin-react` for React projects. Install it and add it to your configuration:
 
@@ -89,8 +92,11 @@ import react from '@vitejs/plugin-react';
     plugins: [react()]
 });
 ```
+
+---
+
 <h4><b>Challenges and Considerations</b></h4>
-While Vite offers a powerful development experience, there are some challenges to keep in mind:
+<p>While Vite offers a powerful development experience, there are some challenges to keep in mind:</p>
 
 1. **Hot Module Replacement (HMR)**
 Vite's HMR is fast, but integrating it with certain frameworks or configurations (like Module
