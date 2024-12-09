@@ -1,7 +1,7 @@
 +++
 title = "Getting Started with Vite"
 template = "blog-post.html"
-description = "A beginner-friendly guide to starting your development workflow with Vite."
+description = "A beginner-friendly guide to starting your development workflow with Vite"
 +++
 
 ![blog-cover](/images/blog/2024-12-30/vite.png)
