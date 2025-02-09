@@ -7,8 +7,8 @@ Visit my portfolio: https://cosmevalera.github.io/
 ## Tech
 ### 📦 Prerequisites
 
-- Node.js (v16.13.2 or higher)
-- Zola (0.17.2 or higher)
+- [Node.js](https://nodejs.org/en/download) (v16.13.2 or higher)
+- [Zola](https://www.getzola.org/documentation/getting-started/installation/) (0.17.2 or higher)
 
 ### 🚀 Getting Started
 Follow these steps to set up and run this Zola project:
