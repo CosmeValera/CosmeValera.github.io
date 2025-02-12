@@ -126,6 +126,13 @@ body {
                 h1 {
                     margin-top: 0;
                 }
+
+                .blog-cards {
+                    a.blog-card {
+                        margin: 0 auto;
+                        max-width: 500px;
+                    }
+                }
             }    
         }
         @media screen and (max-width: $break-medium) {
