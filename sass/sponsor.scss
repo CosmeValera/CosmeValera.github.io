@@ -61,6 +61,7 @@
 
         &:hover {
             box-shadow: 0px 8px 16px rgba(0,0,0, 0.7);
+            transform: scale(1.04);
         }
 
         &.tier-card-silver {
@@ -74,6 +75,20 @@
           border: 2px solid #FFD700;
           hr.tier-card-hr {
             background-color: #FFD700;
+          }
+          position: relative;
+
+          &::before {
+            content: "Popular";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #FFD700;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
           }
         }
 
