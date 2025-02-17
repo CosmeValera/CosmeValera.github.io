@@ -1,5 +1,16 @@
 @import 'main';
 
+.projects-intro {
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: $text-color;
+    opacity: 0.9;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    line-height: 1.6;
+    font-style: italic;
+}
+
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -159,9 +170,4 @@
             }
         }
     }
-}
-
-
-i:not(.fab-button-i) {
-    margin-right: 4px;
 }
