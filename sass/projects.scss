@@ -111,6 +111,11 @@
                     font-size: clamp(1rem, 4vw, 1.5rem);
                     margin: 0; // Remove default margin
                 }
+                
+                // Add margin to the icons
+                p.card-technology span.tag i, .card-buttons .card-button i {
+                    margin-right: 4px;
+                }
 
                 p.card-technology {
                     font-size: clamp(10px, 1.2vw, 12px);
@@ -128,6 +133,7 @@
                         border-radius: 9999px; // Tag border radius
                         font-size: clamp(0.45rem, 2vw, 0.9rem);
                         color: $text-color;
+                        min-width: fit-content;
                     }
                 }
 
