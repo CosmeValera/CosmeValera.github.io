@@ -17,7 +17,7 @@ This system allows you to schedule blog posts in Zola, automatically displaying 
 2. **Future Date:** 
     - **Current Date:** `2025-01-01`
     - **File Name:** `2030-01-01-scheduled-post.md`
-    - **Result:** The post will initially show today's date (`2025-01-01`) until it reaches the scheduled release date of `2030-01-01`
+    - **Result:** The post will show the last commit date (`2025-01-01`); and with every commit, the date will change to the last commit date, until the scheduled release date (`2030-01-01`).
 3. **Testing Posts:** Use `draft=true` to hide posts under development from the live site while you test or refine them:
 
     ```sh
