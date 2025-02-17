@@ -18,10 +18,39 @@
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
 
         &:hover {
             transform: translateY(20px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        &.recommended::before {
+            content: "Recommended";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.4));
+            color: $text-color;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        &.for-beginners::before {
+            content: "For Beginners";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: linear-gradient(145deg, #c06c84, #6c5b7b);
+            color: $text-color;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .blog-title {
