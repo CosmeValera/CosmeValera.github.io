@@ -181,6 +181,44 @@ h2 {
                 }
             }
         }
+                
+        .active-tooltip {
+            position: absolute;
+            right: calc(100% + 15px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: $active-color;
+            color: $primary-bg;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                right: -8px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-left: 8px solid $active-color;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+            }
+        }
+
+        .active-tooltip-show {
+            animation: tooltipFade 4s ease-in-out forwards;
+        }
+
+        @keyframes tooltipFade {
+            0% { opacity: 0; transform: translateY(-50%) translateX(-20px); }
+            15% { opacity: 1; transform: translateY(-50%) translateX(0); }
+            85% { opacity: 1; transform: translateY(-50%) translateX(0); }
+            100% { opacity: 0; transform: translateY(-50%) translateX(-20px); }
+        }
     }
 }
 

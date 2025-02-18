@@ -47,7 +47,37 @@ function toggleMobileMenu() {
     }
 }
 
+function showActiveTooltip() {
+    const activeTooltip = document.querySelector('.active-tooltip');
+    if (!activeTooltip) return;
+
+    // Get current path and check if tooltip has been shown
+    const currentPath = window.location.pathname;
+    const tooltipShownKey = `tooltipShown_${currentPath}`;
+    const hasTooltipBeenShown = localStorage.getItem(tooltipShownKey);
+
+    if (!hasTooltipBeenShown) {
+        // Show tooltip
+        activeTooltip.classList.remove('active-tooltip-show');
+        void activeTooltip.offsetWidth; // Force reflow
+        activeTooltip.classList.add('active-tooltip-show');
+        
+        // Remove the class after animation completes
+        setTimeout(() => {
+            activeTooltip.classList.remove('active-tooltip-show');
+        }, 4000);
+
+        // Store in localStorage that tooltip has been shown for this path
+        localStorage.setItem(tooltipShownKey, 'true');
+    }
+}
+
 // Initialize
-document.addEventListener('DOMContentLoaded', initializeDesktopMenu);
-window.addEventListener('resize', handleResize);
-fabButton.addEventListener('click', toggleMobileMenu);
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDesktopMenu();
+    showActiveTooltip();
+    
+    // Add resize and click handlers
+    window.addEventListener('resize', handleResize);
+    fabButton.addEventListener('click', toggleMobileMenu);
+});
