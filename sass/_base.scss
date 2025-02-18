@@ -152,6 +152,35 @@ h2 {
                 letter-spacing: 0.5px;
                 text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
             }
+
+            &.active-page {
+                background: linear-gradient(135deg, 
+                    rgba(79, 245, 79, 0.15) 0%, 
+                    rgba(79, 245, 79, 0.25) 100%
+                );
+                border-color: #4ff54f;
+
+                span {
+                    // Add a very noticeable shadow to the text to increase contrast
+                    text-shadow: -1px 1px 1px rgba(0, 0, 0, 1);
+                }
+
+                .menu-icon {
+                    color: #4ff54f;
+                }
+
+                &:hover {
+                    background: linear-gradient(135deg, 
+                        rgba(79, 245, 79, 0.25) 0%, 
+                        rgba(79, 245, 79, 0.35) 100%
+                    );
+                    border-color: #4ff54f;
+                    
+                    .menu-icon {
+                        color: #4ff54f;
+                    }
+                }
+            }
         }
     }
 }
