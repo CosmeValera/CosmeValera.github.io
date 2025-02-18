@@ -155,29 +155,28 @@ h2 {
 
             &.active-page {
                 background: linear-gradient(135deg, 
-                    rgba(79, 245, 79, 0.15) 0%, 
-                    rgba(79, 245, 79, 0.25) 100%
+                    rgba($active-color, 0.15) 0%, 
+                    rgba($active-color, 0.25) 100%
                 );
-                border-color: #4ff54f;
+                border-color: $active-color;
 
                 span {
-                    // Add a very noticeable shadow to the text to increase contrast
                     text-shadow: -1px 1px 1px rgba(0, 0, 0, 1);
                 }
-
+                
                 .menu-icon {
-                    color: #4ff54f;
+                    color: $active-color;
                 }
 
                 &:hover {
                     background: linear-gradient(135deg, 
-                        rgba(79, 245, 79, 0.25) 0%, 
-                        rgba(79, 245, 79, 0.35) 100%
+                        rgba($active-color, 0.25) 0%, 
+                        rgba($active-color, 0.35) 100%
                     );
-                    border-color: #4ff54f;
+                    border-color: $active-color;
                     
                     .menu-icon {
-                        color: #4ff54f;
+                        color: $active-color;
                     }
                 }
             }
