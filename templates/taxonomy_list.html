@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Tags | Cosme
+{% endblock %}
+
+{% block content %}
+<div class="taxonomy-list">
+  <h1>Tags</h1>
+  <div class="tags-cloud">
+    {% for term in terms %}
+      <a class="tag" href="{{ term.permalink }}">
+        {{ term.name }} ({{ term.pages | length }})
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

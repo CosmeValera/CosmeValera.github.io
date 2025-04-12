@@ -3,6 +3,10 @@ title = "Home | Cosme"
 
 compile_sass = true
 
+taxonomies = [
+    {name = "tags", feed = true},
+]
+
 [markdown]
 highlight_code = true
 highlight_theme = "monokai"

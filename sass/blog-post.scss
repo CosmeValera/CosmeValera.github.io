@@ -31,6 +31,11 @@
             font-weight: 500;
             letter-spacing: 0.025em;
             text-transform: uppercase;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background: darken(#8b5cf6, 10%);
+            }
         }
     }
 

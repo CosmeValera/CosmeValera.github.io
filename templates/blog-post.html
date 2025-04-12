@@ -15,10 +15,10 @@
     <div class="blog-post">
       <a href="/blog" class="back-link">← Back to all posts</a>
       
-      {% if page.taxonomies.tags %}
+      {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags">
           {% for tag in page.taxonomies.tags %}
-            <span class="tag">{{ tag }}</span>
+            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
           {% endfor %}
         </div>
       {% endif %}

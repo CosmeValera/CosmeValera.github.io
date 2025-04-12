@@ -2,6 +2,9 @@
 title = "Getting Started with Vite"
 template = "blog-post.html"
 description = "A beginner-friendly guide to starting your development workflow with Vite"
+date = 2024-12-30
+[taxonomies]
+tags = ["for begginers"]
 +++
 
 ![blog-cover](/images/blog/2024-12-30/vite.png)
