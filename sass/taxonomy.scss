@@ -43,12 +43,16 @@
         color: white;
         transition: transform 0.2s ease;
 
-        &[href*="for-begginers"] {
+        &[href*="recommended"] {
+          background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+        }
+
+        &[href*="for-beginners"] {
           background: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
         }
 
-        &[href*="recommended"] {
-          background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+        &:not([href*="recommended"]):not([href*="for-beginners"]) {
+          background: linear-gradient(145deg, #444, #222);
         }
 
         .tag-count {

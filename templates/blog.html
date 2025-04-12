@@ -31,8 +31,9 @@
       {% endif %}
       
       <a class="blog-card 
-        {% if post.title == 'SOLID Principles' %}recommended{% endif %}
-        {% if post.title == 'Getting Started with Vite' %}for-beginners{% endif %}" 
+        {% if post.taxonomies and post.taxonomies.tags %}
+          {% for tag in post.taxonomies.tags %}tag-{{ tag | slugify }}{% endfor %}
+        {% endif %}" 
         href="{{ post.permalink }}">
         <h3 class="blog-title">{{ post.title }}</h3>
         <div class="blog-card-details">

@@ -31,12 +31,18 @@
             color: white;
             transition: transform 0.2s ease;
 
-            &[href*="for-begginers"] {
+            // Tag-specific styling using the tag slug in the URL
+            &[href*="recommended"] {
+                background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+            }
+
+            &[href*="for-beginners"] {
                 background: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
             }
 
-            &[href*="recommended"] {
-                background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+            // Fallback style for other tags
+            &:not([href*="recommended"]):not([href*="for-beginners"]) {
+                background: linear-gradient(145deg, #444, #222);
             }
 
             &:hover {

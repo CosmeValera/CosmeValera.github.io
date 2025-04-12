@@ -36,7 +36,7 @@
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
         }
 
-        &.recommended::before {
+        &.tag-recommended::before {
             content: "Recommended";
             position: absolute;
             top: -12px;
@@ -50,7 +50,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        &.for-beginners::before {
+        &.tag-for-beginners::before {
             content: "For Beginners";
             position: absolute;
             top: -12px;
