@@ -4,19 +4,31 @@
   {{ term.name }} | Cosme
 {% endblock %}
 
+{% block styles %}
+  <link rel="stylesheet" href="{{ get_url(path="taxonomy.css") | safe }}">
+{% endblock %}
+
 {% block content %}
-<div class="taxonomy-single">
-  <h1>Posts tagged with "{{ term.name }}"</h1>
-  <div class="posts-list">
-    {% for page in term.pages %}
-      <article class="post-preview">
-        <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-        <span class="post-date">{{ page.date | date(format="%B %d, %Y") }}</span>
-        {% if page.description %}
-          <p>{{ page.description }}</p>
-        {% endif %}
-      </article>
-    {% endfor %}
+<div class="column right">
+  <div class="taxonomy-single">
+    <a href="/tags" class="back-link">← Back to all tags</a>
+    <div class="tag-header">
+      <h1>Posts tagged</h1>
+      <span class="current-tag">{{ term.name }}</span>
+    </div>
+    <div class="posts-list">
+      {% for page in term.pages %}
+        <article class="post-preview">
+          <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+          <div class="post-metadata">
+            <span class="post-date">{{ page.date | date(format="%B %d, %Y") }}</span>
+          </div>
+          {% if page.description %}
+            <p class="post-description">{{ page.description }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock content %}

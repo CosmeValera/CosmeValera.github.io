@@ -23,18 +23,24 @@
 
         .tag {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: #8b5cf6;
-            color: white;
+            padding: 0.35rem 1.25rem;
             border-radius: 999px;
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             font-weight: 500;
-            letter-spacing: 0.025em;
-            text-transform: uppercase;
-            transition: background-color 0.2s ease;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease;
+
+            &[href*="for-begginers"] {
+                background: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
+            }
+
+            &[href*="recommended"] {
+                background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+            }
 
             &:hover {
-                background: darken(#8b5cf6, 10%);
+                transform: translateY(-2px);
             }
         }
     }
@@ -63,6 +69,7 @@
         line-height: 1.6;
         margin: 1.5rem 0;
         text-wrap: balance;
+        text-align: center;
     }
 
     .link-text {
