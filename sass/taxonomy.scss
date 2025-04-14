@@ -44,15 +44,15 @@
         transition: transform 0.2s ease;
 
         &[href*="recommended"] {
-          background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+          background-color: $recommended-plain;
         }
 
         &[href*="for-beginners"] {
-          background: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
+          background-color: $for-beginners-plain;
         }
 
         &:not([href*="recommended"]):not([href*="for-beginners"]) {
-          background: linear-gradient(145deg, #444, #222);
+          background-color: $default-tag-plain;
         }
 
         .tag-count {
@@ -71,7 +71,7 @@
 
 .tag-header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 3rem;
 
@@ -80,9 +80,26 @@
     }
 
     .current-tag {
-        font-size: 1.5rem;
-        color: #8b5cf6;
+        display: inline-block;
+        padding: 0.35rem 1.25rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
         font-weight: 500;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s ease;
+        
+        &[data-tag*="recommended"] {
+            background-color: $recommended-plain;
+        }
+        
+        &[data-tag*="for-beginners"] {
+            background-color: $for-beginners-plain;
+        }
+        
+        &:not([data-tag*="recommended"]):not([data-tag*="for-beginners"]) {
+            background-color: $default-tag-plain;
+        }
     }
 }
 

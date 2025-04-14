@@ -33,16 +33,16 @@
 
             // Tag-specific styling using the tag slug in the URL
             &[href*="recommended"] {
-                background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+                background-color: $recommended-plain;
             }
 
             &[href*="for-beginners"] {
-                background: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
+                background-color: $for-beginners-plain;
             }
 
             // Fallback style for other tags
             &:not([href*="recommended"]):not([href*="for-beginners"]) {
-                background: linear-gradient(145deg, #444, #222);
+                background-color: $default-tag-plain;
             }
 
             &:hover {

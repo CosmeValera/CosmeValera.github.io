@@ -41,7 +41,7 @@
             position: absolute;
             top: -12px;
             right: 20px;
-            background: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+            background: $recommended-gradient;
             color: $text-color;
             padding: 4px 12px;
             border-radius: 12px;
@@ -55,7 +55,7 @@
             position: absolute;
             top: -12px;
             right: 20px;
-            background: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
+            background: $for-beginners-gradient;
             color: $text-color;
             padding: 4px 12px;
             border-radius: 12px;

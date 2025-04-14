@@ -18,7 +18,9 @@
       {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags">
           {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
+            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">
+              {{ tag | replace(from="-", to=" ") | title }}
+            </a>
           {% endfor %}
         </div>
       {% endif %}
