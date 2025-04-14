@@ -6,63 +6,8 @@
   max-width: 700px;
   margin: 0 auto;
 
-  #section-reasons-sponsor {
-    @include card-a-colors-dark;
-    margin-bottom: 1rem;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .sponsor-title {
-      font-size: 2rem;
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .sponsor-features {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-
-      .sponsor-feature {
-        flex: 1;
-        min-width: 150px;
-        text-align: center;
-        padding: 10px;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-
-        .feature-title {
-          font-size: 1.5rem;
-          font-weight: 600;
-          margin-bottom: 16px;
-        }
-
-        p {
-          font-size: 1rem;
-          opacity: 0.8;
-        }
-      }
-    }
-  }
-
-  .common-hr {
-    opacity: 0.5;
-    margin: 16px 32px;
-  }
-
   #section-contribution {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -162,6 +107,69 @@
         
           &:hover {
             text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  
+  #section-reasons-sponsor {
+    @include card-a-colors-dark;
+    padding: 24px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .sponsor-title {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .sponsor-features {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      .sponsor-feature {
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+        padding: 10px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .feature-title {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-size: 0.8rem;
+          opacity: 0.8;
+          
+          a {
+            font-weight: bold;
+            color: $accent-color;
+            text-decoration: none;
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+            
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
