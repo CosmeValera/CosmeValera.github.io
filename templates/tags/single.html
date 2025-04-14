@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block title %}
-  {{ term.name }} | Cosme
+  {{ term.name | slugify | replace(from="-", to=" ") | title }} ({{ taxonomy.name | title }}) | Cosme
 {% endblock %}
 
 {% block styles %}
-  <link rel="stylesheet" href="{{ get_url(path="taxonomy.css") | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path="tags.css") | safe }}">
 {% endblock %}
 
 {% block content %}
 <div class="column right">
-  <div class="taxonomy-single">
-    <a href="/tags" class="back-link">← Back to all tags</a>
+  <div class="tag-single">
+    <a href="/{{ taxonomy.name }}" class="back-link">← Back to all {{ taxonomy.name }}</a>
     <div class="tag-header">
       <h1>Posts tagged</h1>
       <span class="current-tag" data-tag="{{ term.name | slugify }}">
@@ -35,4 +35,4 @@
     </div>
   </div>
 </div>
-{% endblock content %}
+{% endblock content %} 

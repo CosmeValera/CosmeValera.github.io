@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Tags | Cosme
+  {{ taxonomy.name | title }} | Cosme
 {% endblock %}
 
 {% block styles %}
-  <link rel="stylesheet" href="{{ get_url(path="taxonomy.css") | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path="tags.css") | safe }}">
 {% endblock %}
 
 {% block content %}
 <div class="column right">
-  <div class="taxonomy-list">
+  <div class="tag-list">
     <a href="/blog" class="back-link">← Back to all posts</a>
     <h1>Tags</h1>
     <div class="tags-cloud">
@@ -23,4 +23,4 @@
     </div>
   </div>
 </div>
-{% endblock content %}
+{% endblock content %} 
