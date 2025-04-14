@@ -48,17 +48,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             z-index: 1;
             
-            &.tag-recommended {
-                background: $recommended-gradient;
-            }
-            
-            &.tag-for-beginners {
-                background: $for-beginners-gradient;
-            }
-            
-            &:not(.tag-recommended):not(.tag-for-beginners) {
-                background: $default-tag-gradient;
-            }
+            @include tag-styling;
         }
 
         .blog-title {

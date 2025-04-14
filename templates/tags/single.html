@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ term.name | slugify | replace(from="-", to=" ") | title }} ({{ taxonomy.name | title }}) | Cosme
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ get_url(path="tags.css") | safe }}">
+{% endblock %}
+
+{% block content %}
+<div class="column right">
+  <div class="tag-single">
+    <a href="/{{ taxonomy.name }}" class="back-link">← Back to all {{ taxonomy.name }}</a>
+    <div class="tag-header">
+      <h1>Posts tagged</h1>
+      {% if term.name | slugify == 'recommended' %}
+        <span class="current-tag tag-recommended-plain" data-tag="{{ term.name | slugify }}">
+          {{ term.name | slugify | replace(from="-", to=" ") | title }}
+        </span>
+      {% elif term.name | slugify == 'for-beginners' %}
+        <span class="current-tag tag-for-beginners-plain" data-tag="{{ term.name | slugify }}">
+          {{ term.name | slugify | replace(from="-", to=" ") | title }}
+        </span>
+      {% else %}
+        <span class="current-tag tag-default-plain" data-tag="{{ term.name | slugify }}">
+          {{ term.name | slugify | replace(from="-", to=" ") | title }}
+        </span>
+      {% endif %}
+    </div>
+    <div class="posts-list">
+      {% for page in term.pages %}
+        <a href="{{ page.permalink }}" class="post-preview-link">
+          <article class="post-preview">
+            <h2>{{ page.title }}</h2>
+            <div class="post-metadata">
+              <span class="post-date">{{ page.date | date(format="%B %d, %Y") }}</span>
+            </div>
+            {% if page.description %}
+              <p class="post-description">{{ page.description }}</p>
+            {% endif %}
+          </article>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %} 

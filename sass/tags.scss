@@ -1,6 +1,8 @@
 @import 'main';
 
-.taxonomy-list, .taxonomy-single {
+//////////////////
+////// Tags //////
+.tag-list, .tag-single {
     max-width: 700px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -42,18 +44,8 @@
         text-decoration: none;
         color: white;
         transition: transform 0.2s ease;
-
-        &[href*="recommended"] {
-          background-color: $recommended-plain;
-        }
-
-        &[href*="for-beginners"] {
-          background-color: $for-beginners-plain;
-        }
-
-        &:not([href*="recommended"]):not([href*="for-beginners"]) {
-          background-color: $default-tag-plain;
-        }
+        
+        @include tag-styling-plain;
 
         .tag-count {
             background: rgba(255, 255, 255, 0.2);
@@ -89,17 +81,7 @@
         color: white;
         transition: transform 0.2s ease;
         
-        &[data-tag*="recommended"] {
-            background-color: $recommended-plain;
-        }
-        
-        &[data-tag*="for-beginners"] {
-            background-color: $for-beginners-plain;
-        }
-        
-        &:not([data-tag*="recommended"]):not([data-tag*="for-beginners"]) {
-            background-color: $default-tag-plain;
-        }
+        @include tag-styling-plain;
     }
 }
 
@@ -171,4 +153,6 @@
             margin-bottom: 1rem;
         }
     }
-}
+} 
+////// END: Tags //////
+///////////////////////

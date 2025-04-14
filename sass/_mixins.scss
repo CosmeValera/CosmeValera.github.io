@@ -58,4 +58,32 @@
 @mixin card-b-colors-dark {
     background-color: $tertiary-bg;
     border: 1px solid $accent-color;
+}
+
+@mixin tag-styling {
+    &.tag-recommended {
+        background: $recommended-gradient;
+    }
+
+    &.tag-for-beginners {
+        background: $for-beginners-gradient;
+    }
+
+    &.tag-default {
+        background: $default-tag-gradient;
+    }
+}
+
+@mixin tag-styling-plain {
+    &.tag-recommended-plain {
+        background-color: $recommended-plain;
+    }
+
+    &.tag-for-beginners-plain {
+        background-color: $for-beginners-plain;
+    }
+
+    &.tag-default-plain {
+        background-color: $default-tag-plain;
+    }
 } 
