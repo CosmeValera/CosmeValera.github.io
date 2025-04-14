@@ -8,6 +8,7 @@ tags = ["for-beginners"]
 +++
 
 ![blog-cover](/images/blog/2024-12-30/vite.png)
+
 <h4><b>Setting Up a Vite Project</b></h4>
 
 **1. Start a project with Vite**

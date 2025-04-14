@@ -15,7 +15,7 @@
     <div class="tag-header">
       <h1>Posts tagged</h1>
       <span class="current-tag" data-tag="{{ term.name | slugify }}">
-        {{ term.name | replace(from="-", to=" ") | title }}
+        {{ term.name | slugify | replace(from="-", to=" ") | title }}
       </span>
     </div>
     <div class="posts-list">

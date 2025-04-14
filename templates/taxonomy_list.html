@@ -16,7 +16,7 @@
     <div class="tags-cloud">
       {% for term in terms %}
         <a class="tag" href="{{ term.permalink }}">
-          {{ term.name | replace(from="-", to=" ") | title }}
+          {{ term.name | slugify | replace(from="-", to=" ") | title }}
           <span class="tag-count">{{ term.pages | length }}</span>
         </a>
       {% endfor %}
