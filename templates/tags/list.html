@@ -15,10 +15,22 @@
     <h1>Tags</h1>
     <div class="tags-cloud">
       {% for term in terms %}
-        <a class="tag" href="{{ term.permalink }}">
-          {{ term.name | slugify | replace(from="-", to=" ") | title }}
-          <span class="tag-count">{{ term.pages | length }}</span>
-        </a>
+        {% if term.name | slugify == 'recommended' %}
+          <a class="tag tag-recommended-plain" href="{{ term.permalink }}">
+            {{ term.name | slugify | replace(from="-", to=" ") | title }}
+            <span class="tag-count">{{ term.pages | length }}</span>
+          </a>
+        {% elif term.name | slugify == 'for-beginners' %}
+          <a class="tag tag-for-beginners-plain" href="{{ term.permalink }}">
+            {{ term.name | slugify | replace(from="-", to=" ") | title }}
+            <span class="tag-count">{{ term.pages | length }}</span>
+          </a>
+        {% else %}
+          <a class="tag tag-default-plain" href="{{ term.permalink }}">
+            {{ term.name | slugify | replace(from="-", to=" ") | title }}
+            <span class="tag-count">{{ term.pages | length }}</span>
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
