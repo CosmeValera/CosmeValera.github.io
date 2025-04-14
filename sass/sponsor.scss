@@ -3,6 +3,8 @@
 #sponsor {
   text-align: center;
   padding: 0 2rem 2rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
 
   #section-reasons-sponsor {
     @include card-a-colors-dark;
@@ -10,6 +12,12 @@
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
     .sponsor-title {
       font-size: 2rem;
@@ -49,110 +57,9 @@
     }
   }
 
-  #section-tiers {
-    .tier-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      justify-content: space-between;
-
-      .tier-card {
-        @include card-b-colors-dark;
-        flex: 1;
-        border-radius: 8px;
-        padding: 24px;
-        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
-        margin-bottom: 1.5rem;
-
-        &:hover {
-            box-shadow: 0px 8px 16px rgba(0,0,0, 0.7);
-            transform: scale(1.04);
-        }
-
-        &.tier-card-silver {
-          border: 1px solid #C0C0C0;
-          hr.tier-card-hr {
-            background-color: #C0C0C0;
-          }
-        }
-
-        &.tier-card-gold {
-          border: 2px solid #FFD700;
-          hr.tier-card-hr {
-            background-color: #FFD700;
-          }
-          position: relative;
-
-          &::before {
-            content: "Popular";
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #FFD700;
-            color: #000;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: bold;
-          }
-        }
-
-        &.tier-card-platinum {
-          border: 3px solid  #E5E4E2;
-          hr.tier-card-hr {
-            background-color: #E5E4E2;
-          }
-        }
-
-        .tier-card-header {
-          text-align: start;
-          
-          small {
-            opacity: 0.8;
-            display: block;
-            margin-top: 4px;
-            font-size: 0.875rem;
-          }
-        }
-
-
-        .tier-card-content {
-          text-align: start;
-
-          p {
-            font-size: 2.25rem;
-            font-weight: 500;
-            margin: 16px 0px;
-          }
-
-          ul {
-            list-style: none;
-            padding: 0;
-          }
-        }
-
-        .tier-card-hr {
-          opacity: 0.5;
-          margin: 16px 0px;
-        }
-      }
-    }
-
-  }
-
   .common-hr {
     opacity: 0.5;
-    margin: 32px 32px;
-  }
-
-  #section-current-sponsors {
-    @include card-a-colors-dark;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    margin-bottom: 1.5rem;
+    margin: 16px 32px;
   }
 
   #section-contribution {
