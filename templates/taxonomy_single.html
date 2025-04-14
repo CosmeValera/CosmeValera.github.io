@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ term.name }} | Cosme
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ get_url(path="taxonomy.css") | safe }}">
+{% endblock %}
+
+{% block content %}
+<div class="column right">
+  <div class="taxonomy-single">
+    <a href="/tags" class="back-link">← Back to all tags</a>
+    <div class="tag-header">
+      <h1>Posts tagged</h1>
+      <span class="current-tag" data-tag="{{ term.name | slugify }}">
+        {{ term.name | slugify | replace(from="-", to=" ") | title }}
+      </span>
+    </div>
+    <div class="posts-list">
+      {% for page in term.pages %}
+        <a href="{{ page.permalink }}" class="post-preview-link">
+          <article class="post-preview">
+            <h2>{{ page.title }}</h2>
+            <div class="post-metadata">
+              <span class="post-date">{{ page.date | date(format="%B %d, %Y") }}</span>
+            </div>
+            {% if page.description %}
+              <p class="post-description">{{ page.description }}</p>
+            {% endif %}
+          </article>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -2,7 +2,10 @@
 title = "SOLID Principles"
 template = "blog-post.html"
 description = "Learn how SOLID principles can enhance your codebase by promoting maintainability, scalability, and clean design"
+[taxonomies]
+tags = ["recommended"]
 +++
+
 ![blog-cover](/images/blog/2024-11-22/solid-principles.png)
 
 <h4>🧐 Why SOLID Principles?</h4>
@@ -126,7 +129,7 @@ class Square extends Shape {
 
 <h4>🎛️ 4. Interface Segregation Principle (ISP) <code class="solid-principles-tag">Easy</code></h4>
 
-**Definition:** A class should not be forced to implement interfaces it doesn’t use. Instead, create specific, smaller interfaces.
+**Definition:** A class should not be forced to implement interfaces it doesn't use. Instead, create specific, smaller interfaces.
 
 ```ts
 /** Violates ISP **/

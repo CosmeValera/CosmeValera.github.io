@@ -8,6 +8,15 @@ $text-color: #ffffff;
 $accent-color: #4ff5f5;
 $active-color: #4ff54f;
 
+// Tag colors
+$recommended-plain: #2D8295;
+$recommended-gradient: linear-gradient(145deg, #1d4f6a, rgba($accent-color, 0.45));
+
+$for-beginners-plain: #A5439F;
+$for-beginners-gradient: linear-gradient(145deg, #7b3eb0, rgba(#f94d7e, 0.5));
+
+$default-tag-plain: #555;
+$default-tag-gradient: linear-gradient(145deg, #444, #666);
 
 // Fonts
 $sans-serif: Montserrat, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;

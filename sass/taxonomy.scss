@@ -1,0 +1,174 @@
+@import 'main';
+
+.taxonomy-list, .taxonomy-single {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    .back-link {
+        display: block;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        transition: color 0.2s;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 1.25rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s ease;
+
+        &[href*="recommended"] {
+          background-color: $recommended-plain;
+        }
+
+        &[href*="for-beginners"] {
+          background-color: $for-beginners-plain;
+        }
+
+        &:not([href*="recommended"]):not([href*="for-beginners"]) {
+          background-color: $default-tag-plain;
+        }
+
+        .tag-count {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.1rem 0.5rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.tag-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .current-tag {
+        display: inline-block;
+        padding: 0.35rem 1.25rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s ease;
+        
+        &[data-tag*="recommended"] {
+            background-color: $recommended-plain;
+        }
+        
+        &[data-tag*="for-beginners"] {
+            background-color: $for-beginners-plain;
+        }
+        
+        &:not([data-tag*="recommended"]):not([data-tag*="for-beginners"]) {
+            background-color: $default-tag-plain;
+        }
+    }
+}
+
+.posts-list {
+    .post-preview-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            .post-preview {
+                transform: translateY(-4px);
+            }
+            
+            h2 {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .post-preview {
+        background: $secondary-bg;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+        
+        h2 {
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.3;
+            transition: color 0.2s ease;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.75rem;
+                font-weight: 600;
+                line-height: 1.3;
+                
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+
+        .post-metadata {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .post-date {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.875rem;
+            }
+        }
+
+        .post-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -30,10 +30,15 @@
         {% set time_label = "mins" %}
       {% endif %}
       
-      <a class="blog-card 
-        {% if post.title == 'SOLID Principles' %}recommended{% endif %}
-        {% if post.title == 'Getting Started with Vite' %}for-beginners{% endif %}" 
-        href="{{ post.permalink }}">
+      <a class="blog-card" href="{{ post.permalink }}">
+        {% if post.taxonomies and post.taxonomies.tags %}
+          {% for tag in post.taxonomies.tags %}
+            <div class="blog-card-tag tag-{{ tag | slugify }}">
+              {{ tag | slugify | replace(from="-", to=" ") | title }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        
         <h3 class="blog-title">{{ post.title }}</h3>
         <div class="blog-card-details">
           <p class="card-description">{{ post.description }}</p>

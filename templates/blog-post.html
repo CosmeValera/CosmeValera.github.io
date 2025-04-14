@@ -13,7 +13,24 @@
 {% block content %}
   <div class="column right">
     <div class="blog-post">
+      <a href="/blog" class="back-link">← Back to all posts</a>
+      
+      {% if page.taxonomies and page.taxonomies.tags %}
+        <div class="tags">
+          {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">
+              {{ tag | slugify | replace(from="-", to=" ") | title }}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
       <h1 class="blog-post-title">{{ page.title }}</h1>
+      <div class="post-metadata">
+        <span class="post-date">{{ page.date | date(format="%B %d, %Y") }}</span>
+        <span class="reading-time">{{ page.reading_time | default(value="3") }} min read • {{ page.word_count | default(value="0") }} words</span>
+      </div>
+
       <h3 class="presentation-text">{{ page.description }}</h3>
       <div class="post-content">
           {{ page.content | safe }}
