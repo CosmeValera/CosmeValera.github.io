@@ -37,7 +37,7 @@ function clickFilterRendersCards() {
 
     const filterButtons = document.querySelectorAll(".filter-button");
     const projectCards = document.querySelectorAll(".project-card");
-    const animationClasses = ["animate__bounceInLeft", "animate__bounceIn", "animate__bounceInRight"];
+    const animationClasses = ["animate__bounceInLeft", "animate__bounceInRight"];
     let currentSelectedFilter = ALL_FILTER_VALUE; // Start with "All" selected initially
     let previousVisibleCards = Array.from(projectCards).map((card, index) => ({
         card: card,
@@ -80,9 +80,8 @@ function clickFilterRendersCards() {
                 card.style.display = "none";
                 setTimeout(() => {
                     card.style.display = "block";
-                    card.classList.add(animationClasses[index % 3]);
-                    card.classList.remove(animationClasses[(index + 1) % 3]);
-                    card.classList.remove(animationClasses[(index + 2) % 3]);
+                    card.classList.add(animationClasses[index % 2]);
+                    card.classList.remove(animationClasses[(index + 1) % 2]);
                 }, 1);
             });
 
