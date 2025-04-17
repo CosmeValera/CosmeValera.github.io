@@ -126,18 +126,24 @@ body {
                 h1 {
                     margin-top: 0;
                 }
-
+            }    
+        }
+        
+        /* Small mobile screens only for blog page */
+        @media screen and (max-width: $break-small) {
+            .column.right {
                 .blog-cards {
                     grid-template-columns: 1fr;
-
+                    
                     a.blog-card {
                         margin: 0 auto;
                         max-width: max(400px, 90%);
                         width: 90%;
                     }
                 }
-            }    
+            }
         }
+        
         @media screen and (max-width: $break-medium) {
             .column.right {
                 .filter-buttons {
