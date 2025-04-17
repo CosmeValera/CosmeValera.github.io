@@ -136,46 +136,48 @@ body {
             }    
         }
         @media screen and (max-width: $break-medium) {
-            .filter-buttons {
-                flex-direction: column;
-                gap: 0.4rem;
-                margin: 2vw 4vw;
-
-                .toggle-buttons-wrapper {
-                    .filter-toggle-button, .toggle-hover-button {
-                        display: block; // Show the toggle button only on mobile
-
-                        i.no-show {
-                            display: none;
-                        }
-                    }
-                }
-    
-                .filter-dropdown {
-                    display: none; // Initially hide filter options on mobile
+            .column.right {
+                .filter-buttons {
                     flex-direction: column;
-                    background: darken($accent-color, 47%);
-                    padding: 10px;
-                    margin: 0.4rem 0;
-                    border-radius: 8px;
+                    gap: 0.4rem;
+                    margin: 2vw 4vw;
 
-                    &.show {
-                        display: flex;
+                    .toggle-buttons-wrapper {
+                        .filter-toggle-button, .toggle-hover-button {
+                            display: block; // Show the toggle button only on mobile
+
+                            i.no-show {
+                                display: none;
+                            }
+                        }
                     }
+        
+                    .filter-dropdown {
+                        display: none; // Initially hide filter options on mobile
+                        flex-direction: column;
+                        background: darken($accent-color, 47%);
+                        padding: 10px;
+                        margin: 0.4rem 0;
+                        border-radius: 8px;
 
-                    .filter-button {
-                        margin: 5px 0;
-                        border-radius: 5px;
+                        &.show {
+                            display: flex;
+                        }
 
-                        &:not(.selected-filter) { // Disable hover effect on mobile
-                            background-color: darken($accent-color, 33%)!important;
-                            color: $primary-bg!important;
+                        .filter-button {
+                            margin: 5px 0;
+                            border-radius: 5px;
+
+                            &:not(.selected-filter) { // Disable hover effect on mobile
+                                background-color: darken($accent-color, 33%)!important;
+                                color: $primary-bg!important;
+                            }
                         }
                     }
                 }
-            }
-            .blog-post .related-container > .link a {
-                max-width: unset;
+                .blog-post .related-container > .link a {
+                    max-width: unset;
+                }
             }
         }
 
