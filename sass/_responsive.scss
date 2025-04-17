@@ -128,9 +128,12 @@ body {
                 }
 
                 .blog-cards {
+                    grid-template-columns: 1fr;
+
                     a.blog-card {
                         margin: 0 auto;
-                        max-width: 500px;
+                        max-width: max(400px, 90%);
+                        width: 90%;
                     }
                 }
             }    
