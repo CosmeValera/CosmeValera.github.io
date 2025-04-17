@@ -61,6 +61,8 @@
 }
 
 @mixin tag-styling {
+    min-width: fit-content;
+
     &.tag-recommended {
         background: $recommended-gradient;
     }
@@ -75,6 +77,8 @@
 }
 
 @mixin tag-styling-plain {
+    min-width: fit-content;
+    
     &.tag-recommended-plain {
         background-color: $recommended-plain;
     }
@@ -86,4 +90,4 @@
     &.tag-default-plain {
         background-color: $default-tag-plain;
     }
-} 
+}

@@ -18,9 +18,19 @@
       {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags">
           {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">
-              {{ tag | slugify | replace(from="-", to=" ") | title }}
-            </a>
+            {% if tag | slugify == 'recommended' %}
+              <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag tag-{{ tag | slugify }}-plain">
+                {{ tag | slugify | replace(from="-", to=" ") | title }}
+              </a>
+            {% elif tag | slugify == 'for-beginners' %}
+              <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag tag-{{ tag | slugify }}-plain">
+                {{ tag | slugify | replace(from="-", to=" ") | title }}
+              </a>
+            {% else %}
+              <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag tag-{{ tag | slugify }}-plain">
+                {{ tag | slugify | replace(from="-", to=" ") | title }}
+              </a>
+            {% endif %}
           {% endfor %}
         </div>
       {% endif %}
