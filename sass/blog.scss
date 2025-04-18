@@ -18,8 +18,8 @@
 
     .blog-cards {
         max-width: 900px;
+        margin: 0 clamp(0.5rem, 2vw, 10rem);
         padding-top: 1.5rem;
-        margin: 0 0.5rem;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.5rem;
@@ -121,4 +121,17 @@
             }
         }
     }
+    
+    /* Small mobile screens blog page specific styles */
+    @media screen and (max-width: $break-small) {
+        .blog-cards {
+            grid-template-columns: 1fr;
+            
+            a.blog-card {
+                margin: 0 auto;
+                max-width: max(400px, 90%);
+                width: 90%;
+            }
+        }
+    }   
 }

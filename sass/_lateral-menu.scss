@@ -1,0 +1,90 @@
+.lateral-menu {
+    @media screen and (min-width: $break-medium) {
+        display: flex;
+        align-items: flex-end;
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        flex-direction: column;
+        z-index: 1000;
+        width: unset;
+        background-color: transparent;
+
+        .menu-item-container {
+            margin: 10px 0;
+            text-align: center;
+            
+            .menu-item {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background-color: $menu-item-bg;
+                color: $text-color;
+                padding: 10px;
+                border-radius: 50%;
+                overflow: hidden;
+                white-space: nowrap;
+                min-width: 60px;
+                height: 60px;
+                position: relative;
+                
+                width: 60px;
+                max-width: 60px;
+                transition: max-width 0.4s ease, border-radius 0.25s ease;
+
+                &:hover {
+                    max-width: 200px;
+                    width: fit-content;
+                    border-radius: 30px;
+
+                    .menu-label {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
+                    .menu-icon {
+                        transform: translateX(-6px) scale(1.15);
+                        transition: transform 0.25s ease; 
+                    }
+                }
+
+                &:not(:hover) .menu-label {
+                    opacity: 0;
+                    transition: opacity 0s ease, transform 0s ease; /* Instant disappear on unhover */
+                }
+                
+                .menu-icon {
+                    opacity: 0.9;
+                    font-size: 24px;
+                    transition: transform 0.25s ease;
+                    margin: 0 6px 0 0;
+                }
+
+                .menu-label {
+                    visibility: visible; /* Keep visible, but control appearance with opacity */
+                    opacity: 0; /* Hidden initially */
+                    font-size: 1rem;
+                    margin: 0 12px 0 12px;
+                    transform: translateX(20px);
+                    transition: opacity 0.25s ease, transform 0.25s ease;
+                    font-family: Andika, 'Courier New', Courier, monospace;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.fab-button {
+    @media screen and (min-width: $break-medium) {
+        display: none;
+    }
+}
+
+// Ensure scrollbar is always visible on medium screens to prevent layout shifts
+@media screen and (min-width: $break-medium) {
+    html {
+        overflow-y: scroll;
+    }
+} 
