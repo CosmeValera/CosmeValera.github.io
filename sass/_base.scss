@@ -76,7 +76,7 @@ h2 {
             z-index: -1;
             animation: fadeIn 0.3s ease;
             
-            @media screen and (min-width: $break-medium) {
+            @include respond-to('md') {
                 display: none; // Hide overlay on desktop
             }
         }

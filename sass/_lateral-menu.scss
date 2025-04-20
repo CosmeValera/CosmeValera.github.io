@@ -1,5 +1,5 @@
 .lateral-menu {
-    @media screen and (min-width: $break-medium) {
+    @include respond-to('md') {
         display: flex;
         align-items: flex-end;
         position: fixed;
@@ -77,13 +77,13 @@
 }
 
 .fab-button {
-    @media screen and (min-width: $break-medium) {
+    @include respond-to('md') {
         display: none;
     }
 }
 
 // Ensure scrollbar is always visible on medium screens to prevent layout shifts
-@media screen and (min-width: $break-medium) {
+@include respond-to('md') {
     html {
         overflow-y: scroll;
     }

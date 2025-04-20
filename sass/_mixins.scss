@@ -91,3 +91,22 @@
         background-color: $default-tag-plain;
     }
 }
+
+// Breakpoints map for responsive mixins
+$breakpoints: (
+  'sm': $break-small,
+  'md': $break-medium,
+  'lg': $break-large,
+  'xl': $break-extra-large
+);
+
+// Mixin for min-width breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in \$breakpoints map.";
+  }
+}

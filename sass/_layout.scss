@@ -23,7 +23,7 @@ main {
         }
     }
     
-    @media screen and (min-width: $break-medium) {
+    @include respond-to('md') {
         .column.right .description{
             padding-right: 5rem;
         }

@@ -179,7 +179,7 @@
       }
     }
     
-    @media (min-width: $break-extra-large) {
+    @include respond-to('xl') {
       #section-tiers .tier-cards {
         flex-direction: row;
         .tier-card {
