@@ -29,24 +29,39 @@ h1, h2, h3, h4, h5, h6, p, b, a {
 
 h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: calc(min(5rem, 10vw));
     font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+h1.presentation-title {
+    font-size: calc(min(5rem, 10vw));
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: calc(min(2.5rem, 5vw));
     font-weight: normal;
 }
 
-@media screen and (max-width: $break-large) {
-    h1, h1.presentation-title {
-        font-size: calc(min(5rem, 10vw))!important;
+@include respond-to('lg') {
+    // These 2 are for the index page actually
+    h1.presentation-title {
+        font-size: 7rem;
+    }
+
+    h2.presentation {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 5rem;
     }
 
     h2 {
-        font-size: calc(min(2.5rem, 5vw))!important;
+        font-size: 3rem;
     }
 }
+  
 
 ///////////////////////
 //   LATERAL-MENU    //
@@ -76,7 +91,7 @@ h2 {
             z-index: -1;
             animation: fadeIn 0.3s ease;
             
-            @media screen and (min-width: $break-medium) {
+            @include respond-to('md') {
                 display: none; // Hide overlay on desktop
             }
         }

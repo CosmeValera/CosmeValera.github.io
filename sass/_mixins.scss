@@ -1,35 +1,40 @@
 @mixin styled-button($color-font-and-border, $hover-background-color) {
-    font-size: 2rem;
-    padding: 12px 30px;
-    border: 3px solid $color-font-and-border;
+    // 📱 Mobile base styles (formerly "phone")
+    font-size: 1rem;
+    padding: 10px 8px;
+    border: 2px solid $color-font-and-border;
     color: $color-font-and-border;
     background-color: $primary-bg;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
-    
+  
     &:hover {
-        color: $primary-bg;
-        background-color: $hover-background-color;
+      color: $primary-bg;
+      background-color: $hover-background-color;
     }
-    
-    // TABLET
-    @media screen and (max-width: $break-medium) {
-        font-size: 1.6rem;
-        padding: 12px 25px;
-        border: 2px solid $color-font-and-border;
-        font-weight: normal;
+  
+    // 🧠 Remove tighter mobile styles from non .index-nav elements only
+    &:not(.index-nav) {
+      // Already applied by default now
     }
-    
-    // PHONE
-    @media screen and (max-width: $break-small) {
-        &:not(.index-nav) {
-            font-size: 1rem;
-            padding: 10px 8px;
-            border: 2px solid $color-font-and-border;
-            font-weight: normal;
-        }
+  
+    // 🧾 TABLET styles (min-width: md)
+    @include respond-to('md') {
+      font-size: 1.6rem;
+      padding: 12px 25px;
+      border: 2px solid $color-font-and-border;
+      font-weight: normal;
     }
-}
+  
+    // 🖥 DESKTOP styles (min-width: lg)
+    @include respond-to('lg') {
+      font-size: 2rem;
+      padding: 12px 30px;
+      border: 3px solid $color-font-and-border;
+      font-weight: bold;
+    }
+  }
+  
 
 @mixin underline-effect($after-position, $bottom, $hover-color) {
     position: relative;
@@ -90,4 +95,23 @@
     &.tag-default-plain {
         background-color: $default-tag-plain;
     }
+}
+
+// Breakpoints map for responsive mixins
+$breakpoints: (
+  'sm': $break-small,
+  'md': $break-medium,
+  'lg': $break-large,
+  'xl': $break-extra-large
+);
+
+// Mixin for min-width breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in \$breakpoints map.";
+  }
 }
