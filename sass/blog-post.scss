@@ -10,6 +10,8 @@
         text-decoration: none;
         margin-bottom: 2rem;
         font-size: 1rem;
+        transition: color 0.2s;
+        min-width: fit-content;
 
         &:hover {
             color: white;
