@@ -1,47 +1,255 @@
 @import 'main';
 
 .column.right {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 
-    .projects-intro {
-        margin: 0 auto 2rem;
-        text-align: center;
-        color: $text-color;
-        opacity: 0.9;
-        font-size: clamp(0.9rem, 2.2vw, 1.1rem);
-        line-height: 1.6;
-        font-style: italic;
+  .projects-intro {
+    max-width: min(900px, 75vw);
+    text-wrap: balance;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: $text-color;
+    opacity: 0.9;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 2vw 4vw 24px;
+
+    .toggle-buttons-wrapper {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+        justify-content: center;
+
+        .filter-toggle-button,
+        .toggle-hover-button {
+            display: block; // Visible on mobile
+            background: $accent-color;
+            color: $primary-bg;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+
+            i.no-show {
+                display: none;
+            }
+        }
+
+        .filter-toggle-button {
+            flex: 3;
+        }
+
+        .toggle-hover-button {
+            flex: 5;
+        }
     }
 
+    .filter-dropdown {
+        display: none;
+        flex-direction: column;
+        background: darken($accent-color, 47%);
+        padding: 10px;
+        margin: 0.4rem 0;
+        border-radius: 8px;
+
+        &.show {
+            display: flex;
+        }
+
+        .filter-button {
+            margin: 5px 0;
+            border-radius: 5px;
+
+            &:not(.selected-filter) {
+                background-color: darken($accent-color, 33%) !important;
+                color: $primary-bg !important;
+            }
+        }
+    }
+
+    .filter-button {
+      background-color: darken($accent-color, 33%);
+      border: none;
+      cursor: pointer;
+      padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
+      margin: 0 5px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-bg;
+      border-radius: 9999px;
+      transition: background-color 0.3s ease-in-out;
+
+      &.selected-filter {
+        background-color: darken($accent-color, 17%);
+        color: $primary-bg;
+      }
+
+      &:hover {
+        background-color: $accent-color;
+        color: $primary-bg;
+      }
+    }
+  }
+
+  .project-cards-row {
+    overflow: hidden;
+    margin: 0 clamp(0.5rem, 2vw, 10rem);
+
+    .project-card {
+      position: relative;
+      margin-bottom: 2rem;
+      cursor: default;
+
+      .project-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        a {
+          text-decoration: none;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+
+        .project-details-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, #4ff5f5cc, rgba(0, 0, 0, 0.7));
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          text-align: left;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          padding-left: 2rem;
+          padding-bottom: clamp(0.5vw, 2rem, 2vw);
+
+          h3.card-title {
+            font-weight: bold;
+            color: $text-color;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            margin: 0;
+          }
+
+          p.card-technology span.tag i,
+          .card-buttons .card-button i {
+            margin-right: 4px;
+          }
+
+          p.card-technology {
+            font-size: clamp(10px, 1.2vw, 12px);
+            font-weight: 600;
+            color: $text-color;
+            font-family: Andika;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            gap: 0.5rem;
+            margin: 8px 0 8px;
+
+            span.tag {
+              background-color: #4ff5f550;
+              padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
+              border-radius: 9999px;
+              font-size: clamp(0.45rem, 2vw, 0.9rem);
+              color: $text-color;
+              min-width: fit-content;
+            }
+          }
+
+          .card-buttons {
+            display: flex;
+            gap: 0.5rem;
+
+            .card-button {
+              font-size: clamp(0.45rem, 2vw, 0.9rem);
+              padding: 6px 10px;
+              color: $secondary-bg;
+              background-color: $accent-color;
+              font-weight: bold;
+              text-decoration: none;
+              margin: 0;
+              border-radius: 5px;
+              width: fit-content;
+
+              svg {
+                width: clamp(8px, 2vw, 16px);
+                height: clamp(8px, 2vw, 16px);
+              }
+
+              &:hover {
+                background-color: #4ff5f5c0;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover,
+      &.hovered {
+        .project-details-overlay {
+          opacity: 1;
+        }
+
+        .project-image {
+          transform: translateY(20px);
+          transition: transform 0.5s;
+        }
+      }
+    }
+  }
+
+  .blog-post .related-container > .link a {
+    max-width: unset;
+  }
+
+  // 🖥️ Desktop overrides
+  @include respond-to('md') {
     .filter-buttons {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         margin-bottom: 24px;
 
         .toggle-buttons-wrapper {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
-            justify-content: center;
-
             .filter-toggle-button, .toggle-hover-button {
-                display: none; // Hide on desktop
-                background: $accent-color;
-                color: $primary-bg;
-                padding: 8px 16px;
-                border: none;
-                cursor: pointer;
-                font-weight: bold;
-                border-radius: 5px;
-            }
-            .filter-toggle-button { flex: 3; }
-            .toggle-hover-button{ flex: 5; }
-        }
-        
+                display: none;
 
+                i.no-show {
+                    display: inline;
+                }
+            }
+      }
+
+      .filter-dropdown {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+        flex-direction: row;
+        background: $primary-bg;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+  
         .filter-button {
-            background-color: darken($accent-color, 33%);
+            background-color: #0de1e1;
             border: none;
             cursor: pointer;
             padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
@@ -49,181 +257,21 @@
             font-size: 0.9rem;
             font-weight: bold;
             text-transform: uppercase;
-            color: $primary-bg;
+            color: #006060;
             border-radius: 9999px;
             transition: background-color 0.3s ease-in-out;
 
-            &.selected-filter {
-                background-color: darken($accent-color, 17%);
-                color: $primary-bg;
-            }
-
             &:hover {
-                background-color: $accent-color;
+                background-color: #4ff5f5 !important;
+                color: $primary-bg !important;
+            }
+  
+            &:not(.selected-filter) {
+                background-color: darken($accent-color, 33%);
                 color: $primary-bg;
             }
         }
+      }
     }
-
-    .project-cards-row {
-        overflow: hidden;
-        margin: 0 clamp(0.5rem, 2vw, 10rem);
-        
-        
-        .project-card {
-            position: relative;
-            margin-bottom: 2rem;
-            cursor: default;
-
-            .project-image {
-                position: relative;
-                overflow: hidden;
-                border-radius: 3%;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-                a {
-                    text-decoration: none;
-                }
-
-                img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 5px;
-                }
-
-                .project-details-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(to bottom, #4ff5f5cc, rgba(0, 0, 0, 0.7));
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end; // Align items to the bottom
-                    text-align: left; // Align text to the left
-                    opacity: 0;
-                    transition: opacity 0.3s ease-in-out;
-                    padding-left: 2rem;
-                    padding-bottom: clamp(0.5vw, 2rem, 2vw);
-
-                    h3.card-title {
-                        font-weight: bold;
-                        color: $text-color;
-                        font-size: 1.5rem;
-                        font-size: clamp(1rem, 4vw, 1.5rem);
-                        margin: 0; // Remove default margin
-                    }
-                    
-                    // Add margin to the icons
-                    p.card-technology span.tag i, .card-buttons .card-button i {
-                        margin-right: 4px;
-                    }
-
-                    p.card-technology {
-                        font-size: clamp(10px, 1.2vw, 12px);
-                        font-weight: 600;
-                        color: $text-color;
-                        font-family: Andika;
-                        display: flex;
-                        flex-wrap: wrap-reverse;
-                        gap: 0.5rem;
-                        margin: 8px 0 8px;
-
-                        // Create tag styles
-                        span.tag {
-                            background-color: #4ff5f550; 
-                            padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
-                            border-radius: 9999px; // Tag border radius
-                            font-size: clamp(0.45rem, 2vw, 0.9rem);
-                            color: $text-color;
-                            min-width: fit-content;
-                        }
-                    }
-
-                    .card-buttons {
-                        display: flex;
-                        gap: 0.5rem;
-
-                        .card-button {
-                            font-size: clamp(0.45rem, 2vw, 0.9rem);
-                            padding: 6px 10px;
-                            
-                            color: $secondary-bg;
-                            background-color: $accent-color;
-                            font-weight: bold;
-                            text-decoration: none;
-                            margin: 0;
-                            border-radius: 5px;
-                            width: fit-content;
-                            svg {
-                                width: clamp(8px, 2vw, 16px);
-                                height: clamp(8px, 2vw, 16px);
-                            }
-                            
-                            &:hover {
-                                background-color: #4ff5f5c0;
-                            }
-                        }
-                    }
-                }
-            }
-
-            &:hover, &.hovered {
-                .project-details-overlay {
-                    opacity: 1; // Show overlay on hover
-                }
-
-                .project-image {
-                    transform: translateY(20px);
-                    transition: transform 0.5s;
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: $break-medium) {
-        .filter-buttons {
-            flex-direction: column;
-            gap: 0.4rem;
-            margin: 2vw 4vw;
-
-            .toggle-buttons-wrapper {
-                .filter-toggle-button, .toggle-hover-button {
-                    display: block; // Show the toggle button only on mobile
-
-                    i.no-show {
-                        display: none;
-                    }
-                }
-            }
-
-            .filter-dropdown {
-                display: none; // Initially hide filter options on mobile
-                flex-direction: column;
-                background: darken($accent-color, 47%);
-                padding: 10px;
-                margin: 0.4rem 0;
-                border-radius: 8px;
-
-                &.show {
-                    display: flex;
-                }
-
-                .filter-button {
-                    margin: 5px 0;
-                    border-radius: 5px;
-
-                    &:not(.selected-filter) { // Disable hover effect on mobile
-                        background-color: darken($accent-color, 33%)!important;
-                        color: $primary-bg!important;
-                    }
-                }
-            }
-        }
-        
-        .blog-post .related-container > .link a {
-            max-width: unset;
-        }
-    }
+  }
 }
