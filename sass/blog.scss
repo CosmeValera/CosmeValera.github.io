@@ -6,7 +6,7 @@
     width: 100%;
 
     .blog-intro {
-      max-width: min(900px, 75vw);
+      max-width: 75vw;
       text-wrap: balance;
       margin: 0 auto 2rem;
       text-align: center;
@@ -37,7 +37,7 @@
           transition: transform 0.3s, box-shadow 0.3s;
           position: relative;
           width: 90%;
-          max-width: max(400px, 90%);
+          max-width: 90%;
           margin: 0 auto;
       
           &:hover {
