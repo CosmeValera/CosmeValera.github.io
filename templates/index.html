@@ -16,25 +16,43 @@
         <h1 class="mt-5 presentation-title">Hello!</h1>
         <h2 class="presentation"><span class="less-opacity">I am</span> Cosme</h2>
         <p class="description">👉🏼 Motivated by a genuine love for software, I actively promote <span class="bold">clean code</span> and <span class="bold">agile dynamics.</span> I thrive in rapidly evolving environments, readily embracing new knowledge and translating it into impactful results.</p>
-        {% if config.extra.links %}
-            <div class="links">
-                <p class="call-to-action">You can also find me here!</p>
-                <div class="row">
-                    {% for link in config.extra.links %}
-                        <div class="col-12 col-sm-6 animate__animated animate__fadeInUp">
-                            <a rel="me" href="{{ link.url }}" title="{{ link.title }}" target="_blank">
-                                {% if link.iconset %}
-                                    <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
-                                {% else %}
-                                    <span class="fab {{ 'fa-' ~ link.icon }}"></span>
-                                {% endif %}
-                                
-                                {{ link.title }}
-                            </a>
-                        </div>
-                    {% endfor %}
+        
+        <div class="sections-container">
+            <div class="quick-links">
+                <p class="quick-links-title">
+                    <i class="fas fa-search-plus"></i> See more!
+                </p>
+                <div class="explore-options">
+                    <a href="{{ get_url(path='projects') | safe }}" class="explore-option">
+                        <span class="fas fa-code"></span> Browse my projects
+                    </a>
+                    <a href="{{ get_url(path='blog') | safe }}" class="explore-option">
+                        <span class="fas fa-newspaper"></span> Check out my latest posts
+                    </a>
                 </div>
             </div>
-        {% endif %}
+            
+            {% if config.extra.links %}
+                <div class="links">
+                    <p class="call-to-action">
+                        <i class="fas fa-paper-plane"></i> Connect with me
+                    </p>
+                    <div class="row">
+                        {% for link in config.extra.links %}
+                            <div class="col-12">
+                                <a rel="me" href="{{ link.url }}" title="{{ link.title }}" target="_blank">
+                                    {% if link.iconset %}
+                                        <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
+                                    {% else %}
+                                        <span class="fab {{ 'fa-' ~ link.icon }}"></span>
+                                    {% endif %}
+                                    {{ link.title }}
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
     </div>
 {% endblock content %}
