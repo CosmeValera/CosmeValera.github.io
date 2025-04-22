@@ -6,7 +6,7 @@ description = "Learn how to simplify responsive design with a mobile-first appro
 tags = ["recommended"]
 +++
 
-![blog-cover](/images/blog/2025-04-22/respond-to-pattern.png)
+![blog-cover](/images/blog/2025-04-22/respond-to-pattern-3.png)
 
 <h4><b>🤔 The Problem with Traditional Media Queries</b></h4>
 
