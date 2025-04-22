@@ -58,7 +58,17 @@
                     opacity: 0.9;
                     font-size: 24px;
                     transition: transform 0.25s ease;
-                    margin: 0 6px 0 0;
+
+                    // Fine-tune positioning for specific icons
+                    &.fa-home {
+                        margin-right: 5px;
+                    }
+                    &.fa-code {
+                        margin-right: 3px;
+                    }
+                    &.fa-newspaper {
+                        margin-right: 6px;
+                    }
                 }
 
                 .menu-label {
