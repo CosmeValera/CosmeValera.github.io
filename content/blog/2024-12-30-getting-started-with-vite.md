@@ -3,8 +3,6 @@ title = "Getting Started with Vite"
 template = "blog-post.html"
 description = "A beginner-friendly guide to starting your development workflow with Vite"
 date = 2024-12-30
-[taxonomies]
-tags = ["for-beginners"]
 +++
 
 ![blog-cover](/images/blog/2024-12-30/vite.png)
@@ -46,6 +44,16 @@ npm run dev
 Vite's blazing-fast Hot Module Replacement (HMR) ensures near-instantaneous updates as you
 code.
 
+<h4><b>Learn More About Vite</b></h4>
+
+To see Vite in action, check out this excellent tutorial:
+
+<div class="video-container">
+  <a href="https://www.youtube.com/watch?v=89NJdbYTgJ8" target="_blank">
+    <span class="fab fa-youtube"></span> Vite Tutorial - Learn and Master Vite.js
+  </a>
+</div>
+
 ---
 
 <h4><b>Key Configuration Options</b></h4>
@@ -82,21 +90,6 @@ Access these variables in your app with `import.meta.env`:
 console.log(import.meta.env.VITE_API_URL);
 ```
 
-**3. Plugins**
-
-Extend Vite's functionality using <a href="https://vite.dev/plugins/#plugins" target="_blank">plugins</a>, such as `@vitejs/plugin-react` for React projects. Install it and add it to your configuration:
-
-```sh
-npm install @vitejs/plugin-react
-```
-
-```javascript
-import react from '@vitejs/plugin-react';
-    export default defineConfig({
-    plugins: [react()]
-});
-```
-
 ---
 
 <h4><b>Challenges and Considerations</b></h4>
@@ -106,23 +99,11 @@ import react from '@vitejs/plugin-react';
 Vite's HMR is fast, but integrating it with certain frameworks or configurations (like Module
 Federation) may require additional effort.
 
-2. **Build Performance**
+1. **Build Performance**
 Vite leverages Rollup for production builds, which may require fine-tuning for large applications.
 
-3. **Cross-Browser Compatibility**
+1. **Cross-Browser Compatibility**
 Ensure your app is transpiled for older browsers using the `@vitejs/plugin-legacy` plugin.
-
-```sh
-npm install @vitejs/plugin-legacy
-```
-
-```js
-import legacy from '@vitejs/plugin-legacy';
-
-export default defineConfig({
-    plugins: [legacy()]
-});
-```
 
 ---
 
@@ -130,5 +111,5 @@ export default defineConfig({
 
 <h4>Resources</h4>
 
-- <a target="_blank" href="https://vite.dev/">VITE DOC</a>
-- **Learn VITE + Module Federation** with this video tutorial by Jack Herrington. <a target="_blank" href="https://vite.dev/">Watch it here</a>.
+- <a target="_blank" href="https://vite.dev/"><span class="fas fa-book"></span> VITE DOC</a>
+- <a target="_blank" href="https://www.youtube.com/watch?v=t-nchkL9yIg"> <span class="fab fa-youtube"></span>**Learn VITE + Module Federation** </a> with this video tutorial   
