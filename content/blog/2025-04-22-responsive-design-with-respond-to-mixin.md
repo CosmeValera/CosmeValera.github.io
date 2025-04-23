@@ -1,5 +1,5 @@
 +++
-title = "Respond-To Mixin pattern"
+title = "Respond-To Mixin pattern (SCSS)"
 template = "blog-post.html"
 description = "Learn how to simplify responsive design with a mobile-first approach using the respond-to mixin pattern in SCSS"
 [taxonomies]
