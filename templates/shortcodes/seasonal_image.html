@@ -1,6 +1,7 @@
 <div class="seasonal-image-container">
   {% set date = now() %}
   {% set month = date | date(format="%m") | int %}
+  <!-- <p>{{month}}</p> -->
   
   {# Determine season based on month #}
   {% if month == 12 or month == 1 or month == 2 %}
@@ -13,17 +14,14 @@
     {% set season = "autumn" %}
   {% endif %}
   
-  {# Display appropriate image based on season #}
-  {% if season == "winter" and winter_image %}
-    <img src="{{ winter_image }}" alt="{{ winter_alt | default(value='Winter seasonal image') }}">
-  {% elif season == "spring" and spring_image %}
-    <img src="{{ spring_image }}" alt="{{ spring_alt | default(value='Spring seasonal image') }}">
-  {% elif season == "summer" and summer_image %}
-    <img src="{{ summer_image }}" alt="{{ summer_alt | default(value='Summer seasonal image') }}">
-  {% elif season == "autumn" and autumn_image %}
-    <img src="{{ autumn_image }}" alt="{{ autumn_alt | default(value='Autumn seasonal image') }}">
-  {% else %}
-    {# Fallback to default image #}
-    <img src="{{ default_image | default(value=regular_image) }}" alt="{{ default_alt | default(value='Seasonal image') }}">
+  {# Display appropriate image based on season and image availability #}
+  {% if season == "autumn" or season == "winter" %}
+    <img
+      src="{{ get_url(path=winter_image | default(value='images/blog/general/tree-autumn-winter.png')) }}" 
+      alt="{{ winter_alt | default(value='Autumn/Winter seasonal image') }}">
+  {% elif season == "spring" or season == "summer" %}
+    <img 
+      src="{{ get_url(path=spring_summer_image | default(value='images/blog/general/tree-summer-spring.png')) }}" 
+      alt="{{ spring_summer_alt | default(value='Spring/Summer seasonal image') }}">
   {% endif %}
 </div> 

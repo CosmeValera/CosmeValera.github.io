@@ -200,13 +200,8 @@ class Notification {
 
 ---
 
-<!-- Change image depending on season -->
-{{ seasonal_image(
-  winter_image="/images/blog/general/garnalds.png",
-  default_image="/images/blog/general/tree1.webp",
-  winter_alt="Garnalds winter image", 
-  default_alt="Regular tree image"
-) }}
+<!-- Visual break before conclusion - changes based on time of year -->
+{{ seasonal_image() }}
 
 <h4>Resources</h4>
 
