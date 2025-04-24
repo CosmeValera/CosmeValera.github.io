@@ -204,7 +204,7 @@ Look at how we moved `display: flex` from the desktop default to the tablet brea
 - In the original desktop-first code, `display: flex` was applied to **both desktop and tablet** (it was overridden only for mobile)
 - In our mobile-first version, we start with mobile styles (`display: block`), so `display: flex` needs to be applied at the tablet breakpoint to maintain the same visual outcome
 
-This shift isn't just about reorganizing code—it's about preserving the same functionality while changing our starting point. In desktop-first, you subtract complexity for smaller screens; in mobile-first, you add enhancements as screens get larger.
+This shift isn't just about reorganizing code. It's about preserving the same functionality while changing our starting point. In desktop-first, you subtract complexity for smaller screens; in mobile-first, you add enhancements as screens get larger.
 
 ---
 
