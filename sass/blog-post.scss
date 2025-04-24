@@ -77,10 +77,16 @@
         }
     }
 
-    p:has(img[alt=blog-cover], img[alt=garnalds]) {
+    .seasonal-image-container img {
+        max-width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    p:has(img[alt=blog-cover]) {
         text-align: center;
 
-        img[alt=blog-cover], img[alt=garnalds] {
+        img[alt=blog-cover] {
             max-width: 100%;
             margin: 1rem 0;
         }

@@ -208,10 +208,13 @@ This shift isn't just about reorganizing code—it's about preserving the same f
 
 ---
 
-<!-- SHOW in WINTER -->
-![garnalds](/images/blog/general/garnalds.png)
-<!-- SHOW in other times of the year -->
-![garnalds](/images/blog/general/tree1.webp)
+<!-- Change image depending on season -->
+{{ seasonal_image(
+  winter_image="/images/blog/general/garnalds.png",
+  default_image="/images/blog/general/tree1.webp",
+  winter_alt="Garnalds winter image", 
+  default_alt="Regular tree image"
+) }}
 
 <h4><b>📚 Conclusion</b></h4>
 
