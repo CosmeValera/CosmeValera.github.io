@@ -109,7 +109,7 @@ Ensure your app is transpiled for older browsers using the `@vitejs/plugin-legac
 
 ---
 
-![garnalds](/images/blog/general/garlands.png)
+![garnalds](/images/blog/general/garnalds.png)
 
 <h4>Resources</h4>
 

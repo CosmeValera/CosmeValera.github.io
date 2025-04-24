@@ -200,7 +200,7 @@ class Notification {
 
 ---
 
-![garnalds](/images/blog/general/garlands.png)
+![garnalds](/images/blog/general/garnalds.png)
 
 <h4>Resources</h4>
 

@@ -208,7 +208,10 @@ This shift isn't just about reorganizing code—it's about preserving the same f
 
 ---
 
-![garnalds](/images/blog/general/garlands.png)
+<!-- SHOW in WINTER -->
+![garnalds](/images/blog/general/garnalds.png)
+<!-- SHOW in other times of the year -->
+![garnalds](/images/blog/general/tree1.webp)
 
 <h4><b>📚 Conclusion</b></h4>
 
