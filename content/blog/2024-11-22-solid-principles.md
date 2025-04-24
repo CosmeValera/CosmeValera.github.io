@@ -200,7 +200,8 @@ class Notification {
 
 ---
 
-![garnalds](/images/blog/general/garlands.png)
+<!-- Visual break before conclusion - changes based on time of year -->
+{{ seasonal_image() }}
 
 <h4>Resources</h4>
 

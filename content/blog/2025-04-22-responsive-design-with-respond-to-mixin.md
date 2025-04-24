@@ -208,7 +208,8 @@ This shift isn't just about reorganizing code—it's about preserving the same f
 
 ---
 
-![garnalds](/images/blog/general/garlands.png)
+<!-- Visual break before conclusion - changes based on time of year -->
+{{ seasonal_image() }}
 
 <h4><b>📚 Conclusion</b></h4>
 

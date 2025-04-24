@@ -1,0 +1,27 @@
+<div class="seasonal-image-container">
+  {% set date = now() %}
+  {% set month = date | date(format="%m") | int %}
+  <!-- <p>{{month}}</p> -->
+  
+  {# Determine season based on month #}
+  {% if month == 12 or month == 1 or month == 2 %}
+    {% set season = "winter" %}
+  {% elif month >= 3 and month <= 5 %}
+    {% set season = "spring" %}
+  {% elif month >= 6 and month <= 8 %}
+    {% set season = "summer" %}
+  {% else %}
+    {% set season = "autumn" %}
+  {% endif %}
+  
+  {# Display appropriate image based on season and image availability #}
+  {% if season == "autumn" or season == "winter" %}
+    <img
+      src="{{ get_url(path=winter_image | default(value='images/blog/general/tree-autumn-winter.png')) }}" 
+      alt="{{ winter_alt | default(value='Autumn/Winter seasonal image') }}">
+  {% elif season == "spring" or season == "summer" %}
+    <img 
+      src="{{ get_url(path=spring_summer_image | default(value='images/blog/general/tree-summer-spring.png')) }}" 
+      alt="{{ spring_summer_alt | default(value='Spring/Summer seasonal image') }}">
+  {% endif %}
+</div> 
