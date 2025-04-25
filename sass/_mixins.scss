@@ -13,11 +13,6 @@
       background-color: $hover-background-color;
     }
   
-    // 🧠 Remove tighter mobile styles from non .index-nav elements only
-    &:not(.index-nav) {
-      // Already applied by default now
-    }
-  
     // 🧾 TABLET styles (min-width: md)
     @include respond-to('md') {
       font-size: 1.6rem;

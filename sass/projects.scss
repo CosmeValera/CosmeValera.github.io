@@ -109,6 +109,10 @@
       position: relative;
       margin-bottom: 2rem;
       cursor: default;
+      
+      &:nth-last-child(2), &:last-child {
+        margin-bottom: 0; // Don't push footer
+      }
 
       .project-image {
         position: relative;
@@ -220,7 +224,7 @@
     max-width: unset;
   }
 
-  // 🖥️ Desktop overrides
+  // 🧾 TABLET overrides
   @include respond-to('md') {
     .filter-buttons {
         display: flex;
