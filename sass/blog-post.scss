@@ -104,7 +104,6 @@
     }
     
     a {
-        max-width: 20vw;
         color: $accent-color;
         text-wrap: balance;
         text-decoration: underline;
@@ -173,13 +172,14 @@
             flex: 1;
             padding: 1rem;
             box-sizing: border-box;
-            width: 50%;
-
+            // Remove width: 50% since flex: 1 already handles the width distribution
+            
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
-            align-content: center;
-        
+            justify-content: center; // Centers content vertically
+            align-items: center; // Centers content horizontally
+            // Remove flex-wrap: wrap since it might cause unexpected behavior
+            
             span {
                 font-style: italic;
                 font-size: 1rem;
