@@ -102,7 +102,6 @@
   }
 
   .project-cards-row {
-    overflow: hidden;
     margin: 0 clamp(0.5rem, 2vw, 10rem);
 
     .project-card {
@@ -110,8 +109,13 @@
       margin-bottom: 2rem;
       cursor: default;
       
-      &:nth-last-child(2), &:last-child {
-        margin-bottom: 0; // Don't push footer
+      &:last-child {
+        margin-bottom: 0; // Last card doesn't push footer
+      }
+      @include respond-to('md') { // Tablet -> 2 cards per row
+        &:nth-last-child(2) {
+          margin-bottom: 0; // 2 last cards don't push footer
+        }
       }
 
       .project-image {
