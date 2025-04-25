@@ -21,6 +21,12 @@ $default-tag-gradient: linear-gradient(145deg, #444, #666);
 // Fonts
 $sans-serif: Montserrat, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}
+
 // Responsive breaks
 $break-small: 576px;
 $break-medium: 768px;
