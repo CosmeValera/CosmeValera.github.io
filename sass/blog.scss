@@ -123,8 +123,8 @@
           }
         }
       
-        // 💻 Responsive override: from sm and up (min-width)
-        @include respond-to('sm') {
+        // 🧾 TABLET overrides
+        @include respond-to('md') {
           grid-template-columns: repeat(2, minmax(0, 1fr));
       
           a.blog-card {
