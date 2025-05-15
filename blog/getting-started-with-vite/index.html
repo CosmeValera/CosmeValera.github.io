@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+  Blog | Cosme
+</title>
+
+    <link rel="stylesheet" href="https://cosmevalera.github.io/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Inter:wght@400;600;700&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cosmevalera.github.io/fonts.css">
+    <link rel="stylesheet" href="https://cosmevalera.github.io/fontawesome/css/fontawesome.css">
+    <script src="https://kit.fontawesome.com/cfd779d106.js" crossorigin="anonymous"></script>
+    
+    
+    <link rel="icon" href="https://cosmevalera.github.io/favicon.jpg" />
+    
+    
+    
+  <link rel="stylesheet" href="https://cosmevalera.github.io/blog-post.css">
+
+  </head>
+  <body>
+    <!-- Lateral Floating Menu -->
+    <div class="lateral-menu">
+      <div class="menu-item-container">
+        
+        <a class="menu-item " href="/">
+          <span class="menu-label">Home</span>
+          <i class="menu-icon fas fa-home"></i>
+        </a>
+      </div>
+      <div class="menu-item-container">
+        <a class="menu-item " href="/projects">
+          <span class="menu-label">Projects</span>
+          <i class="menu-icon fas fa-code"></i>
+        </a>
+      </div>
+      <div class="menu-item-container">
+        <a class="menu-item active-page" href="/blog">
+          <span class="menu-label">Blog</span>
+          <i class="menu-icon fas fa-newspaper"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="fab-button">
+      <i class="fab-button-i fas fa-ellipsis-v"></i>
+    </div>
+    <!-- END: Lateral Floating Menu -->
+
+    <main>
+        
+  <div class="column right">
+    <div class="blog-post">
+      <a href="/blog" class="back-link">← Back to all posts</a>
+      
+      
+        <div class="tags">
+          
+            
+              <a href="https://cosmevalera.github.io/tags/for-beginners/" class="tag tag-for-beginners-plain">
+                For Beginners
+              </a>
+            
+          
+        </div>
+      
+
+      <h1 class="blog-post-title">Getting Started with Vite</h1>
+      <h3 class="presentation-text">A beginner-friendly guide to starting your development workflow with Vite</h3>
+      
+      <div class="post-metadata">
+        <span class="post-date">December 30, 2024</span>
+        <span class="reading-time">3 min read • 419 words</span>
+      </div>
+      <div class="post-content">
+          <p><img src="/images/blog/2024-12-30/vite.png" alt="blog-cover" /></p>
+<h4><b>Setting Up a Vite Project</b></h4>
+<p><strong>1. Start a project with Vite</strong></p>
+<p>To start a project with Vite, you can either create a basic project or directly specify a template</p>
+<p><strong>1.1. Option 1.</strong> Install Vite</p>
+<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span>npm create vite@latest my-vite-app
+</span></code></pre>
+<blockquote>
+<p>Replace <code>my-vite-app</code> with your project name.</p>
+</blockquote>
+<p><strong>1.2 Option 2.</strong> Choose a Template</p>
+<p>Vite supports vanilla JavaScript, React, Vue, Svelte, and <a href="https://vite.dev/guide/#scaffolding-your-first-vite-project" target="_blank">more</a>. For example, to create a React app, you can specify it directly:</p>
+<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span>npm create vite@latest my-react-app</span><span style="color:#f92672;"> --</span><span> --template react
+</span></code></pre>
+<p><strong>2. Install Dependencies</strong>
+After creating the project, navigate into the directory and install the dependencies:</p>
+<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#66d9ef;">cd</span><span> my-vite-app
+</span><span>npm install
+</span></code></pre>
+<p><strong>3. Run the Development Server</strong>
+Start the development server with:</p>
+<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span>npm run dev
+</span></code></pre>
+<p>Vite's blazing-fast Hot Module Replacement (HMR) ensures near-instantaneous updates as you
+code.</p>
+<h4><b>Learn More About Vite</b></h4>
+<p>To see Vite in action, check out this excellent tutorial:</p>
+<div class="video-container">
+  <a href="https://www.youtube.com/watch?v=89NJdbYTgJ8" target="_blank">
+    <span class="fab fa-youtube"></span> Vite Tutorial - Learn and Master Vite.js
+  </a>
+</div>
+<hr />
+<h4><b>Key Configuration Options</b></h4>
+<p>Configuring your <code>vite.config.js</code> is crucial for improving the development experience.</p>
+<p><strong>1. Alias Imports</strong></p>
+<p>Simplify your imports by defining aliases:</p>
+<pre data-lang="js" style="background-color:#272822;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#f92672;">import </span><span>{ defineConfig } </span><span style="color:#f92672;">from </span><span style="color:#e6db74;">&#39;vite&#39;</span><span>;
+</span><span style="color:#f92672;">import </span><span>path </span><span style="color:#f92672;">from </span><span style="color:#e6db74;">&#39;path&#39;</span><span>;
+</span><span>
+</span><span style="color:#f92672;">export default </span><span style="color:#a6e22e;">defineConfig</span><span>({
+</span><span>    resolve: {
+</span><span>        alias: {
+</span><span>            </span><span style="color:#e6db74;">&#39;@&#39;</span><span>: path.</span><span style="color:#66d9ef;">resolve</span><span>(__dirname, </span><span style="color:#e6db74;">&#39;./src&#39;</span><span>)
+</span><span>        }
+</span><span>    }
+</span><span>});
+</span></code></pre>
+<p><strong>2. Environment Variables</strong></p>
+<p>Vite supports <code>.env</code> files for managing configurations. Create a <code>.env</code> file and define variables:</p>
+<pre data-lang="env" style="background-color:#272822;color:#f8f8f2;" class="language-env "><code class="language-env" data-lang="env"><span>VITE_API_URL=https://api.example.com
+</span></code></pre>
+<p>Access these variables in your app with <code>import.meta.env</code>:</p>
+<pre data-lang="js" style="background-color:#272822;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="font-style:italic;color:#66d9ef;">console</span><span>.</span><span style="color:#66d9ef;">log</span><span>(</span><span style="color:#f92672;">import</span><span>.meta.env.VITE_API_URL);
+</span></code></pre>
+<hr />
+<h4><b>Challenges and Considerations</b></h4>
+<p>While Vite offers a powerful development experience, there are some challenges to keep in mind:</p>
+<ol>
+<li>
+<p><strong>Hot Module Replacement (HMR)</strong>
+Vite's HMR is fast, but integrating it with certain frameworks or configurations (like Module
+Federation) may require additional effort.</p>
+</li>
+<li>
+<p><strong>Build Performance</strong>
+Vite leverages Rollup for production builds, which may require fine-tuning for large applications.</p>
+</li>
+<li>
+<p><strong>Cross-Browser Compatibility</strong>
+Ensure your app is transpiled for older browsers using the <code>@vitejs/plugin-legacy</code> plugin.</p>
+</li>
+</ol>
+<hr />
+<!-- Visual break before conclusion - changes based on time of year -->
+<div class="seasonal-image-container">
+  
+  
+  <!-- <p>5</p> -->
+  
+  
+  
+    
+  
+  
+  
+  
+    <img 
+      src="https://cosmevalera.github.io/images/blog/general/tree-summer-spring.png" 
+      alt="Spring&amp;#x2F;Summer seasonal image">
+  
+</div> <h4>Resources</h4>
+<ul>
+<li><a target="_blank" href="https://vite.dev/"><span class="fas fa-book"></span> VITE DOC</a></li>
+<li><a target="_blank" href="https://www.youtube.com/watch?v=t-nchkL9yIg"> <span class="fab fa-youtube"></span><strong>Learn VITE + Module Federation</strong> </a> with this video tutorial   </li>
+</ul>
+
+      </div>
+
+      <hr class="footer-rule" />
+      
+<div class="related-container">
+
+  
+  <div class="link">
+    <span>Previous post</span>
+    <a href="https:&#x2F;&#x2F;cosmevalera.github.io&#x2F;blog&#x2F;solid-principles&#x2F;">SOLID Principles</a>
+  </div>
+  
+
+  
+  <div class="link">
+    <span>Next post</span>
+    <a href="https:&#x2F;&#x2F;cosmevalera.github.io&#x2F;blog&#x2F;responsive-design-with-respond-to-mixin&#x2F;">Respond-To Mixin pattern (SCSS)</a>
+  </div>
+  
+
+</div>
+
+      <hr class="footer-rule-2" />
+    </div>
+  </div>
+
+    </main>
+
+    <footer>
+      <a href="/sponsor"><i class="fa fa-magic dark-hover" aria-hidden="true"></i> Sponsor</a> | © 2025 Cosme Valera Reales
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cosmevalera.github.io/js/lateralMenu.js"></script>
+     
+    <!-- END: SCRIPTS -->
+  </body>
+</html>
