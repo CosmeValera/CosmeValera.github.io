@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Home | Cosme - for-beginners</title>
+	<link href="https://cosmevalera.github.io/tags/for-beginners/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://cosmevalera.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2024-12-30T00:00:00+00:00</updated>
+	<id>https://cosmevalera.github.io/tags/for-beginners/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Getting Started with Vite</title>
+		<published>2024-12-30T00:00:00+00:00</published>
+		<updated>2024-12-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://cosmevalera.github.io/blog/getting-started-with-vite/" type="text/html"/>
+		<id>https://cosmevalera.github.io/blog/getting-started-with-vite/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;blog&#x2F;2024-12-30&#x2F;vite.png&quot; alt=&quot;blog-cover&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h4&gt;&lt;b&gt;Setting Up a Vite Project&lt;&#x2F;b&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;strong&gt;1. Start a project with Vite&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To start a project with Vite, you can either create a basic project or directly specify a template&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;1.1. Option 1.&lt;&#x2F;strong&gt; Install Vite&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;npm create vite@latest my-vite-app
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Replace &lt;code&gt;my-vite-app&lt;&#x2F;code&gt; with your project name.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.2 Option 2.&lt;&#x2F;strong&gt; Choose a Template&lt;&#x2F;p&gt;
+&lt;p&gt;Vite supports vanilla JavaScript, React, Vue, Svelte, and &lt;a href=&quot;https:&#x2F;&#x2F;vite.dev&#x2F;guide&#x2F;#scaffolding-your-first-vite-project&quot; target=&quot;_blank&quot;&gt;more&lt;&#x2F;a&gt;. For example, to create a React app, you can specify it directly:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;npm create vite@latest my-react-app&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt; --&lt;&#x2F;span&gt;&lt;span&gt; --template react
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;2. Install Dependencies&lt;&#x2F;strong&gt;
+After creating the project, navigate into the directory and install the dependencies:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-vite-app
+&lt;&#x2F;span&gt;&lt;span&gt;npm install
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;3. Run the Development Server&lt;&#x2F;strong&gt;
+Start the development server with:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;npm run dev
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Vite&#x27;s blazing-fast Hot Module Replacement (HMR) ensures near-instantaneous updates as you
+code.&lt;&#x2F;p&gt;
+&lt;h4&gt;&lt;b&gt;Learn More About Vite&lt;&#x2F;b&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;To see Vite in action, check out this excellent tutorial:&lt;&#x2F;p&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=89NJdbYTgJ8&quot; target=&quot;_blank&quot;&gt;
+    &lt;span class=&quot;fab fa-youtube&quot;&gt;&lt;&#x2F;span&gt; Vite Tutorial - Learn and Master Vite.js
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;hr &#x2F;&gt;
+&lt;h4&gt;&lt;b&gt;Key Configuration Options&lt;&#x2F;b&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;Configuring your &lt;code&gt;vite.config.js&lt;&#x2F;code&gt; is crucial for improving the development experience.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;1. Alias Imports&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Simplify your imports by defining aliases:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ defineConfig } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;vite&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;path&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;defineConfig&lt;&#x2F;span&gt;&lt;span&gt;({
+&lt;&#x2F;span&gt;&lt;span&gt;    resolve: {
+&lt;&#x2F;span&gt;&lt;span&gt;        alias: {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;@&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: path.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;resolve&lt;&#x2F;span&gt;&lt;span&gt;(__dirname, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;.&#x2F;src&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;2. Environment Variables&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Vite supports &lt;code&gt;.env&lt;&#x2F;code&gt; files for managing configurations. Create a &lt;code&gt;.env&lt;&#x2F;code&gt; file and define variables:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;env&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-env &quot;&gt;&lt;code class=&quot;language-env&quot; data-lang=&quot;env&quot;&gt;&lt;span&gt;VITE_API_URL=https:&#x2F;&#x2F;api.example.com
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Access these variables in your app with &lt;code&gt;import.meta.env&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;import&lt;&#x2F;span&gt;&lt;span&gt;.meta.env.VITE_API_URL);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h4&gt;&lt;b&gt;Challenges and Considerations&lt;&#x2F;b&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;While Vite offers a powerful development experience, there are some challenges to keep in mind:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hot Module Replacement (HMR)&lt;&#x2F;strong&gt;
+Vite&#x27;s HMR is fast, but integrating it with certain frameworks or configurations (like Module
+Federation) may require additional effort.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Build Performance&lt;&#x2F;strong&gt;
+Vite leverages Rollup for production builds, which may require fine-tuning for large applications.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cross-Browser Compatibility&lt;&#x2F;strong&gt;
+Ensure your app is transpiled for older browsers using the &lt;code&gt;@vitejs&#x2F;plugin-legacy&lt;&#x2F;code&gt; plugin.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;!-- Visual break before conclusion - changes based on time of year --&gt;
+&lt;div class=&quot;seasonal-image-container&quot;&gt;
+  
+  
+  &lt;!-- &lt;p&gt;5&lt;&#x2F;p&gt; --&gt;
+  
+  
+  
+    
+  
+  
+  
+  
+    &lt;img 
+      src=&quot;https:&#x2F;&#x2F;cosmevalera.github.io&#x2F;images&#x2F;blog&#x2F;general&#x2F;tree-summer-spring.png&quot; 
+      alt=&quot;Spring&amp;amp;#x2F;Summer seasonal image&quot;&gt;
+  
+&lt;&#x2F;div&gt; &lt;h4&gt;Resources&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;vite.dev&#x2F;&quot;&gt;&lt;span class=&quot;fas fa-book&quot;&gt;&lt;&#x2F;span&gt; VITE DOC&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=t-nchkL9yIg&quot;&gt; &lt;span class=&quot;fab fa-youtube&quot;&gt;&lt;&#x2F;span&gt;&lt;strong&gt;Learn VITE + Module Federation&lt;&#x2F;strong&gt; &lt;&#x2F;a&gt; with this video tutorial   &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>
