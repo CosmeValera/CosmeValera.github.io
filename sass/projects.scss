@@ -1,5 +1,10 @@
 @import 'main';
 
+// Prevent appearance of horizontal scrollbar with animations
+body {
+  overflow-x: hidden;
+}
+
 .column.right {
   max-width: 900px;
   margin: 0 auto;
